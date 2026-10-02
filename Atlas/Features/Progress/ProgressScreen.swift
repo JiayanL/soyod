@@ -128,7 +128,7 @@ private struct ProjectionChart: View {
     let points: [Measurement]
     @Environment(AppState.self) private var app
 
-    private struct Point: Identifiable { let date: Date; let value: Double; var id: Date { date } }
+    private struct Point: Identifiable { let id = UUID(); let date: Date; let value: Double }
 
     var body: some View {
         let units = app.context.units
@@ -155,15 +155,9 @@ private struct ProjectionChart: View {
             }
             Chart {
                 ForEach(actual) { p in
-                    AreaMark(x: .value("Date", p.date), yStart: .value("Base", lo - pad), yEnd: .value("Value", p.value), series: .value("Series", "ActualArea"))
-                        .foregroundStyle(LinearGradient(colors: [Theme.Palette.accent.opacity(0.22), Theme.Palette.accent.opacity(0)], startPoint: .top, endPoint: .bottom))
-                        .interpolationMethod(.monotone)
-                }
-                ForEach(actual) { p in
                     LineMark(x: .value("Date", p.date), y: .value("Value", p.value), series: .value("Series", "Actual"))
                         .foregroundStyle(Theme.Palette.accent)
-                        .lineStyle(StrokeStyle(lineWidth: 2.5, lineCap: .round))
-                        .interpolationMethod(.monotone)
+                        .lineStyle(StrokeStyle(lineWidth: 2.5, lineCap: .round, lineJoin: .round))
                 }
                 ForEach(actual) { p in
                     PointMark(x: .value("Date", p.date), y: .value("Value", p.value))
