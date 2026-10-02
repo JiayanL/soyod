@@ -180,7 +180,7 @@ extension View {
 // MARK: - Color helpers
 
 extension Color {
-    init(light: UInt32, lightAlpha: Double = 1, dark: UInt32, darkAlpha: Double = 1) {
+    nonisolated init(light: UInt32, lightAlpha: Double = 1, dark: UInt32, darkAlpha: Double = 1) {
         self.init(uiColor: UIColor { traits in
             traits.userInterfaceStyle == .dark
                 ? UIColor(hex: dark, alpha: darkAlpha)
@@ -190,7 +190,7 @@ extension Color {
 }
 
 extension UIColor {
-    convenience init(hex: UInt32, alpha: Double = 1) {
+    nonisolated convenience init(hex: UInt32, alpha: Double = 1) {
         self.init(
             red: CGFloat((hex >> 16) & 0xFF) / 255,
             green: CGFloat((hex >> 8) & 0xFF) / 255,
