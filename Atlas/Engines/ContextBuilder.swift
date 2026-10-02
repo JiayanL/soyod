@@ -149,8 +149,9 @@ nonisolated enum ContextBuilder {
 
         // MARK: Calendar
         c.events = events.filter { cal.isDate($0.start, inSameDayAs: now) }
+        let tomorrow = cal.date(byAdding: .day, value: 1, to: cal.startOfDay(for: now))!
         c.tomorrowFirstEvent = events
-            .filter { $0.start >= now }
+            .filter { cal.isDate($0.start, inSameDayAs: tomorrow) }
             .sorted { $0.start < $1.start }
             .first
         c.recommendedBedtime = ScoreEngine.recommendedBedtime(

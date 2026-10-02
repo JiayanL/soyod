@@ -376,6 +376,11 @@ final class AppState {
     // MARK: - Memories
 
     func addMemory(kind: MemoryKind, text: String, dueDate: Date?) {
+        let norm = text.lowercased().components(separatedBy: .whitespaces).joined()
+        let existing = (try? modelContext.fetch(FetchDescriptor<MemoryItem>())) ?? []
+        if existing.contains(where: {
+            $0.text.lowercased().components(separatedBy: .whitespaces).joined() == norm
+        }) { return }
         let m = MemoryItem()
         m.kind = kind
         m.text = text
@@ -454,6 +459,9 @@ final class AppState {
     }
 
     func loadSampleData() {
+        // Idempotent: wipe any existing data before re-seeding.
+        let hasAny = ((try? modelContext.fetchCount(FetchDescriptor<UserProfile>())) ?? 0) > 0
+        if hasAny { resetAll() }
         SampleDataSeeder().seed(into: modelContext, now: AppClock.now)
         try? modelContext.save()
         refresh()

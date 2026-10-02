@@ -56,7 +56,9 @@ nonisolated enum GamePlanEngine {
                 let name = ev.location ?? ev.title
                 let restaurant = ev.location?.components(separatedBy: ",").first ?? ev.title
                 // Lunch budget: ~35% of remaining kcal, high protein.
-                let lunchKcal = Int((c.remaining.kcal * 0.35 / 10).rounded() * 10)
+                // Cap at what's left minus a ~600 dinner reserve; never negative.
+                let lunchKcal = max(0, min(Int((c.remaining.kcal * 0.35 / 10).rounded() * 10),
+                                           Int(c.remaining.kcal) - 600))
                 let lunchProtein = max(40, c.targets.proteinG / 3)
                 var detail = "Keep lunch ~\(Fmt.kcal(Double(lunchKcal))) kcal, \(lunchProtein) g protein"
                 if let w = c.eatingWindow {

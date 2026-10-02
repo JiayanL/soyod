@@ -127,7 +127,24 @@ struct RuleBasedCoachTests {
         #expect(r.actions.contains { $0.kind == .reserveTable })
         #expect(r.actions.contains { $0.kind == .orderMeal })
         #expect(!r.memoryWrites.isEmpty)
+        // Bare hour + dinner/tonight → PM: 19:30 the same day.
+        let res = r.actions.first { $0.kind == .reserveTable }
+        let iso = res?.params["dateISO"].flatMap { ISO8601DateFormatter().date(from: $0) }
+        let comps = iso.map { Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: $0) }
+        #expect(comps?.hour == 19 && comps?.minute == 30)
+        let nowComps = Calendar.current.dateComponents([.year, .month, .day], from: Date())
+        #expect(comps?.year == nowComps.year && comps?.month == nowComps.month && comps?.day == nowComps.day)
     }
+
+    @Test func bareEveningHoursArePM() async throws {
+        for (prompt, hour) in [("I have dinner at 8 tonight", 20), ("drinks at 9", 21)] {
+            let r = try await RuleBasedCoach().respond(to: prompt, history: [], context: context())
+            let res = r.actions.first { $0.kind == .reserveTable }
+            let iso = res?.params["dateISO"].flatMap { ISO8601DateFormatter().date(from: $0) }
+            #expect(iso.map { Calendar.current.component(.hour, from: $0) } == hour)
+        }
+    }
+
 
     @Test func sleptBadly() async throws {
         let r = try await RuleBasedCoach().respond(to: "I slept badly", history: [], context: context())

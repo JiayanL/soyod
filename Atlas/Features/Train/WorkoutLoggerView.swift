@@ -109,8 +109,8 @@ struct WorkoutLoggerView: View {
 
     private var stats: some View {
         HStack(spacing: 0) {
-            TimelineView(.periodic(from: start, by: 1)) { ctx in
-                stat("Duration", value: clock(Int(ctx.date.timeIntervalSince(start))))
+            TimelineView(.periodic(from: start, by: 1)) { _ in
+                stat("Duration", value: clock(Int(AppClock.now.timeIntervalSince(start))))
             }
             stat("Volume", value: Fmt.weight(kg: volumeKg, units: units))
             stat("Sets", value: "\(doneSets)")

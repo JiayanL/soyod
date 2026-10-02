@@ -142,22 +142,34 @@ nonisolated enum ScoreEngine {
         return TrainingLoad(acute7: acute, chronic28: chronic, ratio: ratio, status: status)
     }
 
-    /// Wake = first event − 75 min (default 7:00 AM); bed = wake − need − 15 min.
+    /// Bedtime tonight = (planned wake, tomorrow) − need − 15 min.
+    /// Wake = tomorrow's first event − 75 min (default 7:00 AM).
+    /// If that lands in the past or outside tonight's window (18:00–01:00),
+    /// fall back to the default 7:00 wake.
     static func recommendedBedtime(firstEventTomorrow: CalendarEventInfo?, needMin: Int,
                                    now: Date, calendar: Calendar = .current) -> Date {
-        var wake: Date
-        if let ev = firstEventTomorrow {
-            wake = ev.start.addingTimeInterval(-75 * 60)
-        } else {
-            var comps = calendar.dateComponents([.year, .month, .day], from: now)
-            let tomorrow = calendar.date(byAdding: .day, value: 1, to: calendar.startOfDay(for: now))!
-            comps = calendar.dateComponents([.year, .month, .day], from: tomorrow)
+        let tomorrow = calendar.date(byAdding: .day, value: 1, to: calendar.startOfDay(for: now))!
+        func defaultWake() -> Date {
+            var comps = calendar.dateComponents([.year, .month, .day], from: tomorrow)
             comps.hour = 7
             comps.minute = 0
-            wake = calendar.date(from: comps)!
+            return calendar.date(from: comps)!
         }
-        return wake.addingTimeInterval(-Double(needMin) * 60 - 15 * 60)
+        var wake = defaultWake()
+        if let ev = firstEventTomorrow, calendar.isDate(ev.start, inSameDayAs: tomorrow) {
+            wake = ev.start.addingTimeInterval(-75 * 60)
+        }
+        var bed = wake.addingTimeInterval(-Double(needMin) * 60 - 15 * 60)
+        // Guard: bedtime must be tonight (hour >= 18 or <= 1) and not in the past.
+        let hour = calendar.component(.hour, from: bed)
+        let tonight = calendar.isDate(bed, inSameDayAs: now) && hour >= 18
+            || calendar.isDate(bed, inSameDayAs: tomorrow) && hour <= 1
+        if bed <= now || !tonight {
+            bed = defaultWake().addingTimeInterval(-Double(needMin) * 60 - 15 * 60)
+        }
+        return bed
     }
+
 
     static func scoreBand(_ score: Int) -> ScoreBand {
         if score < 34 { return .low }

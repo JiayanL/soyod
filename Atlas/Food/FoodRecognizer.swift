@@ -49,9 +49,24 @@ enum FoodRecognizer {
         ("noodle", "pad_thai"), ("poke", "poke_bowl"), ("bowl", "chipotle_bowl"),
     ]
 
-    static func recognize(_ image: UIImage) async -> FoodRecognition {
+    /// `hint` is the bundled sample photo's base name — resolves straight
+    /// through the manifest so demo photos always produce items.
+    static func recognize(_ image: UIImage, hint: String? = nil) async -> FoodRecognition {
         guard let cg = image.cgImage else {
             return FoodRecognition(items: [], labels: [], usedFallback: false)
+        }
+
+        // Bundled sample photo: manifest lookup beats both paths.
+        if let hint,
+           let sig = loadSignatures().first(where: { $0.name == hint }) {
+            let items = sig.foodIds.compactMap {
+                FoodDatabase.shared.entry(id: $0)?.item(quantity: 1, confidence: 0.9)
+            }
+            if !items.isEmpty {
+                return FoodRecognition(items: items,
+                                       labels: [RecognizedLabel(name: hint, confidence: 0.9)],
+                                       usedFallback: true)
+            }
         }
 
         // 1. Vision classification (off main thread).

@@ -1,5 +1,6 @@
 import SwiftUI
 import UIKit
+import SwiftData
 
 enum AppSheet: Identifiable {
     case memory
@@ -38,6 +39,7 @@ enum AppSheet: Identifiable {
 struct SnapInput: Identifiable {
     let id = UUID()
     let image: UIImage
+    var name: String? = nil   // bundled sample photo base name, if any
 }
 
 /// UI navigation state shared across tabs.
@@ -75,13 +77,26 @@ final class Router {
         case .snapReview:
             app.selectedTab = .fuel
             if let image = SampleMealPhotos.image(named: "chicken_rice_bowl") {
-                sheet = .snapReview(SnapInput(image: image))
+                sheet = .snapReview(SnapInput(image: image, name: "chicken_rice_bowl"))
             }
         case .train: app.selectedTab = .train
         case .logger:
             app.selectedTab = .train
             sheet = .logger(app.context.todaySession ?? app.context.weekSplit.first)
-        case .workoutSummary: app.selectedTab = .train
+        case .workoutSummary:
+            app.selectedTab = .train
+            // Deep link / screenshot route: wrap the most recent workout.
+            var d = FetchDescriptor<Workout>(sortBy: [SortDescriptor(\.date, order: .reverse)])
+            d.fetchLimit = 1
+            if let w = try? app.modelContext.fetch(d).first {
+                let prs = w.exercises.flatMap { ex in
+                    (ex.sets.filter(\.done).max { $0.e1RM < $1.e1RM }).map {
+                        [PRRecord(exerciseName: ex.name, weightKg: $0.weightKg,
+                                  reps: $0.reps, e1RM: $0.e1RM)]
+                    } ?? []
+                }
+                sheet = .workoutSummary(WorkoutSaveResult(workout: w, prs: prs))
+            }
         case .cardioLog: app.selectedTab = .train; sheet = .cardio
         case .sleep: app.selectedTab = .sleep
         case .manualSleep: app.selectedTab = .sleep; sheet = .manualSleep

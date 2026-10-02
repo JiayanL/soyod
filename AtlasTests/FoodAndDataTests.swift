@@ -102,6 +102,34 @@ struct SampleDataSeederTests {
         #expect(asleepMin > 300 && asleepMin < 380)
     }
 
+    @Test func deterministicAcrossSeeds() throws {
+        let now = Date()
+        func seededContext() throws -> CoachContext {
+            let container = try makeContainer()
+            let ctx = container.mainContext
+            SampleDataSeeder().seed(into: ctx, now: now)
+            try ctx.save()
+            return ContextBuilder.build(modelContext: ctx, events: [], now: now)
+        }
+        let a = try seededContext()
+        let b = try seededContext()
+        #expect(a.recoveryScore == b.recoveryScore)
+        #expect(a.lastSleep?.score == b.lastSleep?.score)
+        #expect(a.lastSleep?.asleepMin == b.lastSleep?.asleepMin)
+        #expect(a.eaten.kcal == b.eaten.kcal)
+    }
+
+    @Test func loadSampleDataTwiceKeepsOneCopy() throws {
+        let app = AppState(inMemory: true)
+        app.loadSampleData()
+        let ctx = app.modelContext
+        let once = try ctx.fetchCount(FetchDescriptor<MemoryItem>())
+        app.loadSampleData()
+        let twice = try ctx.fetchCount(FetchDescriptor<MemoryItem>())
+        #expect(once >= 4)
+        #expect(twice == once)
+    }
+
     @Test func contextBuilds() throws {
         let container = try makeContainer()
         let ctx = container.mainContext

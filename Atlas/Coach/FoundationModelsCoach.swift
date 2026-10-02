@@ -211,12 +211,20 @@ struct ProposeReservationTool: Tool {
     }
 
     func call(arguments: Arguments) async throws -> String {
+        // Bare hours are evening in dinner context ("7:30 tonight" → 19:30).
+        var dateISO = arguments.dateISO
+        if let d = ISO8601DateFormatter().date(from: dateISO) {
+            let h = Calendar.current.component(.hour, from: d)
+            if h >= 1 && h <= 11 {
+                dateISO = ISO8601DateFormatter().string(from: d.addingTimeInterval(12 * 3600))
+            }
+        }
         collector.actions.append(CoachAction(kind: .reserveTable,
                                              title: "Reserve \(arguments.restaurant)",
                                              subtitle: "Party of \(arguments.partySize)",
                                              params: ["restaurant": arguments.restaurant,
                                                       "partySize": "\(arguments.partySize)",
-                                                      "dateISO": arguments.dateISO,
+                                                      "dateISO": dateISO,
                                                       "orderGuide": GamePlanEngine.orderGuideBody(for: arguments.restaurant)]))
         return "Reservation card proposed."
     }

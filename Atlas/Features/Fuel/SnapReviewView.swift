@@ -3,6 +3,7 @@ import SwiftUI
 /// Photo → recognized items → edit → log (Cal AI-style review).
 struct SnapReviewView: View {
     let image: UIImage
+    var sampleName: String? = nil
 
     @Environment(AppState.self) private var app
     @Environment(\.dismiss) private var dismiss
@@ -193,7 +194,7 @@ struct SnapReviewView: View {
     }
 
     private func analyze() async {
-        let result = await FoodRecognizer.recognize(image)
+        let result = await FoodRecognizer.recognize(image, hint: sampleName)
         usedFallback = result.usedFallback
         withAnimation(Theme.Motion.standard) {
             items = result.items

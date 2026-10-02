@@ -85,10 +85,8 @@ import UIKit
         for nightsAgo in (1...21).reversed() {
             let isLastNight = nightsAgo == 1
             let wakeDay = today.addingTimeInterval(TimeInterval(-nightsAgo * 86400))
-            // Bed ~23:15 ± noise; wake per duration.
-            var bedtime = wakeDay.addingTimeInterval(-3600 * Double(Int.random(in: 0...0)))
-            // Previous evening 23:00–23:45.
-            bedtime = wakeDay.addingTimeInterval(-8.2 * 3600 - rng.next() * 3600 - 15 * 3600)
+            // Bed previous evening 23:00–23:45; wake per duration.
+            let bedtime = wakeDay.addingTimeInterval(-8.2 * 3600 - rng.next() * 3600 - 15 * 3600)
             let asleepMin: Double
             let eff: Double
             let hrv: Double
@@ -193,7 +191,7 @@ import UIKit
         let photoNames = bundledSamplePhotos()
         for daysAgo in (0...21).reversed() {
             let day = today.addingTimeInterval(TimeInterval(-daysAgo * 86400))
-            let count = Int.random(in: 2...4)
+            let count = 2 + Int(rng.next() * 3)
             // Meal times inside window: 12:00–12:45, 15:00, 18:30, 19:30.
             let slots = [(12, 15), (15, 0), (18, 30), (19, 45)]
             for i in 0..<count {

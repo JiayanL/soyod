@@ -225,6 +225,15 @@ final class RuleBasedCoach: CoachAgent {
         }
         // Generic "work dinner" / "dinner tonight" — look at calendar.
         if containsAny(lower, ["dinner", "restaurant", "eating out", "drinks"]) {
+            // An explicit "at 8" beats the calendar event's start time.
+            if let t = eventTime(from: lower, context: c) {
+                if let ev = c.events.first(where: {
+                    $0.title.lowercased().contains("dinner") || $0.location != nil
+                }) {
+                    return (ev.location?.components(separatedBy: ",").first ?? ev.title, t)
+                }
+                return ("Dinner", t)
+            }
             if let ev = c.events.first(where: {
                 $0.title.lowercased().contains("dinner") || $0.location != nil
             }) {
@@ -240,6 +249,9 @@ final class RuleBasedCoach: CoachAgent {
     private func eventTime(from lower: String, context c: CoachContext) -> Date? {
         // "at 7:30", "at 7pm"
         let cal = Calendar.current
+        // Evening context means a bare hour is PM ("dinner at 7", "drinks at 9").
+        let evening = lower.contains("tonight") || lower.contains("dinner")
+            || lower.contains("drinks") || lower.contains("evening")
         if let m = lower.range(of: #"(\d{1,2})(:(\d{2}))?\s*(pm|am)"#, options: .regularExpression) {
             let s = String(lower[m])
             let pm = s.contains("pm")
@@ -251,10 +263,15 @@ final class RuleBasedCoach: CoachAgent {
                 comps.hour = hour; comps.minute = min
                 return cal.date(from: comps)
             }
-        } else if let m = lower.range(of: #"at (\d{1,2}):(\d{2})"#, options: .regularExpression) {
-            let digits = String(lower[m]).dropFirst(3).split(separator: ":")
+        } else if let m = lower.range(of: #"at (\d{1,2})(:(\d{2}))?"#, options: .regularExpression) {
+            let s = String(lower[m])
+            let digits = s.components(separatedBy: CharacterSet.decimalDigits.inverted).filter { !$0.isEmpty }
+            guard let h = Int(digits[0]) else { return nil }
             var comps = cal.dateComponents([.year, .month, .day], from: c.now)
-            comps.hour = Int(digits[0]); comps.minute = Int(digits.last ?? "")
+            var hour = h
+            if evening && hour >= 1 && hour <= 11 { hour += 12 }
+            comps.hour = hour
+            comps.minute = digits.count > 1 ? Int(digits[1]) : 0
             return cal.date(from: comps)
         }
         return nil
@@ -308,7 +325,9 @@ final class RuleBasedCoach: CoachAgent {
                              context c: CoachContext, memories: [MemoryDraft]) -> CoachReply {
         var reply = CoachReply(text: "", memoryWrites: memories)
         let timeStr = Fmt.clock(restaurant.time)
-        let lunchKcal = Int((c.remaining.kcal * 0.35 / 10).rounded() * 10)
+        // Cap at what's left minus a ~600 dinner reserve; never negative.
+        let lunchKcal = max(0, min(Int((c.remaining.kcal * 0.35 / 10).rounded() * 10),
+                                   Int(c.remaining.kcal) - 600))
         let lunchProtein = max(40, c.targets.proteinG / 3)
         let windowNote: String
         if let w = c.eatingWindow {
@@ -345,8 +364,8 @@ final class RuleBasedCoach: CoachAgent {
 
     private func orderReply(context c: CoachContext, memories: [MemoryDraft]) -> CoachReply {
         var reply = CoachReply(text: "", memoryWrites: memories)
-        let kcal = Int(c.remaining.kcal * 0.4)
-        let protein = Int(c.remaining.protein * 0.4)
+        let kcal = max(0, Int(c.remaining.kcal * 0.4))
+        let protein = max(0, Int(c.remaining.protein * 0.4))
         reply.text = "You have \(Fmt.kcal(c.remaining.kcal)) kcal and \(Int(c.remaining.protein)) g protein left today. Order something in the \(Fmt.kcal(Double(kcal))) kcal, \(protein)+ g protein range — a double-protein bowl does it."
         reply.actions.append(CoachAction(kind: .orderMeal, title: "Order lunch",
                                          subtitle: "~\(Fmt.kcal(Double(kcal))) kcal · \(protein)+ g protein",

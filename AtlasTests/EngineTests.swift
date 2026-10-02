@@ -136,6 +136,45 @@ struct ScoreEngineTests {
         // wake = event - 75min, bed = wake - 480 - 15 = event - 570 min.
         #expect(abs(bed.timeIntervalSince(ev.start) + 570 * 60) < 1)
     }
+
+    @Test func bedtimeFallsTonight() throws {
+        // 2026-10-01 15:30 local — the "9:05 AM lights out" regression.
+        var cal = Calendar.current
+        cal.timeZone = .current
+        let now = cal.date(bySettingHour: 15, minute: 30, second: 0, of: Date())!
+        let tomorrow = cal.date(byAdding: .day, value: 1, to: cal.startOfDay(for: now))!
+
+        // No events tomorrow → default 7:00 wake → ~22:45 tonight.
+        let bed = ScoreEngine.recommendedBedtime(firstEventTomorrow: nil, needMin: 480,
+                                                 now: now, calendar: cal)
+        #expect(bed > now)
+        let hour = cal.component(.hour, from: bed)
+        #expect(hour >= 18 || hour <= 1)
+
+        // A *today* evening event passed in by mistake (the ContextBuilder bug):
+        // must not drag bedtime into the morning — falls back to 7:00-wake math.
+        let todayDinner = CalendarEventInfo(
+            id: "d", title: "Dinner",
+            start: cal.date(bySettingHour: 19, minute: 30, second: 0, of: now)!,
+            end: cal.date(bySettingHour: 21, minute: 30, second: 0, of: now)!)
+        let guarded = ScoreEngine.recommendedBedtime(firstEventTomorrow: todayDinner,
+                                                     needMin: 480, now: now, calendar: cal)
+        #expect(guarded > now)
+        let guardedHour = cal.component(.hour, from: guarded)
+        #expect(guardedHour >= 18 || guardedHour <= 1)
+        #expect(cal.isDate(guarded, inSameDayAs: now) || cal.isDate(guarded, inSameDayAs: tomorrow))
+
+        // A real tomorrow-morning event still shifts bedtime earlier.
+        let standup = CalendarEventInfo(
+            id: "s", title: "Standup",
+            start: cal.date(bySettingHour: 9, minute: 0, second: 0, of: tomorrow)!,
+            end: cal.date(bySettingHour: 9, minute: 30, second: 0, of: tomorrow)!)
+        let early = ScoreEngine.recommendedBedtime(firstEventTomorrow: standup,
+                                                   needMin: 480, now: now, calendar: cal)
+        #expect(early > now)
+        #expect(cal.isDate(early, inSameDayAs: now))
+        #expect(cal.component(.hour, from: early) >= 18 || cal.component(.hour, from: early) <= 1)
+    }
 }
 
 @MainActor

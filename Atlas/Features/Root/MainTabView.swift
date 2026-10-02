@@ -61,7 +61,7 @@ struct SheetHost: View {
             SnapPickerSheet()
                 .presentationCornerRadius(Theme.Radius.sheet)
         case .snapReview(let input):
-            SnapReviewView(image: input.image)
+            SnapReviewView(image: input.image, sampleName: input.name)
                 .presentationCornerRadius(Theme.Radius.sheet)
                 .interactiveDismissDisabled()
         case .mealDetail(let id):
