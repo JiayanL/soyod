@@ -146,14 +146,17 @@ enum FoodRecognizer {
     private static func loadSignatures() -> [SampleSignature] {
         if let signatures { return signatures }
         var result: [SampleSignature] = []
+        // xcodegen flattens resources: try the subdirectory first, then the root.
         let manifestURL = Bundle.main.url(forResource: "manifest", withExtension: "json",
                                           subdirectory: "SampleMeals")
+            ?? Bundle.main.url(forResource: "manifest", withExtension: "json")
         let manifest = manifestURL.flatMap {
             try? JSONDecoder().decode([String: [String]].self, from: Data(contentsOf: $0))
         } ?? [:]
         for (name, foodIds) in manifest {
             guard let url = Bundle.main.url(forResource: name, withExtension: "jpg",
-                                            subdirectory: "SampleMeals"),
+                                            subdirectory: "SampleMeals")
+                    ?? Bundle.main.url(forResource: name, withExtension: "jpg"),
                   let data = try? Data(contentsOf: url),
                   let img = UIImage(data: data)?.cgImage else { continue }
             result.append(SampleSignature(name: name, histogram: histogram(img), foodIds: foodIds))
