@@ -20,12 +20,19 @@ struct FoodItemsEditor: View {
                             .foregroundStyle(Theme.Palette.textPrimary)
                             .lineLimit(2)
                             .fixedSize(horizontal: false, vertical: true)
-                        Text("\(Int(item.kcal.rounded())) kcal · \(Int(item.protein.rounded()))P \(Int(item.carbs.rounded()))C \(Int(item.fat.rounded()))F")
-                            .textStyle(.footnote)
-                            .foregroundStyle(Theme.Palette.textSecondary)
-                            .monospacedDigit()
+                        let kcal = "\(Int(item.kcal.rounded())) kcal"
+                        let macros = "\(Int(item.protein.rounded()))P \(Int(item.carbs.rounded()))C \(Int(item.fat.rounded()))F"
+                        ViewThatFits(in: .horizontal) {
+                            Text("\(kcal) · \(macros)").lineLimit(1)
+                            VStack(alignment: .leading, spacing: 0) {
+                                Text(kcal)
+                                Text(macros)
+                            }
                             .lineLimit(1)
-                            .minimumScaleFactor(0.85)
+                        }
+                        .textStyle(.footnote)
+                        .foregroundStyle(Theme.Palette.textSecondary)
+                        .monospacedDigit()
                         HStack(spacing: Theme.Space.xxs) {
                             Text(item.servingDescription)
                             if showsConfidence, let c = item.confidence {
