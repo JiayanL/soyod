@@ -1,7 +1,7 @@
 import SwiftUI
 
 /// Wrapping horizontal layout for chips.
-struct FlowLayout: Layout {
+nonisolated struct FlowLayout: Layout {
     var spacing: CGFloat
 
     @MainActor init(spacing: CGFloat = Theme.Space.xs) {

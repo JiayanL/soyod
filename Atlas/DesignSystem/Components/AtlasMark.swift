@@ -2,7 +2,7 @@ import SwiftUI
 
 /// The Atlas mark: a globe resting on the titan's shoulders (DESIGN §1).
 /// Proportions match scripts/render-icon.swift (unit square).
-struct AtlasMarkShape: Shape {
+nonisolated struct AtlasMarkShape: Shape {
     var part: Part = .both
     enum Part { case globe, shoulders, both }
 
