@@ -1,0 +1,4 @@
+// Shared signing settings. Set DEVELOPMENT_TEAM locally via
+// Config/Signing.local.xcconfig (gitignored) — see docs/RELEASE.md.
+DEVELOPMENT_TEAM =
+#include? "Signing.local.xcconfig"
