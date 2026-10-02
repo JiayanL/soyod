@@ -193,3 +193,21 @@ struct MemoryExtractorTests {
         #expect(MemoryExtractor.extract(from: "what's for lunch").isEmpty)
     }
 }
+
+@MainActor
+struct LastReplyEngineTests {
+    private struct ThrowingCoach: CoachAgent {
+        var displayName: String { "Fake primary" }
+        struct Boom: Error {}
+        func respond(to text: String, history: [ChatTurn], context: CoachContext) async throws -> CoachReply {
+            throw Boom()
+        }
+    }
+
+    @Test func failingPrimaryFlipsLabel() async throws {
+        let app = AppState(inMemory: true, coach: ThrowingCoach())
+        #expect(app.lastReplyEngine == nil)
+        await app.send("I have dinner at Nobu at 7:30 tonight")
+        #expect(app.lastReplyEngine?.name == "Atlas on-device")
+    }
+}

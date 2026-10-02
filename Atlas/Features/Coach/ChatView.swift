@@ -60,7 +60,7 @@ struct ChatView: View {
             ToolbarItem(placement: .principal) {
                 VStack(spacing: 0) {
                     Text("Atlas").textStyle(.headline).foregroundStyle(Theme.Palette.textPrimary)
-                    Text(app.engineStatus.name)
+                    Text((app.lastReplyEngine ?? app.engineStatus).name)
                         .textStyle(.micro)
                         .foregroundStyle(Theme.Palette.textTertiary)
                 }

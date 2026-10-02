@@ -70,7 +70,7 @@ struct SnapReviewView: View {
 
     private var photo: some View {
         Color.clear
-            .frame(height: 340)
+            .containerRelativeFrame(.vertical) { h, _ in min(340, h * 0.34) }
             .overlay {
                 Image(uiImage: image)
                     .resizable()
@@ -79,13 +79,15 @@ struct SnapReviewView: View {
             .clipped()
             .overlay(alignment: .top) {
                 if phase == .analyzing && !reduceMotion {
-                    LinearGradient(colors: [.clear, Theme.Palette.accentFill.opacity(0.55), .clear], startPoint: .top, endPoint: .bottom)
-                        .frame(height: 90)
-                        .offset(y: scan * 300 - 45)
-                        .blendMode(.plusLighter)
-                        .onAppear {
-                            withAnimation(.easeInOut(duration: 1.3).repeatForever(autoreverses: true)) { scan = 1 }
-                        }
+                    GeometryReader { g in
+                        LinearGradient(colors: [.clear, Theme.Palette.accentFill.opacity(0.55), .clear], startPoint: .top, endPoint: .bottom)
+                            .frame(height: 90)
+                            .offset(y: scan * (g.size.height - 40) - 45)
+                            .blendMode(.plusLighter)
+                    }
+                    .onAppear {
+                        withAnimation(.easeInOut(duration: 1.3).repeatForever(autoreverses: true)) { scan = 1 }
+                    }
                 }
             }
             .overlay(alignment: .bottom) {
@@ -151,13 +153,9 @@ struct SnapReviewView: View {
                         .fixedSize(horizontal: false, vertical: true)
                 }
                 if fixing { fixField.transition(.opacity) }
-                ScrollView {
-                    FoodItemsEditor(items: $items, showsConfidence: true)
-                        .atlasCard()
-                        .padding(.bottom, Theme.Space.m)
-                }
-                .frame(maxHeight: 340)
-                .scrollIndicators(.hidden)
+                FoodItemsEditor(items: $items, showsConfidence: false)
+                    .atlasCard()
+                    .padding(.bottom, Theme.Space.m)
                 FormGroup(title: "Meal") { MealTypePicker(selection: $mealType) }
             }
         }

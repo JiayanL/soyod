@@ -98,7 +98,7 @@ struct WorkoutSummaryView: View {
     private func stats(_ w: Workout, units: UnitSystem) -> [(label: String, value: String)] {
         var out: [(label: String, value: String)] = [("Time", Fmt.duration(seconds: w.durationSec)), ("Load", "\(Int(w.load))")]
         if w.kind == .strength {
-            out.append(("Volume", Fmt.weight(kg: w.volumeKg, units: units)))
+            if w.volumeKg > 0 { out.append(("Volume", Fmt.weight(kg: w.volumeKg, units: units))) }
             out.append(("Sets", "\(w.exercises.flatMap(\.sets).count)"))
         } else {
             if let d = w.distanceM, d > 0 { out.append(("Distance", Fmt.distance(m: d, units: units))) }

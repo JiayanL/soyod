@@ -22,6 +22,8 @@ final class AppState {
     var context = CoachContext(now: AppClock.now)
     var directives: [Directive] = []
     var engineStatus = CoachRouter.engineStatus
+    /// Which engine produced the last reply; nil until the first send.
+    var lastReplyEngine: CoachEngineStatus?
     var lastImport: ImportSummary?
     var isCoachThinking = false
     var selectedTab: AppTab = .coach
@@ -34,8 +36,9 @@ final class AppState {
 
     private var coach: any CoachAgent = CoachRouter.current()
 
-    init(inMemory: Bool = false, launch: LaunchOptions = LaunchOptions()) {
+    init(inMemory: Bool = false, launch: LaunchOptions = LaunchOptions(), coach: (any CoachAgent)? = nil) {
         self.launch = launch
+        if let coach { self.coach = coach }
         let schema = Schema([
             UserProfile.self, Goal.self, Measurement.self, PlanSnapshot.self,
             MealEntry.self, Workout.self, SleepSession.self, DailyMetric.self,
@@ -94,12 +97,12 @@ final class AppState {
         let reply: CoachReply
         do {
             reply = try await coach.respond(to: text, history: history, context: context)
-            engineStatus = CoachRouter.engineStatus   // configured engine answered
+            lastReplyEngine = CoachRouter.engineStatus   // configured engine answered
         } catch {
             reply = (try? await RuleBasedCoach().respond(to: text, history: history, context: context))
                 ?? CoachReply(text: "Something glitched — try that again.")
-            engineStatus = CoachEngineStatus(name: "Atlas on-device",
-                                             detail: "Rule-based coach answered (primary engine failed).")
+            lastReplyEngine = CoachEngineStatus(name: "Atlas on-device",
+                                                detail: "Rule-based coach answered (primary engine failed).")
         }
 
         // Apply memory writes.
@@ -465,6 +468,7 @@ final class AppState {
         // Idempotent: wipe any existing data before re-seeding.
         let hasAny = ((try? modelContext.fetchCount(FetchDescriptor<UserProfile>())) ?? 0) > 0
         if hasAny { resetAll() }
+        lastReplyEngine = nil
         SampleDataSeeder().seed(into: modelContext, now: AppClock.now)
         try? modelContext.save()
         refresh()
@@ -481,6 +485,7 @@ final class AppState {
         wipe(SleepSession.self); wipe(DailyMetric.self); wipe(CoachMessage.self)
         wipe(MemoryItem.self)
         try? modelContext.save()
+        lastReplyEngine = nil
         refresh()
     }
 
