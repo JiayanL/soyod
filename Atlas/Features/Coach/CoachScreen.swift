@@ -5,14 +5,15 @@ struct CoachScreen: View {
     @Environment(AppState.self) private var app
     @Environment(Router.self) private var router
     @Query(sort: \CoachMessage.date, order: .reverse) private var messages: [CoachMessage]
+    @State private var compact = false
 
     var body: some View {
         @Bindable var router = router
         NavigationStack(path: $router.coachPath) {
             ScrollView {
-                VStack(alignment: .leading, spacing: Theme.Space.section) {
+                VStack(alignment: .leading, spacing: compact ? Theme.Space.l : Theme.Space.section) {
                     CoachHeader()
-                    PillarRingsRow()
+                    PillarRingsRow(diameter: compact ? 72 : 92)
                     GamePlanCard()
                     ActionCarousel()
                     WhyTodayCard()
@@ -26,6 +27,13 @@ struct CoachScreen: View {
                     .ignoresSafeArea()
             }
             .atlasScreenBackground()
+            .background {
+                GeometryReader { geo in
+                    Color.clear
+                        .onAppear { compact = geo.size.height < 700 }
+                        .onChange(of: geo.size.height) { _, h in compact = h < 700 }
+                }
+            }
             .safeAreaInset(edge: .bottom) {
                 TalkToAtlasBar { router.openChat() }
                     .gutter()
@@ -141,6 +149,7 @@ private struct CoachHeader: View {
 
 struct PillarRingsRow: View {
     @Environment(AppState.self) private var app
+    var diameter: CGFloat = 92
 
     var body: some View {
         let ctx = app.context
@@ -149,7 +158,7 @@ struct PillarRingsRow: View {
             ring(label: "Recovery", value: ctx.recoveryScore, color: ctx.recoveryScore.map(Theme.Palette.score) ?? Theme.Palette.recovery, tab: .sleep)
             ring(label: "Sleep", value: ctx.lastSleep?.score, color: Theme.Palette.sleep, tab: .sleep)
             Button { app.selectedTab = .fuel } label: {
-                PillarRing(label: "Fuel", valueText: "\(Int((fuelPct * 100).rounded()))", progress: fuelPct, color: Theme.Palette.fuel)
+                PillarRing(label: "Fuel", valueText: "\(Int((fuelPct * 100).rounded()))", progress: fuelPct, color: Theme.Palette.fuel, diameter: diameter)
             }
             .buttonStyle(.plain)
             .frame(maxWidth: .infinity)
@@ -159,7 +168,7 @@ struct PillarRingsRow: View {
 
     private func ring(label: String, value: Int?, color: Color, tab: AppTab) -> some View {
         Button { app.selectedTab = tab } label: {
-            PillarRing(label: label, valueText: value.map(String.init) ?? "–", unit: value == nil ? "" : "%", progress: Double(value ?? 0) / 100, color: color)
+            PillarRing(label: label, valueText: value.map(String.init) ?? "–", unit: value == nil ? "" : "%", progress: Double(value ?? 0) / 100, color: color, diameter: diameter)
         }
         .buttonStyle(.plain)
         .frame(maxWidth: .infinity)

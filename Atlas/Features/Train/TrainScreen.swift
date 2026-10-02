@@ -20,6 +20,22 @@ struct TrainScreen: View {
                 .padding(.bottom, Theme.Space.xxxl)
             }
             .atlasScreenBackground()
+            .safeAreaInset(edge: .bottom) {
+                if let session = app.context.todaySession {
+                    Button {
+                        router.sheet = .logger(session)
+                    } label: {
+                        Text(app.context.completedToday.isEmpty ? "Start \(session.title)" : "Log another session")
+                            .lineLimit(1)
+                    }
+                    .buttonStyle(.atlasPrimary)
+                    .accessibilityIdentifier("startWorkout")
+                    .gutter()
+                    .padding(.top, Theme.Space.s)
+                    .padding(.bottom, Theme.Space.xs)
+                    .bottomBarScrim()
+                }
+            }
             .navigationTitle("Train")
             .toolbar {
                 ToolbarItemGroup(placement: .topBarTrailing) {
@@ -113,16 +129,6 @@ private struct TodayHero: View {
                         }
                     }
                 }
-                Button {
-                    router.sheet = .logger(session)
-                } label: {
-                    Text(done ? "Log another session" : "Start workout")
-                        .textStyle(.headline)
-                        .tracking(1)
-                        .textCase(.uppercase)
-                }
-                .buttonStyle(.atlasPrimary)
-                .accessibilityIdentifier("startWorkout")
             } else {
                 Text("REST DAY")
                     .textStyle(.display)

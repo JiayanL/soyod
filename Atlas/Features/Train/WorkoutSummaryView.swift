@@ -21,7 +21,7 @@ struct WorkoutSummaryView: View {
                         .changeEffect(.spray(origin: .center) {
                             Image(systemName: "star.fill").foregroundStyle(Theme.Palette.accentFill)
                         }, value: celebrate, isEnabled: !reduceMotion)
-                        .padding(.top, Theme.Space.xxl)
+                        .padding(.top, Theme.Space.l)
                     Text(result.prs.isEmpty ? "Session logged." : (result.prs.count == 1 ? "New personal record." : "\(result.prs.count) new personal records."))
                         .textStyle(.display)
                         .foregroundStyle(Theme.Palette.textPrimary)
@@ -29,22 +29,29 @@ struct WorkoutSummaryView: View {
                     Text(w.title)
                         .textStyle(.body)
                         .foregroundStyle(Theme.Palette.textSecondary)
+                    Text(coachNote)
+                        .textStyle(.callout)
+                        .foregroundStyle(Theme.Palette.textPrimary)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .padding(.top, Theme.Space.xs)
                 }
-                LazyVGrid(columns: [GridItem(.flexible(), spacing: Theme.Space.s), GridItem(.flexible(), spacing: Theme.Space.s)], spacing: Theme.Space.s) {
-                    MetricTile(symbol: "clock", label: "Duration", value: Fmt.duration(seconds: w.durationSec), color: Theme.Palette.textSecondary)
-                    MetricTile(symbol: "flame.fill", label: "Load", value: "\(Int(w.load))", color: Theme.Palette.train)
-                    if w.kind == .strength {
-                        MetricTile(symbol: "scalemass", label: "Volume", value: Fmt.weight(kg: w.volumeKg, units: units), color: Theme.Palette.accent)
-                        MetricTile(symbol: "number", label: "Sets", value: "\(w.exercises.flatMap(\.sets).count)", color: Theme.Palette.sleep)
-                    } else {
-                        if let d = w.distanceM, d > 0 {
-                            MetricTile(symbol: "point.topleft.down.to.point.bottomright.curvepath", label: "Distance", value: Fmt.distance(m: d, units: units), color: Theme.Palette.recovery)
+                HStack(alignment: .top, spacing: 0) {
+                    ForEach(Array(stats(w, units: units).enumerated()), id: \.offset) { i, stat in
+                        if i > 0 { Rectangle().fill(Theme.Palette.hairline).frame(width: 1).padding(.vertical, Theme.Space.xxs) }
+                        VStack(alignment: .leading, spacing: Theme.Space.xxs) {
+                            MicroLabel(stat.label)
+                            Text(stat.value)
+                                .textStyle(.metricS)
+                                .foregroundStyle(Theme.Palette.textPrimary)
+                                .lineLimit(1)
+                                .minimumScaleFactor(0.7)
                         }
-                        if let p = w.paceSecPerKm {
-                            MetricTile(symbol: "speedometer", label: "Pace", value: Fmt.pace(secPerKm: p, units: units), color: Theme.Palette.sleep)
-                        }
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.leading, i > 0 ? Theme.Space.s : 0)
+                        .accessibilityElement(children: .combine)
                     }
                 }
+                .atlasCard()
                 if !result.prs.isEmpty {
                     VStack(alignment: .leading, spacing: 0) {
                         MicroLabel("Personal records", color: Theme.Palette.accent)
@@ -67,10 +74,6 @@ struct WorkoutSummaryView: View {
                     }
                     .atlasCard()
                 }
-                Text(coachNote)
-                    .textStyle(.callout)
-                    .foregroundStyle(Theme.Palette.textSecondary)
-                    .fixedSize(horizontal: false, vertical: true)
             }
             .gutter()
             .padding(.bottom, Theme.Space.xxxl)
@@ -81,13 +84,27 @@ struct WorkoutSummaryView: View {
                 .buttonStyle(.atlasPrimary)
                 .accessibilityIdentifier("summaryDone")
                 .gutter()
+                .padding(.top, Theme.Space.s)
                 .padding(.bottom, Theme.Space.xs)
+                .bottomBarScrim()
         }
         .sensoryFeedback(result.prs.isEmpty ? .success : .increase, trigger: celebrate)
         .task {
             try? await Task.sleep(for: .milliseconds(350))
             celebrate += 1
         }
+    }
+
+    private func stats(_ w: Workout, units: UnitSystem) -> [(label: String, value: String)] {
+        var out: [(label: String, value: String)] = [("Time", Fmt.duration(seconds: w.durationSec)), ("Load", "\(Int(w.load))")]
+        if w.kind == .strength {
+            out.append(("Volume", Fmt.weight(kg: w.volumeKg, units: units)))
+            out.append(("Sets", "\(w.exercises.flatMap(\.sets).count)"))
+        } else {
+            if let d = w.distanceM, d > 0 { out.append(("Distance", Fmt.distance(m: d, units: units))) }
+            if let p = w.paceSecPerKm { out.append(("Pace", Fmt.pace(secPerKm: p, units: units))) }
+        }
+        return out
     }
 
     private var coachNote: String {

@@ -28,7 +28,16 @@ struct ProgressScreen: View {
             .atlasScreenBackground()
             .navigationTitle("Progress")
             .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
+                ToolbarItemGroup(placement: .topBarTrailing) {
+                    if app.context.goal != nil {
+                        Button {
+                            router.sheet = .measurement
+                        } label: {
+                            Image(systemName: "plus").icon(Theme.Icon.regular)
+                        }
+                        .accessibilityLabel("Log measurement")
+                        .accessibilityIdentifier("logMeasurement")
+                    }
                     Button {
                         router.sheet = .settings
                     } label: {
@@ -36,21 +45,6 @@ struct ProgressScreen: View {
                     }
                     .accessibilityLabel("Settings")
                     .accessibilityIdentifier("settingsButton")
-                }
-            }
-            .safeAreaInset(edge: .bottom) {
-                if app.context.goal != nil {
-                    Button {
-                        router.sheet = .measurement
-                    } label: {
-                        Label("Log measurement", systemImage: "plus")
-                    }
-                    .buttonStyle(.atlasPrimary)
-                    .accessibilityIdentifier("logMeasurement")
-                    .gutter()
-                    .padding(.top, Theme.Space.s)
-                    .padding(.bottom, Theme.Space.xs)
-                    .bottomBarScrim()
                 }
             }
         }
@@ -152,6 +146,8 @@ private struct ProjectionChart: View {
                     key("Actual", Theme.Palette.accent, dashed: false)
                     key("Projected", Theme.Palette.textSecondary, dashed: true)
                 }
+                .lineLimit(1)
+                .fixedSize()
             }
             Chart {
                 ForEach(actual) { p in

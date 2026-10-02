@@ -149,6 +149,47 @@ struct OnbPage<Content: View>: View {
 
 // MARK: - Welcome
 
+/// Three pillar rings (recovery, sleep, fuel) orbiting the Atlas globe.
+private struct WelcomeOrbit: View {
+    var appeared: Bool
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+    private let rings: [(color: Color, fill: Double, speed: Double)] = [
+        (Theme.Palette.recovery, 0.82, 9),
+        (Theme.Palette.sleep, 0.64, -6),
+        (Theme.Palette.fuel, 0.9, 4)
+    ]
+
+    var body: some View {
+        TimelineView(.animation(minimumInterval: 1 / 30, paused: reduceMotion)) { timeline in
+            let t = reduceMotion ? 0 : timeline.date.timeIntervalSinceReferenceDate
+            GeometryReader { geo in
+                let side = min(geo.size.width, geo.size.height)
+                let stroke = side * 0.055
+                ZStack {
+                    ForEach(rings.indices, id: \.self) { i in
+                        let inset = CGFloat(i) * stroke * 1.9 + stroke / 2
+                        Circle()
+                            .stroke(rings[i].color.opacity(0.14), lineWidth: stroke)
+                            .padding(inset)
+                        Circle()
+                            .trim(from: 0, to: appeared ? rings[i].fill : 0)
+                            .stroke(rings[i].color, style: StrokeStyle(lineWidth: stroke, lineCap: .round))
+                            .rotationEffect(.degrees(-90 + (t * rings[i].speed).truncatingRemainder(dividingBy: 360)))
+                            .padding(inset)
+                    }
+                    Circle()
+                        .fill(Theme.Palette.accentFill)
+                        .frame(width: side * 0.16, height: side * 0.16)
+                        .shadow(color: Theme.Palette.accentFill.opacity(0.6), radius: side * 0.08)
+                }
+                .frame(width: side, height: side)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+            }
+        }
+        .accessibilityHidden(true)
+    }
+}
+
 private struct WelcomeStep: View {
     let onStart: () -> Void
     let onSample: () -> Void
@@ -158,11 +199,20 @@ private struct WelcomeStep: View {
     var body: some View {
         ZStack {
             VStack(alignment: .leading, spacing: 0) {
-                AtlasMark(size: 56, glow: true)
-                    .padding(.top, Theme.Space.huge)
-                Spacer(minLength: Theme.Space.xxl)
+                Text("ATLAS")
+                    .textStyle(.headline)
+                    .tracking(6)
+                    .foregroundStyle(Theme.Palette.textPrimary)
+                    .padding(.top, Theme.Space.l)
+                    .accessibilityLabel("Atlas")
+                    .accessibilityAddTraits(.isHeader)
+                Spacer(minLength: Theme.Space.l)
+                WelcomeOrbit(appeared: appeared)
+                    .frame(minHeight: 120, maxHeight: 240)
+                    .frame(maxWidth: .infinity)
+                Spacer(minLength: Theme.Space.l)
                 VStack(alignment: .leading, spacing: Theme.Space.m) {
-                    MicroLabel("Atlas · Your fitness concierge", color: Theme.Palette.accent)
+                    MicroLabel("Your fitness concierge", color: Theme.Palette.accent)
                     Text("One goal.\nEvery meal, rep and night of sleep pointed at it.")
                         .textStyle(.display)
                         .foregroundStyle(Theme.Palette.textPrimary)
