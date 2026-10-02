@@ -167,6 +167,12 @@ nonisolated enum ScoreEngine {
         if bed <= now || !tonight {
             bed = defaultWake().addingTimeInterval(-Double(needMin) * 60 - 15 * 60)
         }
+        // Even the fallback can be in the past (late night, big need) —
+        // then the honest answer is "as soon as possible".
+        if bed <= now {
+            let q = 15.0 * 60
+            bed = Date(timeIntervalSince1970: (now.timeIntervalSince1970 / q).rounded(.up) * q)
+        }
         return bed
     }
 

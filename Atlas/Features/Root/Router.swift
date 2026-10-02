@@ -89,11 +89,18 @@ final class Router {
             var d = FetchDescriptor<Workout>(sortBy: [SortDescriptor(\.date, order: .reverse)])
             d.fetchLimit = 1
             if let w = try? app.modelContext.fetch(d).first {
-                let prs = w.exercises.flatMap { ex in
-                    (ex.sets.filter(\.done).max { $0.e1RM < $1.e1RM }).map {
-                        [PRRecord(exerciseName: ex.name, weightKg: $0.weightKg,
-                                  reps: $0.reps, e1RM: $0.e1RM)]
-                    } ?? []
+                // Same PR detection as save: exercise best e1RM vs all earlier workouts.
+                let all = (try? app.modelContext.fetch(FetchDescriptor<Workout>())) ?? []
+                let prior = all.filter { $0.date < w.date }
+                let prs = w.exercises.compactMap { ex -> PRRecord? in
+                    guard let best = ex.sets.filter(\.done).max(by: { $0.e1RM < $1.e1RM }) else { return nil }
+                    let priorBest = prior.flatMap { pw in
+                        pw.exercises.filter { $0.exerciseId == ex.exerciseId }
+                            .flatMap(\.sets).filter(\.done).map(\.e1RM)
+                    }.max() ?? 0
+                    guard best.e1RM > priorBest else { return nil }
+                    return PRRecord(exerciseName: ex.name, weightKg: best.weightKg,
+                                    reps: best.reps, e1RM: best.e1RM)
                 }
                 sheet = .workoutSummary(WorkoutSaveResult(workout: w, prs: prs))
             }

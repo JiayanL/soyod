@@ -246,12 +246,17 @@ final class RuleBasedCoach: CoachAgent {
         return nil
     }
 
+    /// Evening context words that turn a bare hour into PM.
+    nonisolated static func hasEveningContext(_ lower: String) -> Bool {
+        lower.contains("tonight") || lower.contains("dinner")
+            || lower.contains("drinks") || lower.contains("evening")
+    }
+
     private func eventTime(from lower: String, context c: CoachContext) -> Date? {
         // "at 7:30", "at 7pm"
         let cal = Calendar.current
         // Evening context means a bare hour is PM ("dinner at 7", "drinks at 9").
-        let evening = lower.contains("tonight") || lower.contains("dinner")
-            || lower.contains("drinks") || lower.contains("evening")
+        let evening = Self.hasEveningContext(lower)
         if let m = lower.range(of: #"(\d{1,2})(:(\d{2}))?\s*(pm|am)"#, options: .regularExpression) {
             let s = String(lower[m])
             let pm = s.contains("pm")

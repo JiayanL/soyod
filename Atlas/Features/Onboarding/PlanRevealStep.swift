@@ -71,9 +71,9 @@ struct PlanRevealStep: View {
                 Text("kcal").textStyle(.headline).foregroundStyle(Theme.Palette.textSecondary)
             }
             HStack(spacing: Theme.Space.m) {
-                MacroBar(label: "Protein", value: Double(p.targets.proteinG), target: Double(p.targets.proteinG), color: Theme.Palette.fuel)
-                MacroBar(label: "Carbs", value: Double(p.targets.carbsG), target: Double(p.targets.carbsG), color: Theme.Palette.sleep)
-                MacroBar(label: "Fat", value: Double(p.targets.fatG), target: Double(p.targets.fatG), color: Theme.Palette.recovery)
+                MacroBar(label: "Protein", value: Double(p.targets.proteinG), target: Double(p.targets.proteinG), color: Theme.Palette.fuel, targetOnly: true)
+                MacroBar(label: "Carbs", value: Double(p.targets.carbsG), target: Double(p.targets.carbsG), color: Theme.Palette.sleep, targetOnly: true)
+                MacroBar(label: "Fat", value: Double(p.targets.fatG), target: Double(p.targets.fatG), color: Theme.Palette.recovery, targetOnly: true)
             }
         }
         .atlasCard(padding: Theme.Space.hero)

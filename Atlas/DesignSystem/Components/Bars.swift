@@ -7,6 +7,8 @@ struct MacroBar: View {
     let target: Double
     var unit: String = "g"
     let color: Color
+    /// Plan/target contexts: show just the target ("160 g"), not "160 / 160g".
+    var targetOnly = false
 
     @State private var shown: Double = 0
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
@@ -20,11 +22,11 @@ struct MacroBar: View {
                 .foregroundStyle(Theme.Palette.textSecondary)
                 .lineLimit(1)
             HStack(alignment: .firstTextBaseline, spacing: 2) {
-                Text(Int(value.rounded()), format: .number)
+                Text(Int(targetOnly ? target.rounded() : value.rounded()), format: .number)
                     .textStyle(.metricM)
                     .foregroundStyle(Theme.Palette.textPrimary)
                     .contentTransition(.numericText())
-                Text("/ \(Int(target.rounded()))\(unit)")
+                Text(targetOnly ? unit : "/ \(Int(target.rounded()))\(unit)")
                     .textStyle(.footnote)
                     .foregroundStyle(Theme.Palette.textTertiary)
             }

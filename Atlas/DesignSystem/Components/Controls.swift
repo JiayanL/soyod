@@ -17,6 +17,8 @@ struct SegmentedPills<Value: Hashable>: View {
                         .textStyle(.footnote)
                         .fontWeight(.semibold)
                         .foregroundStyle(isOn ? Theme.Palette.onPrimary : Theme.Palette.textSecondary)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.7)
                         .padding(.horizontal, Theme.Space.s)
                         .frame(minHeight: 32)
                         .frame(maxWidth: .infinity)

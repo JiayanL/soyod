@@ -174,6 +174,14 @@ struct ScoreEngineTests {
         #expect(early > now)
         #expect(cal.isDate(early, inSameDayAs: now))
         #expect(cal.component(.hour, from: early) >= 18 || cal.component(.hour, from: early) <= 1)
+
+        // 23:30 + 9h need: even the fallback lands in the past → "now", rounded up to :15.
+        let late = cal.date(bySettingHour: 23, minute: 32, second: 0, of: now)!
+        let asap = ScoreEngine.recommendedBedtime(firstEventTomorrow: nil,
+                                                  needMin: 540, now: late, calendar: cal)
+        #expect(asap > late)
+        #expect(cal.isDate(asap, inSameDayAs: late))
+        #expect(cal.component(.minute, from: asap) == 45)
     }
 }
 

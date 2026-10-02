@@ -19,18 +19,17 @@ struct FoodItemsEditor: View {
                             .textStyle(.headline)
                             .foregroundStyle(Theme.Palette.textPrimary)
                             .lineLimit(2)
-                        HStack(spacing: Theme.Space.xs) {
-                            Text("\(Int(item.kcal.rounded())) kcal")
-                                .foregroundStyle(Theme.Palette.textPrimary)
-                            Text("P \(Int(item.protein.rounded())) · C \(Int(item.carbs.rounded())) · F \(Int(item.fat.rounded()))")
-                        }
-                        .textStyle(.footnote)
-                        .foregroundStyle(Theme.Palette.textSecondary)
-                        .monospacedDigit()
+                            .fixedSize(horizontal: false, vertical: true)
+                        Text("\(Int(item.kcal.rounded())) kcal · \(Int(item.protein.rounded()))P \(Int(item.carbs.rounded()))C \(Int(item.fat.rounded()))F")
+                            .textStyle(.footnote)
+                            .foregroundStyle(Theme.Palette.textSecondary)
+                            .monospacedDigit()
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.85)
                         HStack(spacing: Theme.Space.xxs) {
                             Text(item.servingDescription)
                             if showsConfidence, let c = item.confidence {
-                                Text("· \(Int((c * 100).rounded()))% match")
+                                Text("· \(Int((c * 100).rounded()))%")
                             }
                         }
                         .textStyle(.footnote)
@@ -39,6 +38,7 @@ struct FoodItemsEditor: View {
                     }
                     Spacer(minLength: Theme.Space.xs)
                     QuantityStepper(value: $item.quantity, step: 0.5, range: 0.5...6)
+                        .fixedSize()
                 }
                 .padding(.vertical, Theme.Space.s)
                 .contextMenu {

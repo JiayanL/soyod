@@ -110,6 +110,15 @@ nonisolated enum Fmt {
     }
 
     /// 5000 m -> "3.11 mi" / "5.00 km"
+    /// Height: "188 cm" metric, "6′2″" imperial.
+    static func height(cm: Double, units: UnitSystem) -> String {
+        if units == .imperial {
+            let totalIn = Int((cmToIn(cm)).rounded())
+            return "\(totalIn / 12)′\(totalIn % 12)″"
+        }
+        return "\(Int(cm.rounded())) cm"
+    }
+
     static func distance(m: Double, units: UnitSystem) -> String {
         if units == .imperial {
             return String(format: "%.2f mi", mToMi(m))

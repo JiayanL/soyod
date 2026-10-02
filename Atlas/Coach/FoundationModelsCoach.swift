@@ -3,6 +3,8 @@ import Foundation
 /// Collects tool side-effects (actions, memories, logs) during a turn.
 nonisolated final class CoachToolCollector: @unchecked Sendable {
     var actions: [CoachAction] = []
+    /// Latest user message; set before each `respond` so tools can read context words.
+    var userMessage: String = ""
     var memoryWrites: [MemoryDraft] = []
     var logs: [CoachLog] = []
 }
@@ -21,6 +23,7 @@ final class FoundationModelsCoach: CoachAgent {
         let collector = CoachToolCollector()
         let tools: [any Tool] = Self.makeTools(context: c, collector: collector)
         let session = LanguageModelSession(tools: tools, instructions: Self.instructions(for: c))
+        collector.userMessage = text
         let response = try await session.respond(to: text)
         var reply = CoachReply(text: response.content)
         reply.actions = collector.actions
@@ -213,7 +216,9 @@ struct ProposeReservationTool: Tool {
     func call(arguments: Arguments) async throws -> String {
         // Bare hours are evening in dinner context ("7:30 tonight" → 19:30).
         var dateISO = arguments.dateISO
-        if let d = ISO8601DateFormatter().date(from: dateISO) {
+        let msg = collector.userMessage.lowercased()
+        let wantsPM = RuleBasedCoach.hasEveningContext(msg) && !msg.contains(" am")
+        if wantsPM, let d = ISO8601DateFormatter().date(from: dateISO) {
             let h = Calendar.current.component(.hour, from: d)
             if h >= 1 && h <= 11 {
                 dateISO = ISO8601DateFormatter().string(from: d.addingTimeInterval(12 * 3600))

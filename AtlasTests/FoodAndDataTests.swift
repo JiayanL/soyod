@@ -172,6 +172,12 @@ struct FormattingTests {
         #expect(abs(Fmt.canonical(fromDisplay: 24.5, metric: .verticalJump, units: .imperial) - 62.23) < 0.01)
     }
 
+    @Test func heightFormatting() {
+        #expect(Fmt.height(cm: 188, units: .imperial) == "6′2″")
+        #expect(Fmt.height(cm: 188, units: .metric) == "188 cm")
+        #expect(Fmt.height(cm: 152.4, units: .imperial) == "5′0″")
+    }
+
     @Test func misc() {
         #expect(Fmt.duration(minutes: 462) == "7h 42m")
         #expect(Fmt.kcal(1240) == "1,240")

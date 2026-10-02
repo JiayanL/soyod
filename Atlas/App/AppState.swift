@@ -94,9 +94,12 @@ final class AppState {
         let reply: CoachReply
         do {
             reply = try await coach.respond(to: text, history: history, context: context)
+            engineStatus = CoachRouter.engineStatus   // configured engine answered
         } catch {
             reply = (try? await RuleBasedCoach().respond(to: text, history: history, context: context))
                 ?? CoachReply(text: "Something glitched — try that again.")
+            engineStatus = CoachEngineStatus(name: "Atlas on-device",
+                                             detail: "Rule-based coach answered (primary engine failed).")
         }
 
         // Apply memory writes.

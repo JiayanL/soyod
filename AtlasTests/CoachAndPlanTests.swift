@@ -136,6 +136,13 @@ struct RuleBasedCoachTests {
         #expect(comps?.year == nowComps.year && comps?.month == nowComps.month && comps?.day == nowComps.day)
     }
 
+    @Test func eveningContextHelper() {
+        #expect(RuleBasedCoach.hasEveningContext("dinner at 7:30 tonight"))
+        #expect(RuleBasedCoach.hasEveningContext("drinks at 9"))
+        #expect(!RuleBasedCoach.hasEveningContext("brunch at 11"))
+        #expect(!RuleBasedCoach.hasEveningContext("meeting at 10"))
+    }
+
     @Test func bareEveningHoursArePM() async throws {
         for (prompt, hour) in [("I have dinner at 8 tonight", 20), ("drinks at 9", 21)] {
             let r = try await RuleBasedCoach().respond(to: prompt, history: [], context: context())

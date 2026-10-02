@@ -66,9 +66,20 @@ struct SettingsView: View {
                 TextField("Name", text: $name).multilineTextAlignment(.trailing).onSubmit(commitProfile)
             }
             row("Height") {
-                inlineNumber(Binding(get: { UnitConvert.display(heightCm, dimension: .length, units: units) },
-                                     set: { heightCm = UnitConvert.canonical($0, dimension: .length, units: units) }),
-                             unit: units == .imperial ? "in" : "cm", decimals: 0)
+                if units == .imperial {
+                    let totalIn = (heightCm / UnitConvert.cmPerInch).rounded()
+                    HStack(spacing: Theme.Space.s) {
+                        inlineNumber(Binding(get: { (totalIn / 12).rounded(.down) },
+                                             set: { heightCm = ($0 * 12 + totalIn.truncatingRemainder(dividingBy: 12)) * UnitConvert.cmPerInch }),
+                                     unit: "ft", decimals: 0)
+                        inlineNumber(Binding(get: { totalIn.truncatingRemainder(dividingBy: 12) },
+                                             set: { heightCm = ((totalIn / 12).rounded(.down) * 12 + min(11, max(0, $0))) * UnitConvert.cmPerInch }),
+                                     unit: "in", decimals: 0)
+                    }
+                } else {
+                    inlineNumber(Binding(get: { heightCm }, set: { heightCm = $0 }),
+                                 unit: "cm", decimals: 0)
+                }
             }
             row("Weight") {
                 inlineNumber(Binding(get: { UnitConvert.weightDisplay(kg: weightKg, units: units) },

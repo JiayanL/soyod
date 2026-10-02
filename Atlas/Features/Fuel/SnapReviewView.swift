@@ -151,8 +151,13 @@ struct SnapReviewView: View {
                         .fixedSize(horizontal: false, vertical: true)
                 }
                 if fixing { fixField.transition(.opacity) }
-                FoodItemsEditor(items: $items, showsConfidence: true)
-                    .atlasCard()
+                ScrollView {
+                    FoodItemsEditor(items: $items, showsConfidence: true)
+                        .atlasCard()
+                        .padding(.bottom, Theme.Space.m)
+                }
+                .frame(maxHeight: 340)
+                .scrollIndicators(.hidden)
                 FormGroup(title: "Meal") { MealTypePicker(selection: $mealType) }
             }
         }

@@ -330,7 +330,8 @@ import UIKit
 
     private func bundledSamplePhotos() -> [String] {
         guard let url = Bundle.main.url(forResource: "manifest", withExtension: "json",
-                                        subdirectory: "SampleMeals"),
+                                        subdirectory: "SampleMeals")
+                ?? Bundle.main.url(forResource: "manifest", withExtension: "json"),
               let manifest = try? JSONDecoder().decode([String: [String]].self,
                                                        from: Data(contentsOf: url)) else { return [] }
         return manifest.keys.sorted()
@@ -338,7 +339,8 @@ import UIKit
 
     private func photoData(named name: String) -> Data? {
         guard let url = Bundle.main.url(forResource: name, withExtension: "jpg",
-                                        subdirectory: "SampleMeals") else { return nil }
+                                        subdirectory: "SampleMeals")
+                ?? Bundle.main.url(forResource: name, withExtension: "jpg") else { return nil }
         return try? Data(contentsOf: url)
     }
 
