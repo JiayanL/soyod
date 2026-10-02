@@ -31,6 +31,29 @@ struct EnvironmentProbeTests {
         #endif
     }
 
+    /// Which engine actually answers, and does its reply keep the time?
+    @Test func engineActuallyUsed() async throws {
+        let agent = CoachRouter.current()
+        print("PROBE engine selected: \(type(of: agent))")
+        var c = CoachContext(now: Date())
+        c.targets = MacroTargets(kcal: 3000, proteinG: 168, carbsG: 330, fatG: 67)
+        c.remaining = MacroTotals(kcal: 2300, protein: 118, carbs: 250, fat: 47)
+        do {
+            let r = try await agent.respond(to: "I have dinner at Nobu at 7:30 tonight",
+                                            history: [], context: c)
+            print("PROBE engine reply: \(r.text)")
+            print("PROBE engine actions: \(r.actions.map { "\($0.kind):\($0.title)|\($0.subtitle)" })")
+        } catch {
+            print("PROBE engine threw: \(error)")
+        }
+        let r2 = try? await RuleBasedCoach().respond(to: "I have dinner at Nobu at 7:30 tonight",
+                                                   history: [], context: c)
+        if let r2 {
+            print("PROBE rule reply: \(r2.text)")
+            print("PROBE rule actions: \(r2.actions.map { "\($0.kind):\($0.title)|\($0.subtitle)" })")
+        }
+    }
+
     @Test func visionClassifyImageRequest() async throws {
         // Draw a simple food-ish image (red circle on tan background).
         let size = CGSize(width: 224, height: 224)

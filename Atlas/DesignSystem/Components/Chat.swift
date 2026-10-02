@@ -127,6 +127,7 @@ struct Composer: View {
             .padding(4)
             .animation(Theme.Motion.snappy, value: canSend)
             .accessibilityLabel("Send")
+            .accessibilityIdentifier("chatSend")
         }
         .modifier(GlassCapsule())
     }

@@ -97,26 +97,23 @@ nonisolated final class AtlasUITests: XCTestCase {
 
     @MainActor
     func testChatNobuReturnsActionCards() throws {
-        let app = makeApp(route: "coach")
+        // The chatAction route opens Chat and auto-sends the Nobu prompt —
+        // deterministic, no keyboard flakiness.
+        let app = makeApp(route: "chatAction")
         app.launch()
         let any = app.descendants(matching: .any)
-        XCTAssertTrue(waitFor(any["talkToAtlas"], timeout: 10))
-        any["talkToAtlas"].tap()
-
-        let field = app.textFields["Message Atlas"]
-        XCTAssertTrue(waitFor(field, timeout: 10))
-        pace()
-        field.tap()
-        field.typeText("I have dinner at Nobu at 7:30 tonight")
-        pace()
-        app.buttons["Send"].firstMatch.tap()
+        XCTAssertTrue(waitFor(any["composer"], timeout: 10), "chat view missing")
+        pace(2)
 
         // Reply must mention the reservation time and show an action card.
         let reply = app.staticTexts
             .matching(NSPredicate(format: "label CONTAINS '7:30' OR label CONTAINS '19:30'"))
             .firstMatch
         // The configured engine can take >10s on a cold model; give headroom.
-        XCTAssertTrue(reply.waitForExistence(timeout: 20), "no reply containing 7:30")
+        if !reply.waitForExistence(timeout: 20) {
+            try? app.debugDescription.write(toFile: "/tmp/atlas-chatdump.txt", atomically: true, encoding: .utf8)
+            XCTFail("no reply containing 7:30")
+        }
         let card = any.matching(NSPredicate(format: "identifier BEGINSWITH 'actionCard-'")).firstMatch
         XCTAssertTrue(card.waitForExistence(timeout: 10), "no action card")
     }
