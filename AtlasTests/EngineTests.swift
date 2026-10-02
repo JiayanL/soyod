@@ -129,10 +129,15 @@ struct ScoreEngineTests {
     }
 
     @Test func bedtime() {
+        // Fixed now so the event is tomorrow 09:00 and bed lands tonight
+        // regardless of the wall-clock time the suite runs at.
+        let cal = Calendar.current
+        let now = cal.date(bySettingHour: 15, minute: 0, second: 0, of: Date())!
+        let tomorrow = cal.date(byAdding: .day, value: 1, to: now)!
         let ev = CalendarEventInfo(id: "x", title: "Standup",
-                                   start: Date().addingTimeInterval(86400).addingTimeInterval(9 * 3600),
+                                   start: cal.date(bySettingHour: 9, minute: 0, second: 0, of: tomorrow)!,
                                    end: Date())
-        let bed = ScoreEngine.recommendedBedtime(firstEventTomorrow: ev, needMin: 480, now: Date())
+        let bed = ScoreEngine.recommendedBedtime(firstEventTomorrow: ev, needMin: 480, now: now)
         // wake = event - 75min, bed = wake - 480 - 15 = event - 570 min.
         #expect(abs(bed.timeIntervalSince(ev.start) + 570 * 60) < 1)
     }
