@@ -104,9 +104,9 @@ nonisolated enum Fmt {
     /// 84 kg -> "185 lb" / "84 kg"
     static func weight(kg: Double, units: UnitSystem) -> String {
         if units == .imperial {
-            return String(format: "%.0f lb", kgToLb(kg))
+            return kgToLb(kg).formatted(.number.precision(.fractionLength(0))) + " lb"
         }
-        return kg == kg.rounded() ? String(format: "%.0f kg", kg) : String(format: "%.1f kg", kg)
+        return kg.formatted(.number.precision(.fractionLength(kg == kg.rounded() ? 0 : 1))) + " kg"
     }
 
     /// 5000 m -> "3.11 mi" / "5.00 km"

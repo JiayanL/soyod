@@ -108,14 +108,15 @@ extension View {
     /// Fades scrolling content out behind floating bottom CTAs so they never sit on top of text.
     func bottomBarScrim() -> some View {
         background(alignment: .bottom) {
-            LinearGradient(
-                stops: [
-                    .init(color: Theme.Palette.bg.opacity(0), location: 0),
-                    .init(color: Theme.Palette.bg.opacity(0.9), location: 0.3),
-                    .init(color: Theme.Palette.bg, location: 0.55),
-                ],
-                startPoint: .top, endPoint: .bottom
-            )
+            VStack(spacing: 0) {
+                LinearGradient(
+                    colors: [Theme.Palette.bg.opacity(0), Theme.Palette.bg],
+                    startPoint: .top,
+                    endPoint: .bottom
+                )
+                .frame(height: Theme.Space.xxl)
+                Theme.Palette.bg
+            }
             .padding(.top, -Theme.Space.xxl)
             .ignoresSafeArea()
             .allowsHitTesting(false)
