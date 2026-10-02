@@ -68,16 +68,17 @@ struct ExerciseLibraryTests {
 
 @MainActor
 struct SampleDataSeederTests {
-    private func makeContext() throws -> ModelContext {
+    private func makeContainer() throws -> ModelContainer {
         let schema = Schema([UserProfile.self, Goal.self, Atlas.Measurement.self, PlanSnapshot.self,
                              MealEntry.self, Workout.self, SleepSession.self, DailyMetric.self,
                              CoachMessage.self, MemoryItem.self])
         return try ModelContainer(for: schema,
-                                  configurations: ModelConfiguration(schema: schema, isStoredInMemoryOnly: true)).mainContext
+                                  configurations: ModelConfiguration(isStoredInMemoryOnly: true))
     }
 
     @Test func seedsEnoughData() throws {
-        let ctx = try makeContext()
+        let container = try makeContainer()
+        let ctx = container.mainContext
         SampleDataSeeder().seed(into: ctx, now: Date())
         try ctx.save()
 
@@ -102,7 +103,8 @@ struct SampleDataSeederTests {
     }
 
     @Test func contextBuilds() throws {
-        let ctx = try makeContext()
+        let container = try makeContainer()
+        let ctx = container.mainContext
         SampleDataSeeder().seed(into: ctx, now: Date())
         try ctx.save()
         let c = ContextBuilder.build(modelContext: ctx, events: [], now: Date())

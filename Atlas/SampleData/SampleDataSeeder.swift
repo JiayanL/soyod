@@ -5,7 +5,7 @@ import UIKit
 /// Seeds the demo persona "Marcus" — 6 weeks into a 16-week vertical goal.
 /// Everything is relative to `now` (AppClock.now) so data looks realistic
 /// at any time of day.
-nonisolated struct SampleDataSeeder {
+@MainActor struct SampleDataSeeder {
 
     func seed(into ctx: ModelContext, now: Date) {
         var cal = Calendar.current
@@ -33,7 +33,6 @@ nonisolated struct SampleDataSeeder {
         p.onboardingComplete = true
         p.isSampleData = true
         ctx.insert(p)
-
         // MARK: Goal — vertical 24.5" → 30", 16 weeks, started 6 weeks ago
         let goal = Goal()
         goal.kind = .vertical
@@ -45,7 +44,6 @@ nonisolated struct SampleDataSeeder {
         goal.targetDate = goal.startDate.addingTimeInterval(16 * 7 * 86400)
         goal.isActive = true
         ctx.insert(goal)
-
         // MARK: Measurements — every ~5–7 days, trending to ~26" with noise
         var rng = SeededRNG(seed: 42)
         let measurementDays = [40, 34, 28, 22, 17, 11, 6, 1]
@@ -67,7 +65,6 @@ nonisolated struct SampleDataSeeder {
             m.value = 84.5 - Double(40 - daysAgo) * 0.02 + rng.gaussian() * 0.3
             ctx.insert(m)
         }
-
         // MARK: Plan snapshot from engines
         let targets = NutritionEngine.targets(for: ProfileInput(
             sex: .male, age: 24, heightCm: 188, weightKg: 84,
@@ -84,7 +81,6 @@ nonisolated struct SampleDataSeeder {
         plan.weeklySplit = split
         plan.rationale = "Marcus is training for elastic power: plyometrics paired with heavy lower-body strength 4×/week, \(Fmt.kcal(Double(targets.kcal))) kcal/day and \(targets.proteinG) g protein to stay explosive."
         ctx.insert(plan)
-
         // MARK: Sleep — 21 nights, baseline HRV ~68 ms / RHR ~52, last night bad
         for nightsAgo in (1...21).reversed() {
             let isLastNight = nightsAgo == 1
@@ -119,7 +115,6 @@ nonisolated struct SampleDataSeeder {
             s.source = .sample
             ctx.insert(s)
         }
-
         // MARK: Workouts — per split + Thursday basketball + Zone 2 runs
         let foodDB = FoodDatabase.shared
         _ = foodDB
@@ -193,7 +188,6 @@ nonisolated struct SampleDataSeeder {
             }
         }
         _ = workoutCount
-
         // MARK: Meals — 21 days, 2–4/day inside 12–20 window, today only before now
         let mealPool = mealTemplates()
         let photoNames = bundledSamplePhotos()
@@ -234,7 +228,6 @@ nonisolated struct SampleDataSeeder {
                 ctx.insert(meal)
             }
         }
-
         // MARK: Steps — daily
         for daysAgo in (0...21).reversed() {
             let day = today.addingTimeInterval(TimeInterval(-daysAgo * 86400))
@@ -250,7 +243,6 @@ nonisolated struct SampleDataSeeder {
             d.activeKcal = 350 + rng.next() * 300
             ctx.insert(d)
         }
-
         // MARK: Memories
         func memory(_ kind: MemoryKind, _ text: String, due: Date? = nil) {
             let m = MemoryItem()
@@ -265,7 +257,6 @@ nonisolated struct SampleDataSeeder {
         memory(.fact, "Plays pickup basketball Thursdays 7 PM")
         let retest = cal.date(byAdding: .day, value: 10, to: today)!
         memory(.task, "Re-test vertical on \(Fmt.date(retest))", due: retest)
-
         // MARK: Prior coach conversation (yesterday) with a done action
         let yesterday = today.addingTimeInterval(-86400)
         func msg(_ role: MessageRole, _ text: String, actions: [CoachAction] = [], atMinutes h: Int) {
@@ -291,28 +282,28 @@ nonisolated struct SampleDataSeeder {
 
     private func sleepStages(start: Date, end: Date, asleepMin: Double,
                              rng: inout SeededRNG) -> [SleepStageSegment] {
-        let total = end.timeIntervalSince(start)
-        let awake = total - asleepMin * 60
+        let asleep = asleepMin * 60
+        let awake = end.timeIntervalSince(start) - asleep
         var stages: [SleepStageSegment] = []
         var t = start
-        func seg(_ stage: SleepStage, _ frac: Double) {
-            let d = total * frac
-            stages.append(SleepStageSegment(stage: stage, start: t, end: t.addingTimeInterval(d)))
-            t = t.addingTimeInterval(d)
+        // stage, seconds — non-awake segments sum to asleepMin exactly.
+        func seg(_ stage: SleepStage, _ seconds: Double) {
+            stages.append(SleepStageSegment(stage: stage, start: t, end: t.addingTimeInterval(seconds)))
+            t = t.addingTimeInterval(seconds)
         }
-        seg(.core, 0.22)
-        seg(.deep, 0.10)
-        seg(.awake, awake / total / 2)
-        seg(.core, 0.18)
-        seg(.rem, 0.12)
-        seg(.deep, 0.06)
-        seg(.core, 0.15)
-        seg(.awake, awake / total / 2)
-        seg(.rem, 0.12)
+        seg(.core, asleep * 0.20)
+        seg(.deep, asleep * 0.10)
+        seg(.awake, awake / 2)
+        seg(.core, asleep * 0.18)
+        seg(.rem, asleep * 0.12)
+        seg(.deep, asleep * 0.06)
+        seg(.core, asleep * 0.14)
+        seg(.awake, awake / 2)
+        seg(.rem, asleep * 0.10)
         let covered = stages.reduce(0) { $0 + $1.minutes }
-        let left = total / 60 - covered
+        let left = end.timeIntervalSince(start) / 60 - covered
         if left > 0.5 {
-            seg(.core, left / (total / 60))
+            seg(.core, left * 60)
         }
         return stages.filter { $0.minutes > 0.5 }
     }
@@ -373,6 +364,7 @@ nonisolated struct SampleDataSeeder {
         ]
     }
 }
+
 
 /// Deterministic RNG so sample data is stable.
 nonisolated struct SeededRNG {
