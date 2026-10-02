@@ -43,7 +43,7 @@ struct PlanRevealStep: View {
                 .gutter()
                 .padding(.top, Theme.Space.s)
                 .padding(.bottom, Theme.Space.xs)
-                .background(Theme.Palette.bg.opacity(0.94))
+                .bottomBarScrim()
                 .opacity(revealed >= 4 ? 1 : 0.0)
         }
         .task {

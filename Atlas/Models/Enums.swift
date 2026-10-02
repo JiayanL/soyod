@@ -266,7 +266,7 @@ nonisolated enum GoalKind: String, Codable, CaseIterable, Identifiable, Sendable
     var symbol: String {
         switch self {
         case .vertical: "arrow.up.to.line"
-        case .waist: "figure.core.training"
+        case .waist: "ruler"
         case .glutes: "figure.strengthtraining.functional"
         case .fatLoss: "flame"
         case .muscle: "figure.strengthtraining.traditional"

@@ -48,6 +48,13 @@ struct OnboardingFlow: View {
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .clipped()
         }
+        .background(alignment: .top) {
+            if step == .welcome {
+                AtmosphereBackground(tint: Theme.Palette.accentFill, height: 560)
+                    .ignoresSafeArea()
+                    .transition(.opacity)
+            }
+        }
         .atlasScreenBackground()
         .onChange(of: app.pendingRoute) { _, route in
             if let s = OnbStep(route: route) { step = s; app.pendingRoute = nil }
@@ -135,7 +142,7 @@ struct OnbPage<Content: View>: View {
                 .gutter()
                 .padding(.top, Theme.Space.s)
                 .padding(.bottom, Theme.Space.xs)
-                .background(Theme.Palette.bg.opacity(0.94))
+                .bottomBarScrim()
         }
     }
 }
@@ -150,9 +157,6 @@ private struct WelcomeStep: View {
 
     var body: some View {
         ZStack {
-            AtmosphereBackground(tint: Theme.Palette.accentFill, height: 560)
-                .frame(maxHeight: .infinity, alignment: .top)
-                .ignoresSafeArea()
             VStack(alignment: .leading, spacing: 0) {
                 AtlasMark(size: 56, glow: true)
                     .padding(.top, Theme.Space.huge)

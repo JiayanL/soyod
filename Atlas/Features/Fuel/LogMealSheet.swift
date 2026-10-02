@@ -67,7 +67,7 @@ struct LogMealSheet: View {
                 }
                 .gutter()
                 .padding(.vertical, Theme.Space.s)
-                .background(.regularMaterial)
+                .bottomBarScrim()
             }
             .sensoryFeedback(.success, trigger: saved)
         }
