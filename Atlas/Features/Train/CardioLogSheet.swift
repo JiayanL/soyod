@@ -58,7 +58,7 @@ struct CardioLogSheet: View {
                         }
                         NumberField(label: "Duration", value: $minutes, unit: "min", decimals: 0)
                     }
-                    NumberField(label: "Avg heart rate (optional)", value: $avgHR, unit: "bpm", decimals: 0)
+                    NumberField(label: "Avg heart rate (optional)", value: $avgHR, unit: "bpm", decimals: 0, placeholderWhenZero: true)
                     VStack(alignment: .leading, spacing: Theme.Space.s) {
                         HStack {
                             MicroLabel("Effort (RPE)")

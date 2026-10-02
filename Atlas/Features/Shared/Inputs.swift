@@ -7,14 +7,22 @@ struct NumberField: View {
     var unit: String
     var decimals: Int = 1
     var identifier: String? = nil
+    var placeholderWhenZero = false
 
     @FocusState private var focused: Bool
+
+    private var optionalValue: Binding<Double?> {
+        Binding(
+            get: { placeholderWhenZero && value == 0 ? nil : value },
+            set: { value = $0 ?? 0 }
+        )
+    }
 
     var body: some View {
         VStack(alignment: .leading, spacing: Theme.Space.xs) {
             MicroLabel(label)
             HStack(alignment: .firstTextBaseline, spacing: Theme.Space.xxs) {
-                TextField("0", value: $value, format: .number.precision(.fractionLength(0...decimals)))
+                TextField(placeholderWhenZero ? "—" : "0", value: optionalValue, format: .number.precision(.fractionLength(0...decimals)))
                     .keyboardType(decimals > 0 ? .decimalPad : .numberPad)
                     .textStyle(.metricL)
                     .foregroundStyle(Theme.Palette.textPrimary)
