@@ -29,7 +29,9 @@ struct CoachScreen: View {
             .safeAreaInset(edge: .bottom) {
                 TalkToAtlasBar { router.openChat() }
                     .gutter()
+                    .padding(.top, Theme.Space.s)
                     .padding(.bottom, Theme.Space.xs)
+                    .bottomBarScrim()
             }
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
@@ -386,6 +388,7 @@ private struct TalkToAtlasBar: View {
             }
             .padding(.leading, Theme.Space.m)
             .padding(Theme.Space.xxs)
+            .background(Theme.Palette.surfaceElevated, in: .rect(cornerRadius: Theme.Radius.card, style: .continuous))
             .modifier(GlassCapsule())
             .contentShape(.rect)
         }

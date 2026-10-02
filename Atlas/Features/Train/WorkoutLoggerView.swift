@@ -200,14 +200,14 @@ private struct ExerciseCard: View {
             HStack(spacing: Theme.Space.xs) {
                 Text("SET").frame(width: 28, alignment: .leading)
                 Text("PREV").frame(maxWidth: .infinity, alignment: .leading)
-                Text(UnitConvert.weightUnit(units).uppercased()).frame(width: 64)
+                Text(ExerciseLibrary.shared.entry(id: exercise.exerciseId)?.isBodyweight == true ? "LOAD" : UnitConvert.weightUnit(units).uppercased()).frame(width: 64)
                 Text("REPS").frame(width: 48)
                 Image(systemName: "checkmark").frame(width: 36)
             }
             .textStyle(.micro)
             .foregroundStyle(Theme.Palette.textTertiary)
             ForEach(Array($exercise.sets.enumerated()), id: \.element.id) { index, $set in
-                SetRow(index: index, set: $set, previous: previous[safe: index], units: units, onCheck: onCheck)
+                SetRow(index: index, set: $set, previous: previous[safe: index], units: units, isBodyweight: ExerciseLibrary.shared.entry(id: exercise.exerciseId)?.isBodyweight ?? false, onCheck: onCheck)
             }
             Button {
                 let last = exercise.sets.last
@@ -233,7 +233,10 @@ private struct SetRow: View {
     @Binding var set: SetLog
     let previous: SetLog?
     let units: UnitSystem
+    var isBodyweight = false
     let onCheck: (Bool) -> Void
+
+    private var showsBodyweight: Bool { isBodyweight && set.weightKg == 0 }
 
     private var weight: Binding<Double> {
         Binding(
@@ -253,13 +256,21 @@ private struct SetRow: View {
                 .foregroundStyle(Theme.Palette.textTertiary)
                 .monospacedDigit()
                 .frame(maxWidth: .infinity, alignment: .leading)
-            TextField("0", value: weight, format: .number.precision(.fractionLength(0...1)))
-                .keyboardType(.decimalPad)
-                .multilineTextAlignment(.center)
-                .textStyle(.metricS)
-                .frame(width: 64, height: 36)
-                .background(Theme.Palette.fill, in: .rect(cornerRadius: Theme.Radius.tiny, style: .continuous))
-                .accessibilityLabel("Set \(index + 1) weight")
+            if showsBodyweight {
+                Text("BW")
+                    .textStyle(.metricS)
+                    .foregroundStyle(Theme.Palette.textSecondary)
+                    .frame(width: 64, height: 36)
+                    .accessibilityLabel("Set \(index + 1) bodyweight")
+            } else {
+                TextField("0", value: weight, format: .number.precision(.fractionLength(0...1)))
+                    .keyboardType(.decimalPad)
+                    .multilineTextAlignment(.center)
+                    .textStyle(.metricS)
+                    .frame(width: 64, height: 36)
+                    .background(Theme.Palette.fill, in: .rect(cornerRadius: Theme.Radius.tiny, style: .continuous))
+                    .accessibilityLabel("Set \(index + 1) weight")
+            }
             TextField("0", value: $set.reps, format: .number)
                 .keyboardType(.numberPad)
                 .multilineTextAlignment(.center)

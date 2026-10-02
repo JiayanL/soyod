@@ -51,12 +51,11 @@ struct ChatView: View {
             }
             .padding(.top, Theme.Space.xs)
             .padding(.bottom, Theme.Space.xs)
-            .background(alignment: .bottom) {
-                LinearGradient(colors: [Theme.Palette.bg.opacity(0), Theme.Palette.bg], startPoint: .top, endPoint: .center)
-                    .ignoresSafeArea()
-            }
+            .bottomBarScrim()
         }
         .toolbar(.hidden, for: .tabBar)
+        .toolbarBackground(Theme.Palette.bg, for: .navigationBar)
+        .toolbarBackground(.visible, for: .navigationBar)
         .toolbar {
             ToolbarItem(placement: .principal) {
                 VStack(spacing: 0) {

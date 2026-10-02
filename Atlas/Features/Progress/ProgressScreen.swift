@@ -48,7 +48,9 @@ struct ProgressScreen: View {
                     .buttonStyle(.atlasPrimary)
                     .accessibilityIdentifier("logMeasurement")
                     .gutter()
+                    .padding(.top, Theme.Space.s)
                     .padding(.bottom, Theme.Space.xs)
+                    .bottomBarScrim()
                 }
             }
         }
@@ -131,7 +133,7 @@ private struct ProjectionChart: View {
     var body: some View {
         let units = app.context.units
         let dim = goal.metric.dimension
-        let actual = (points.isEmpty ? [Point(date: goal.startDate, value: goal.baseline)] : points.map { Point(date: $0.date, value: $0.value) })
+        let actual = (points.isEmpty ? [Point(date: goal.startDate, value: goal.baseline)] : points.sorted { $0.date < $1.date }.map { Point(date: $0.date, value: $0.value) })
             .map { Point(date: $0.date, value: UnitConvert.display($0.value, dimension: dim, units: units)) }
         let last = actual.last ?? Point(date: app.context.now, value: UnitConvert.display(goal.current, dimension: dim, units: units))
         let end = min(goal.projection.projectedDate ?? goal.targetDate, goal.targetDate.addingTimeInterval(86400 * 60))
@@ -153,13 +155,17 @@ private struct ProjectionChart: View {
             }
             Chart {
                 ForEach(actual) { p in
-                    AreaMark(x: .value("Date", p.date), yStart: .value("Base", lo - pad), yEnd: .value("Value", p.value))
-                        .foregroundStyle(LinearGradient(colors: [Theme.Palette.accent.opacity(0.25), Theme.Palette.accent.opacity(0)], startPoint: .top, endPoint: .bottom))
+                    AreaMark(x: .value("Date", p.date), yStart: .value("Base", lo - pad), yEnd: .value("Value", p.value), series: .value("Series", "ActualArea"))
+                        .foregroundStyle(LinearGradient(colors: [Theme.Palette.accent.opacity(0.22), Theme.Palette.accent.opacity(0)], startPoint: .top, endPoint: .bottom))
                         .interpolationMethod(.monotone)
+                }
+                ForEach(actual) { p in
                     LineMark(x: .value("Date", p.date), y: .value("Value", p.value), series: .value("Series", "Actual"))
                         .foregroundStyle(Theme.Palette.accent)
                         .lineStyle(StrokeStyle(lineWidth: 2.5, lineCap: .round))
                         .interpolationMethod(.monotone)
+                }
+                ForEach(actual) { p in
                     PointMark(x: .value("Date", p.date), y: .value("Value", p.value))
                         .foregroundStyle(Theme.Palette.accent)
                         .symbolSize(28)

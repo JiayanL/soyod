@@ -57,7 +57,9 @@ struct FuelScreen: View {
                     .accessibilityIdentifier("describeMeal")
                 }
                 .gutter()
+                .padding(.top, Theme.Space.s)
                 .padding(.bottom, Theme.Space.xs)
+                .bottomBarScrim()
             }
         }
     }

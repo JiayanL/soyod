@@ -89,7 +89,7 @@ struct SheetHost: View {
             SettingsView()
                 .presentationCornerRadius(Theme.Radius.sheet)
         case .integrations:
-            IntegrationsView()
+            IntegrationsSheet()
                 .presentationCornerRadius(Theme.Radius.sheet)
         }
     }
@@ -159,5 +159,20 @@ struct QuickLogSheet: View {
             Spacer(minLength: 0)
         }
         .gutter()
+    }
+}
+
+private struct IntegrationsSheet: View {
+    @Environment(\.dismiss) private var dismiss
+
+    var body: some View {
+        NavigationStack {
+            IntegrationsView()
+                .toolbar {
+                    ToolbarItem(placement: .confirmationAction) {
+                        Button("Done") { dismiss() }
+                    }
+                }
+        }
     }
 }

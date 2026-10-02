@@ -57,7 +57,7 @@ struct SnapReviewView: View {
                     }
                     .gutter()
                     .padding(.vertical, Theme.Space.s)
-                    .background(.regularMaterial)
+                    .bottomBarScrim()
                 }
             }
             .task { await analyze() }

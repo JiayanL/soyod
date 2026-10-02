@@ -136,11 +136,11 @@ struct Composer: View {
 struct GlassCapsule: ViewModifier {
     func body(content: Content) -> some View {
         if #available(iOS 26.0, *) {
-            content.glassEffect(.regular.interactive(), in: .rect(cornerRadius: 24, style: .continuous))
+            content.glassEffect(.regular.interactive(), in: .rect(cornerRadius: Theme.Radius.card, style: .continuous))
         } else {
             content
-                .background(.ultraThinMaterial, in: .rect(cornerRadius: 24, style: .continuous))
-                .overlay(RoundedRectangle(cornerRadius: 24, style: .continuous).strokeBorder(Theme.Palette.hairline, lineWidth: Theme.Stroke.hairline))
+                .background(.ultraThinMaterial, in: .rect(cornerRadius: Theme.Radius.card, style: .continuous))
+                .overlay(RoundedRectangle(cornerRadius: Theme.Radius.card, style: .continuous).strokeBorder(Theme.Palette.hairline, lineWidth: Theme.Stroke.hairline))
         }
     }
 }
