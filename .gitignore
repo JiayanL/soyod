@@ -1,0 +1,16 @@
+.DS_Store
+xcuserdata/
+DerivedData/
+build/
+*.xcresult
+design-references/
+Config/Signing.local.xcconfig
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/
+fastlane/test_output/
+*.ipa
+*.dSYM.zip
+*.p8
+.bundle/
+vendor/bundle/
