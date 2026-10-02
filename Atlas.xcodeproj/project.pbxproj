@@ -71,6 +71,7 @@
 		AC7181ACE0CDABD495464678 /* IntegrationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514BA2982952E74EB80AB966 /* IntegrationsView.swift */; };
 		AFC2ACFBF77599818DBB189D /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C98BA94AB0416856EFA28A /* NotificationService.swift */; };
 		AFD79897A5590A0EFD554682 /* Bars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A375BE7177CF3CCD1699B8 /* Bars.swift */; };
+		B161377E0EF73E73204B8F4C /* EnvironmentProbeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD13CB77AD171D4A92470536 /* EnvironmentProbeTests.swift */; };
 		B1C565D0CEA9827BC0EF247C /* greek_yogurt_berries.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ABFD9A1CC2BD0C9FB8FE0793 /* greek_yogurt_berries.jpg */; };
 		B21A77A2E475DF66DC11BB87 /* FoodItemsEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322C91A38DC571C2A230F70A /* FoodItemsEditor.swift */; };
 		B54C2B92CD7F7627674E385C /* salmon_poke.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C2CE9863234E0D90840FDF2 /* salmon_poke.jpg */; };
@@ -191,6 +192,7 @@
 		B6456D7FB785A6FBAF6E799E /* salad.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = salad.jpg; sourceTree = "<group>"; };
 		B671CB9DA9BAD8924F119EEA /* KeychainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStore.swift; sourceTree = "<group>"; };
 		B7C89D4F68D709AA2E77470D /* MemorySheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorySheet.swift; sourceTree = "<group>"; };
+		BD13CB77AD171D4A92470536 /* EnvironmentProbeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentProbeTests.swift; sourceTree = "<group>"; };
 		C3183D932350BFF338271F14 /* ValueTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueTypes.swift; sourceTree = "<group>"; };
 		C979C4FE814119E262A23568 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		CB0EC4492E11D5FDECC3F5D9 /* protein_oats.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = protein_oats.jpg; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 				4D9E50BF2E6F5364B3245CEF /* AtlasPlaceholderTests.swift */,
 				2F19D3BE394D4619A75223DC /* CoachAndPlanTests.swift */,
 				881DF2B48423997AA8DD6DA4 /* EngineTests.swift */,
+				BD13CB77AD171D4A92470536 /* EnvironmentProbeTests.swift */,
 				8F929B3F783CD2BB8E159F8C /* FoodAndDataTests.swift */,
 			);
 			path = AtlasTests;
@@ -777,6 +780,7 @@
 				708B5234706398A000805BE6 /* AtlasPlaceholderTests.swift in Sources */,
 				8F41714616FB6608F843EFEF /* CoachAndPlanTests.swift in Sources */,
 				A1EED1D3ED63DA2BE98F4BC8 /* EngineTests.swift in Sources */,
+				B161377E0EF73E73204B8F4C /* EnvironmentProbeTests.swift in Sources */,
 				6B1408054816E32E60594E10 /* FoodAndDataTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

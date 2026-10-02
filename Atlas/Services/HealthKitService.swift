@@ -30,7 +30,7 @@ final class HealthKitService {
     #endif
 
     private var readTypes: Set<HKObjectType> {
-        var types: [HKObjectType?] = [
+        let types: [HKObjectType?] = [
             HKObjectType.categoryType(forIdentifier: .sleepAnalysis),
             HKObjectType.workoutType(),
             HKObjectType.quantityType(forIdentifier: .heartRateVariabilitySDNN),
@@ -43,7 +43,7 @@ final class HealthKitService {
     }
 
     private var writeTypes: Set<HKSampleType> {
-        var types: [HKSampleType?] = [
+        let types: [HKSampleType?] = [
             HKObjectType.quantityType(forIdentifier: .dietaryEnergyConsumed),
             HKObjectType.quantityType(forIdentifier: .dietaryProtein),
             HKObjectType.quantityType(forIdentifier: .dietaryCarbohydrates),
@@ -279,21 +279,21 @@ final class HealthKitService {
         switch w.workoutActivityType {
         case .running, .walking, .cycling, .swimming, .rowing, .hiking, .elliptical:
             model.kind = .cardio
-            model.title = w.workoutActivityType.name
+            model.title = w.workoutActivityType.atlasName
         case .traditionalStrengthTraining, .functionalStrengthTraining:
             model.kind = .strength
             model.title = "Strength"
-        case .yoga, .flexibility, .stretching, .mindAndBody, .pilates:
+        case .yoga, .flexibility, .mindAndBody, .pilates:
             model.kind = .mobility
             model.title = "Mobility"
         case .basketball, .soccer, .tennis, .badminton, .volleyball, .hockey:
             model.kind = .sport
-            model.sport = w.workoutActivityType.name
-            model.title = w.workoutActivityType.name
+            model.sport = w.workoutActivityType.atlasName
+            model.title = w.workoutActivityType.atlasName
         default:
             model.kind = .sport
-            model.sport = w.workoutActivityType.name
-            model.title = w.workoutActivityType.name
+            model.sport = w.workoutActivityType.atlasName
+            model.title = w.workoutActivityType.atlasName
         }
         model.load = ScoreEngine.sessionLoad(durationMin: model.durationSec / 60, rpe: 6)
         return model
@@ -347,3 +347,26 @@ final class HealthKitService {
     }
     #endif
 }
+
+#if canImport(HealthKit)
+extension HKWorkoutActivityType {
+    var atlasName: String {
+        switch self {
+        case .running: "Run"
+        case .walking: "Walk"
+        case .cycling: "Ride"
+        case .swimming: "Swim"
+        case .rowing: "Row"
+        case .hiking: "Hike"
+        case .elliptical: "Elliptical"
+        case .basketball: "Basketball"
+        case .soccer: "Soccer"
+        case .tennis: "Tennis"
+        case .badminton: "Badminton"
+        case .volleyball: "Volleyball"
+        case .hockey: "Hockey"
+        default: "Workout"
+        }
+    }
+}
+#endif

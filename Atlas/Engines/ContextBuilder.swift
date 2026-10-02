@@ -1,7 +1,7 @@
 import Foundation
 import SwiftData
 
-enum ContextBuilder {
+nonisolated enum ContextBuilder {
 
     /// Assembles the full CoachContext for "now" from the store + services.
     static func build(modelContext: ModelContext, events: [CalendarEventInfo],

@@ -3,15 +3,14 @@ import Foundation
 /// Parses free-text food descriptions into FoodItems.
 /// "2 eggs, toast with avocado, black coffee", "1 cup rice", "200g chicken breast",
 /// "a banana", "half an avocado".
-enum FoodTextParser {
+nonisolated enum FoodTextParser {
 
     static func parse(_ text: String) -> [FoodItem] {
-        // Split on commas / " and " / " with " boundaries.
+        // Split on commas / " and " boundaries ("with" stays — dropped as trailing words).
         let cleaned = text.lowercased()
             .replacingOccurrences(of: " and a ", with: ", ")
             .replacingOccurrences(of: " and some ", with: ", ")
             .replacingOccurrences(of: " and ", with: ", ")
-            .replacingOccurrences(of: " with ", with: ", ")
         let pieces = cleaned.components(separatedBy: ",")
             .map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
             .filter { !$0.isEmpty }
@@ -29,18 +28,20 @@ enum FoodTextParser {
         // "half (of) (a|an)" → 0.5.
         p = p.replacingOccurrences(of: #"^(half|1/2)\s+(of\s+)?(a\s+|an\s+)?"#, with: "0.5 ",
                                    options: .regularExpression)
-        // Leading number ("2 eggs", "200g chicken").
-        if let m = p.range(of: #"^(\d+(?:\.\d+)?)\s*"#, options: .regularExpression) {
-            quantity = Double(p[m].trimmingCharacters(in: .whitespaces)) ?? 1
-            p = String(p[m.upperBound...])
-        }
-        // Trailing/leading gram amount ("200g chicken", "chicken 200 g").
+        // Gram amount first ("200g chicken", "chicken 200 g") so "200" isn't
+        // eaten as a serving count.
         if let m = p.range(of: #"^(\d+(?:\.\d+)?)\s*(g|grams?)\s+"#, options: .regularExpression) {
             gramAmount = Double(p[m].components(separatedBy: CharacterSet.letters).first ?? "")
             p = String(p[m.upperBound...])
         } else if let m = p.range(of: #"^(\d+(?:\.\d+)?)\s*(g|grams?)$"#, options: .regularExpression) {
             gramAmount = Double(p[m].components(separatedBy: CharacterSet.letters).first ?? "")
             p = ""
+        }
+        // Leading number ("2 eggs").
+        if gramAmount == nil,
+           let m = p.range(of: #"^(\d+(?:\.\d+)?)\s*"#, options: .regularExpression) {
+            quantity = Double(p[m].trimmingCharacters(in: .whitespaces)) ?? 1
+            p = String(p[m.upperBound...])
         }
         // Volume units hint the serving match ("1 cup rice", "2 scoops whey").
         var unitHint: String?
@@ -52,7 +53,13 @@ enum FoodTextParser {
         p = p.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !p.isEmpty else { return nil }
 
-        guard let entry = FoodDatabase.shared.bestMatch(for: p) else { return nil }
+        // Try the whole phrase, then drop trailing words ("toast with avocado" → "toast").
+        var entry = FoodDatabase.shared.bestMatch(for: p)
+        while entry == nil, let lastSpace = p.lastIndex(of: " ") {
+            p = String(p[..<lastSpace])
+            entry = FoodDatabase.shared.bestMatch(for: p)
+        }
+        guard let entry else { return nil }
 
         var item = entry.item(quantity: quantity)
         if let grams = gramAmount, entry.grams > 0 {

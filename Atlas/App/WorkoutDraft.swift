@@ -1,7 +1,7 @@
 import Foundation
 
 /// Input for AppState.saveWorkout (logger output).
-struct WorkoutDraft {
+nonisolated struct WorkoutDraft {
     var kind: WorkoutKind
     var title: String
     var start: Date
@@ -14,14 +14,14 @@ struct WorkoutDraft {
     var sport: String? = nil
 }
 
-struct PRRecord: Hashable, Sendable {
+nonisolated struct PRRecord: Hashable, Sendable {
     var exerciseName: String
     var weightKg: Double
     var reps: Int
     var e1RM: Double
 }
 
-struct WorkoutSaveResult {
+nonisolated struct WorkoutSaveResult {
     var workout: Workout
     var prs: [PRRecord]
 }

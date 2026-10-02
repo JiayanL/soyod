@@ -1,6 +1,6 @@
 import Foundation
 
-enum ProjectionEngine {
+nonisolated enum ProjectionEngine {
 
     /// Linear regression over measurements → projection to target.
     /// Values are canonical; `isDecreasing` is inferred from target < baseline.

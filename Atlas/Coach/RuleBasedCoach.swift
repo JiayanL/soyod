@@ -147,8 +147,10 @@ final class RuleBasedCoach: CoachAgent {
         // "ran 5k in 26 min" / "ran 5 miles in 40 min" / "played basketball for 90 min" / "did legs"
         let runMatch = lower.range(of: #"ran|run|jog"#, options: .regularExpression) != nil
         let distM = lower.range(of: #"(\d+(?:\.\d+)?)\s*(k|km|kilometers?|miles?|mi)"#, options: .regularExpression)
+        _ = distM
         let durM = lower.range(of: #"(\d+)\s*(min|minutes|mins)"#, options: .regularExpression) != nil
             || lower.range(of: #"in (\d+):(\d+)"#, options: .regularExpression) != nil
+        _ = durM
 
         if runMatch {
             var distance: Double?
@@ -243,7 +245,7 @@ final class RuleBasedCoach: CoachAgent {
             let pm = s.contains("pm")
             let digits = s.components(separatedBy: CharacterSet.decimalDigits.inverted).filter { !$0.isEmpty }
             if let h = Int(digits[0]) {
-                var hour = h % 12 + (pm ? 12 : 0)
+                let hour = h % 12 + (pm ? 12 : 0)
                 let min = digits.count > 1 ? Int(digits[1]) ?? 0 : 0
                 var comps = cal.dateComponents([.year, .month, .day], from: c.now)
                 comps.hour = hour; comps.minute = min

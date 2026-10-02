@@ -94,7 +94,7 @@ enum FoodRecognizer {
             do {
                 try handler.perform([request])
                 let results = (request.results ?? [])
-                    .filter { $0.hasMinimumPrecision(0.05) || $0.confidence > 0.1 }
+                    .filter { $0.confidence > 0.1 }
                     .prefix(12)
                 return results.map { RecognizedLabel(name: $0.identifier,
                                                      confidence: Double($0.confidence)) }

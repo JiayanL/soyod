@@ -15,7 +15,7 @@ final class AppState {
     let health = HealthKitService()
     let calendar = CalendarService()
     let notifications = NotificationService()
-    lazy var actions = ActionService(calendar: calendar, notifications: notifications)
+    let actions: ActionService
 
     let launch: LaunchOptions
 
@@ -43,6 +43,7 @@ final class AppState {
         ])
         let config = ModelConfiguration(schema: schema, isStoredInMemoryOnly: inMemory)
         container = try! ModelContainer(for: schema, configurations: [config])
+        actions = ActionService(calendar: calendar, notifications: notifications)
         pendingRoute = launch.screen
 
         if launch.resetOnboarding {
@@ -217,7 +218,7 @@ final class AppState {
         refresh()
     }
 
-    static func defaultMealType(at date: Date) -> MealType {
+    nonisolated static func defaultMealType(at date: Date) -> MealType {
         let h = Calendar.current.component(.hour, from: date)
         switch h {
         case ..<11: return .breakfast
@@ -459,14 +460,15 @@ final class AppState {
     }
 
     func resetAll() {
-        let schemaTypes: [any PersistentModel.Type] = [
-            UserProfile.self, Goal.self, Measurement.self, PlanSnapshot.self,
-            MealEntry.self, Workout.self, SleepSession.self, DailyMetric.self,
-            CoachMessage.self, MemoryItem.self,
-        ]
-        for type in schemaTypes {
-            try? modelContext.deleteAll(model: type)
+        func wipe<T: PersistentModel>(_ type: T.Type) {
+            if let objects = try? modelContext.fetch(FetchDescriptor<T>()) {
+                for o in objects { modelContext.delete(o) }
+            }
         }
+        wipe(UserProfile.self); wipe(Goal.self); wipe(Measurement.self)
+        wipe(PlanSnapshot.self); wipe(MealEntry.self); wipe(Workout.self)
+        wipe(SleepSession.self); wipe(DailyMetric.self); wipe(CoachMessage.self)
+        wipe(MemoryItem.self)
         try? modelContext.save()
         refresh()
     }

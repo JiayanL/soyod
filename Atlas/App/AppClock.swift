@@ -2,7 +2,7 @@ import Foundation
 
 /// App-wide clock. All engine/context code must use `AppClock.now` so the
 /// `-AtlasNow <ISO8601>` launch argument can pin "now" for demos and tests.
-enum AppClock {
+nonisolated enum AppClock {
     private static let anchor: (fixed: Date, launchedAt: Date)? = {
         let args = UserDefaults.standard
         guard let raw = args.string(forKey: "AtlasNow"), !raw.isEmpty else { return nil }

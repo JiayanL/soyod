@@ -146,7 +146,7 @@ struct ProjectionEngineTests {
         // 24.5"→30" over 16 wks: cm. Measurements trending up ~2.5 cm in 6 wks.
         let targetDate = start.addingTimeInterval(112 * 86400)
         let ms = [40, 30, 20, 10, 1].enumerated().map { (i, d) in
-            (date: now.addingTimeInterval(-Double(d) * 86400), value: 62.23 + 0.15 * Double(5 - i))
+            (date: now.addingTimeInterval(-Double(d) * 86400), value: 62.23 + 0.15 * Double(i))
         }
         let p = ProjectionEngine.project(baseline: 62.23, start: start, measurements: ms,
                                          target: 76.2, targetDate: targetDate, now: now)

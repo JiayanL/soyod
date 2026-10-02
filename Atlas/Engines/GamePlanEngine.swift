@@ -1,6 +1,6 @@
 import Foundation
 
-enum GamePlanEngine {
+nonisolated enum GamePlanEngine {
 
     /// 3–5 ranked, rule-based directives for today. Facts come from context;
     /// copy follows DESIGN §8 (imperative, numeric, ≤90-char title).
@@ -178,6 +178,15 @@ enum GamePlanEngine {
                     detail: "Bank the win, then let's pick what's next.",
                     pillar: .goal, priority: 9, action: nil))
             }
+        }
+
+        // MARK: Ensure at least 3 — goal check-in fallback
+        if out.count < 3, let g = c.goal {
+            let valStr = Fmt.metric(g.current, metric: g.metric, units: units, customUnit: g.customUnit)
+            out.append(Directive(
+                title: "Check in — log a \(g.metric.title.lowercased()) measurement",
+                detail: "Last reading \(valStr). Fresh data keeps your projection to \(Fmt.metric(g.target, metric: g.metric, units: units, customUnit: g.customUnit)) honest.",
+                pillar: .goal, priority: 2, action: nil))
         }
 
         // MARK: Bedtime (when actionable and nothing bigger)

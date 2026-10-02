@@ -1,6 +1,6 @@
 import Foundation
 
-enum ProgramGenerator {
+nonisolated enum ProgramGenerator {
 
     /// Weekly split of PlannedSessions for a goal. Rest days are absent.
     /// Weekday: 1 = Monday … 7 = Sunday.

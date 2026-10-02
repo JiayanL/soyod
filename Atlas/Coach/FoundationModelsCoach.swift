@@ -1,7 +1,7 @@
 import Foundation
 
 /// Collects tool side-effects (actions, memories, logs) during a turn.
-final class CoachToolCollector: @unchecked Sendable {
+nonisolated final class CoachToolCollector: @unchecked Sendable {
     var actions: [CoachAction] = []
     var memoryWrites: [MemoryDraft] = []
     var logs: [CoachLog] = []
@@ -37,7 +37,7 @@ final class FoundationModelsCoach: CoachAgent {
             Preserve every number, time, and fact exactly. Reply with JSON: [{"i":0,"title":"...","detail":"..."}]
             """)
         let payload = directives.enumerated().map {
-            "{\"i\":\($0.offset),\"title\":\(jsonString($0.element.title)),\"detail\":\(jsonString($0.element.detail))}"
+            "{\"i\":\($0.offset),\"title\":\(Self.jsonString($0.element.title)),\"detail\":\(Self.jsonString($0.element.detail))}"
         }.joined(separator: ",")
         guard let r = try? await session.respond(to: "[" + payload + "]") else { return directives }
         struct Rewrite: Codable { var i: Int; var title: String; var detail: String }

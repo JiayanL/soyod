@@ -1,7 +1,7 @@
 import Foundation
 
 /// Raw inputs for one night of sleep.
-struct SleepInput: Sendable {
+nonisolated struct SleepInput: Sendable {
     var start: Date
     var end: Date
     var stages: [SleepStageSegment]
@@ -10,7 +10,7 @@ struct SleepInput: Sendable {
     var quality: Int?          // 1–5 (manual entries)
 }
 
-enum ScoreEngine {
+nonisolated enum ScoreEngine {
 
     // MARK: - Sleep
 

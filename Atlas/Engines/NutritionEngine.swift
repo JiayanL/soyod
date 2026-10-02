@@ -2,7 +2,7 @@ import Foundation
 
 /// Plain struct of profile fields so onboarding can preview targets
 /// without a SwiftData UserProfile.
-struct ProfileInput: Codable, Hashable, Sendable {
+nonisolated struct ProfileInput: Codable, Hashable, Sendable {
     var sex: Sex
     var age: Int
     var heightCm: Double
@@ -11,7 +11,7 @@ struct ProfileInput: Codable, Hashable, Sendable {
     var dietStyle: DietStyle = .none
 }
 
-enum NutritionEngine {
+nonisolated enum NutritionEngine {
 
     /// Mifflin–St Jeor BMR × activity → TDEE, then goal adjustment.
     static func targets(for p: ProfileInput, goal: GoalKind) -> MacroTargets {

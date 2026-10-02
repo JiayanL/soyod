@@ -2,7 +2,7 @@ import Foundation
 
 // MARK: - Value types (Codable, Hashable, Identifiable, Sendable)
 
-struct FoodItem: Codable, Hashable, Identifiable, Sendable {
+nonisolated struct FoodItem: Codable, Hashable, Identifiable, Sendable {
     var id: UUID = UUID()
     var foodId: String?
     var name: String
@@ -21,7 +21,7 @@ struct FoodItem: Codable, Hashable, Identifiable, Sendable {
     var fat: Double { fatPerServing * quantity }
 }
 
-struct SetLog: Codable, Hashable, Identifiable, Sendable {
+nonisolated struct SetLog: Codable, Hashable, Identifiable, Sendable {
     var id: UUID = UUID()
     var weightKg: Double
     var reps: Int
@@ -33,7 +33,7 @@ struct SetLog: Codable, Hashable, Identifiable, Sendable {
     var e1RM: Double { weightKg * (1 + Double(reps) / 30) }
 }
 
-struct ExerciseLog: Codable, Hashable, Identifiable, Sendable {
+nonisolated struct ExerciseLog: Codable, Hashable, Identifiable, Sendable {
     var id: UUID = UUID()
     var exerciseId: String
     var name: String
@@ -41,7 +41,7 @@ struct ExerciseLog: Codable, Hashable, Identifiable, Sendable {
     var sets: [SetLog]
 }
 
-struct SleepStageSegment: Codable, Hashable, Identifiable, Sendable {
+nonisolated struct SleepStageSegment: Codable, Hashable, Identifiable, Sendable {
     var id: UUID = UUID()
     var stage: SleepStage
     var start: Date
@@ -49,7 +49,7 @@ struct SleepStageSegment: Codable, Hashable, Identifiable, Sendable {
     var minutes: Double { end.timeIntervalSince(start) / 60 }
 }
 
-struct PlannedExercise: Codable, Hashable, Identifiable, Sendable {
+nonisolated struct PlannedExercise: Codable, Hashable, Identifiable, Sendable {
     var id: UUID = UUID()
     var exerciseId: String
     var name: String
@@ -59,13 +59,13 @@ struct PlannedExercise: Codable, Hashable, Identifiable, Sendable {
     var targetWeightKg: Double?
 }
 
-struct PlannedBlock: Codable, Hashable, Identifiable, Sendable {
+nonisolated struct PlannedBlock: Codable, Hashable, Identifiable, Sendable {
     var id: UUID = UUID()
     var title: String         // "Plyometrics"
     var exercises: [PlannedExercise]
 }
 
-struct PlannedSession: Codable, Hashable, Identifiable, Sendable {
+nonisolated struct PlannedSession: Codable, Hashable, Identifiable, Sendable {
     var id: UUID = UUID()
     var weekday: Int          // 1 = Monday … 7 = Sunday
     var title: String         // "Lower power"
@@ -75,15 +75,15 @@ struct PlannedSession: Codable, Hashable, Identifiable, Sendable {
     var blocks: [PlannedBlock]
 }
 
-enum CoachActionKind: String, Codable, CaseIterable, Sendable {
+nonisolated enum CoachActionKind: String, Codable, CaseIterable, Sendable {
     case reserveTable, orderMeal, scheduleWorkout, setReminder, logMeal
 }
 
-enum ActionStatus: String, Codable, CaseIterable, Sendable {
+nonisolated enum ActionStatus: String, Codable, CaseIterable, Sendable {
     case proposed, inProgress, done, dismissed
 }
 
-struct CoachAction: Codable, Hashable, Identifiable, Sendable {
+nonisolated struct CoachAction: Codable, Hashable, Identifiable, Sendable {
     var id: UUID = UUID()
     var kind: CoachActionKind
     var title: String
@@ -135,7 +135,7 @@ struct CoachAction: Codable, Hashable, Identifiable, Sendable {
     }
 }
 
-struct Directive: Codable, Hashable, Identifiable, Sendable {
+nonisolated struct Directive: Codable, Hashable, Identifiable, Sendable {
     var id: UUID = UUID()
     var title: String
     var detail: String
@@ -144,14 +144,14 @@ struct Directive: Codable, Hashable, Identifiable, Sendable {
     var action: CoachAction?
 }
 
-struct MacroTargets: Codable, Hashable, Sendable {
+nonisolated struct MacroTargets: Codable, Hashable, Sendable {
     var kcal: Int
     var proteinG: Int
     var carbsG: Int
     var fatG: Int
 }
 
-struct MacroTotals: Codable, Hashable, Sendable {
+nonisolated struct MacroTotals: Codable, Hashable, Sendable {
     var kcal: Double = 0
     var protein: Double = 0
     var carbs: Double = 0
@@ -167,7 +167,7 @@ struct MacroTotals: Codable, Hashable, Sendable {
     }
 }
 
-struct Milestone: Codable, Hashable, Identifiable, Sendable {
+nonisolated struct Milestone: Codable, Hashable, Identifiable, Sendable {
     var id: UUID = UUID()
     var date: Date
     var value: Double

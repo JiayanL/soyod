@@ -7,6 +7,8 @@ import SwiftData
 
 @Model
 final class UserProfile {
+    init() {}
+
     @Attribute(.unique) var id: UUID = UUID()
     var name: String = ""
     var sexRaw: String = Sex.male.rawValue
@@ -73,6 +75,8 @@ final class UserProfile {
 
 @Model
 final class Goal {
+    init() {}
+
     @Attribute(.unique) var id: UUID = UUID()
     var kindRaw: String = GoalKind.vertical.rawValue
     var title: String = ""
@@ -97,6 +101,8 @@ final class Goal {
 
 @Model
 final class Measurement {
+    init() {}
+
     @Attribute(.unique) var id: UUID = UUID()
     var date: Date = Date()
     var metricRaw: String = GoalMetric.custom.rawValue
@@ -111,6 +117,8 @@ final class Measurement {
 
 @Model
 final class PlanSnapshot {
+    init() {}
+
     @Attribute(.unique) var id: UUID = UUID()
     var createdAt: Date = Date()
     var kcalTarget: Int = 0
@@ -129,6 +137,8 @@ final class PlanSnapshot {
 
 @Model
 final class MealEntry {
+    init() {}
+
     @Attribute(.unique) var id: UUID = UUID()
     var date: Date = Date()
     var mealTypeRaw: String = MealType.lunch.rawValue
@@ -158,6 +168,8 @@ final class MealEntry {
 
 @Model
 final class Workout {
+    init() {}
+
     @Attribute(.unique) var id: UUID = UUID()
     var date: Date = Date()
     var kindRaw: String = WorkoutKind.strength.rawValue
@@ -197,6 +209,8 @@ final class Workout {
 
 @Model
 final class SleepSession {
+    init() {}
+
     @Attribute(.unique) var id: UUID = UUID()
     var start: Date = Date()
     var end: Date = Date()
@@ -219,6 +233,8 @@ final class SleepSession {
 
 @Model
 final class DailyMetric {
+    init() {}
+
     @Attribute(.unique) var id: UUID = UUID()
     var day: Date = Date()      // startOfDay
     var steps: Int?
@@ -227,6 +243,8 @@ final class DailyMetric {
 
 @Model
 final class CoachMessage {
+    init() {}
+
     @Attribute(.unique) var id: UUID = UUID()
     var date: Date = Date()
     var roleRaw: String = MessageRole.user.rawValue
@@ -245,6 +263,8 @@ final class CoachMessage {
 
 @Model
 final class MemoryItem {
+    init() {}
+
     @Attribute(.unique) var id: UUID = UUID()
     var createdAt: Date = Date()
     var kindRaw: String = MemoryKind.fact.rawValue

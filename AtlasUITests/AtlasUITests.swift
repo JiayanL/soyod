@@ -1,6 +1,6 @@
 import XCTest
 
-final class AtlasUITests: XCTestCase {
+nonisolated final class AtlasUITests: XCTestCase {
     @MainActor
     func testLaunch() throws {
         let app = XCUIApplication()

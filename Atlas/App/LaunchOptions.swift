@@ -2,7 +2,7 @@ import Foundation
 
 /// Routes the app can deep-link / launch directly into.
 /// Parsed from `-AtlasScreen <route>` and `atlas://<route>` URLs.
-enum LaunchRoute: String, CaseIterable, Sendable {
+nonisolated enum LaunchRoute: String, CaseIterable, Sendable {
     case coach, chat, chatAction, memory
     case fuel, logMeal, snapReview
     case train, logger, workoutSummary, cardioLog
@@ -20,7 +20,7 @@ enum LaunchRoute: String, CaseIterable, Sendable {
 }
 
 /// Parsed launch arguments (UserDefaults from ProcessInfo arguments).
-struct LaunchOptions: Sendable {
+nonisolated struct LaunchOptions: Sendable {
     var sampleData = false
     var resetOnboarding = false
     var denyPermissions = false

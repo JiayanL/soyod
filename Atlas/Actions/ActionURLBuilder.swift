@@ -1,7 +1,7 @@
 import Foundation
 
 /// Pure URL construction for agent actions (unit-tested).
-enum ActionURLBuilder {
+nonisolated enum ActionURLBuilder {
 
     /// OpenTable search: covers + ISO datetime + term.
     static func openTable(restaurant: String, partySize: Int, date: Date) -> URL? {
@@ -29,7 +29,7 @@ enum ActionURLBuilder {
     }
 
     static func doorDash(query: String) -> URL? {
-        var c = URLComponents(string: "https://www.doordash.com/search/store/\(query.slugified)/")
+        let c = URLComponents(string: "https://www.doordash.com/search/store/\(query.slugified)/")
         return c?.url
     }
 
@@ -40,7 +40,7 @@ enum ActionURLBuilder {
     }
 }
 
-extension String {
+nonisolated extension String {
     /// "Nobu Malibu" -> "nobu-malibu"
     var slugified: String {
         lowercased()

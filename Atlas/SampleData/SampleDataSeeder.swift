@@ -5,7 +5,7 @@ import UIKit
 /// Seeds the demo persona "Marcus" — 6 weeks into a 16-week vertical goal.
 /// Everything is relative to `now` (AppClock.now) so data looks realistic
 /// at any time of day.
-struct SampleDataSeeder {
+nonisolated struct SampleDataSeeder {
 
     func seed(into ctx: ModelContext, now: Date) {
         var cal = Calendar.current
@@ -204,7 +204,7 @@ struct SampleDataSeeder {
             let slots = [(12, 15), (15, 0), (18, 30), (19, 45)]
             for i in 0..<count {
                 let slot = slots[i]
-                var date = day.addingTimeInterval(TimeInterval(slot.0 * 3600 + slot.1 * 60 + Int(rng.next() * 1800)))
+                let date = day.addingTimeInterval(TimeInterval(slot.0 * 3600 + slot.1 * 60 + Int(rng.next() * 1800)))
                 // Today's meals only before now.
                 if daysAgo == 0 && date >= now {
                     continue
@@ -375,7 +375,7 @@ struct SampleDataSeeder {
 }
 
 /// Deterministic RNG so sample data is stable.
-struct SeededRNG {
+nonisolated struct SeededRNG {
     private var state: UInt64
     init(seed: UInt64) { state = seed == 0 ? 0x9E3779B9 : seed }
     mutating func next() -> Double {

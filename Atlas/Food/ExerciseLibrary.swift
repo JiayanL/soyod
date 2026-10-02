@@ -1,6 +1,6 @@
 import Foundation
 
-struct ExerciseEntry: Codable, Hashable, Identifiable, Sendable {
+nonisolated struct ExerciseEntry: Codable, Hashable, Identifiable, Sendable {
     var id: String
     var name: String
     var muscle: String          // Quads, Glutes, Chest, Back, …
@@ -9,7 +9,7 @@ struct ExerciseEntry: Codable, Hashable, Identifiable, Sendable {
     var isBodyweight: Bool
 }
 
-final class ExerciseLibrary: Sendable {
+nonisolated final class ExerciseLibrary: Sendable {
     static let shared = ExerciseLibrary()
 
     let all: [ExerciseEntry]

@@ -1,30 +1,30 @@
 import Foundation
 
-struct ChatTurn: Codable, Hashable, Sendable {
+nonisolated struct ChatTurn: Codable, Hashable, Sendable {
     var role: MessageRole
     var text: String
 }
 
-struct MemoryDraft: Codable, Hashable, Sendable {
+nonisolated struct MemoryDraft: Codable, Hashable, Sendable {
     var kind: MemoryKind
     var text: String
     var dueDate: Date?
 }
 
-enum CoachLog: Sendable {
+nonisolated enum CoachLog: Sendable {
     case meal(title: String, mealType: MealType, items: [FoodItem])
     case workout(kind: WorkoutKind, title: String, durationMin: Int,
                  distanceM: Double?, rpe: Double?, sport: String?)
 }
 
-struct CoachReply: Sendable {
+nonisolated struct CoachReply: Sendable {
     var text: String
     var actions: [CoachAction] = []
     var memoryWrites: [MemoryDraft] = []
     var logs: [CoachLog] = []
 }
 
-struct CoachEngineStatus: Sendable {
+nonisolated struct CoachEngineStatus: Sendable {
     var name: String          // "Apple Intelligence" / "Atlas on-device" / "Remote · <model>"
     var detail: String
 }

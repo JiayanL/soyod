@@ -1,6 +1,6 @@
 import Foundation
 
-struct PlanPreview: Sendable {
+nonisolated struct PlanPreview: Sendable {
     var targets: MacroTargets
     var split: [PlannedSession]
     var sleepTargetMin: Int
@@ -9,7 +9,7 @@ struct PlanPreview: Sendable {
 }
 
 /// Everything onboarding collects; AppState.completeOnboarding persists it.
-struct OnboardingDraft: Sendable {
+nonisolated struct OnboardingDraft: Sendable {
     var goalKind: GoalKind = .vertical
     var customTitle: String = ""
     var metric: GoalMetric = .verticalJump

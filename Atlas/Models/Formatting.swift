@@ -1,7 +1,7 @@
 import Foundation
 
 /// Display formatting helpers. Canonical units: length cm, mass kg, time seconds.
-enum Fmt {
+nonisolated enum Fmt {
 
     // MARK: - Conversions
 

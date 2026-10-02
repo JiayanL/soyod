@@ -69,7 +69,7 @@ struct ExerciseLibraryTests {
 @MainActor
 struct SampleDataSeederTests {
     private func makeContext() throws -> ModelContext {
-        let schema = Schema([UserProfile.self, Goal.self, Measurement.self, PlanSnapshot.self,
+        let schema = Schema([UserProfile.self, Goal.self, Atlas.Measurement.self, PlanSnapshot.self,
                              MealEntry.self, Workout.self, SleepSession.self, DailyMetric.self,
                              CoachMessage.self, MemoryItem.self])
         return try ModelContainer(for: schema,
@@ -84,7 +84,7 @@ struct SampleDataSeederTests {
         #expect((try ctx.fetchCount(FetchDescriptor<SleepSession>())) >= 14)
         #expect((try ctx.fetchCount(FetchDescriptor<MealEntry>())) >= 14)
         #expect((try ctx.fetchCount(FetchDescriptor<Workout>())) >= 14)
-        #expect((try ctx.fetchCount(FetchDescriptor<Measurement>())) >= 8)
+        #expect((try ctx.fetchCount(FetchDescriptor<Atlas.Measurement>())) >= 8)
         #expect((try ctx.fetchCount(FetchDescriptor<MemoryItem>())) >= 4)
         #expect((try ctx.fetchCount(FetchDescriptor<CoachMessage>())) >= 3)
 

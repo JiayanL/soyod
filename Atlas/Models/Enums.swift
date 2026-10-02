@@ -2,13 +2,13 @@ import Foundation
 
 // MARK: - Enums (String raw, Codable, CaseIterable)
 
-enum Sex: String, Codable, CaseIterable, Identifiable, Sendable {
+nonisolated enum Sex: String, Codable, CaseIterable, Identifiable, Sendable {
     case male, female
     var id: String { rawValue }
     var title: String { self == .male ? "Male" : "Female" }
 }
 
-enum ActivityLevel: String, Codable, CaseIterable, Identifiable, Sendable {
+nonisolated enum ActivityLevel: String, Codable, CaseIterable, Identifiable, Sendable {
     case sedentary, light, moderate, active, veryActive
     var id: String { rawValue }
     var title: String {
@@ -40,13 +40,13 @@ enum ActivityLevel: String, Codable, CaseIterable, Identifiable, Sendable {
     }
 }
 
-enum Experience: String, Codable, CaseIterable, Identifiable, Sendable {
+nonisolated enum Experience: String, Codable, CaseIterable, Identifiable, Sendable {
     case beginner, intermediate, advanced
     var id: String { rawValue }
     var title: String { rawValue.prefix(1).uppercased() + rawValue.dropFirst() }
 }
 
-enum Equipment: String, Codable, CaseIterable, Identifiable, Sendable {
+nonisolated enum Equipment: String, Codable, CaseIterable, Identifiable, Sendable {
     case gym, home, none
     var id: String { rawValue }
     var title: String {
@@ -58,7 +58,7 @@ enum Equipment: String, Codable, CaseIterable, Identifiable, Sendable {
     }
 }
 
-enum DietStyle: String, Codable, CaseIterable, Identifiable, Sendable {
+nonisolated enum DietStyle: String, Codable, CaseIterable, Identifiable, Sendable {
     case none, highProtein, vegetarian, vegan, pescatarian, keto
     var id: String { rawValue }
     var title: String {
@@ -73,13 +73,13 @@ enum DietStyle: String, Codable, CaseIterable, Identifiable, Sendable {
     }
 }
 
-enum UnitSystem: String, Codable, CaseIterable, Identifiable, Sendable {
+nonisolated enum UnitSystem: String, Codable, CaseIterable, Identifiable, Sendable {
     case imperial, metric
     var id: String { rawValue }
     var title: String { self == .imperial ? "Imperial" : "Metric" }
 }
 
-enum CoachTone: String, Codable, CaseIterable, Identifiable, Sendable {
+nonisolated enum CoachTone: String, Codable, CaseIterable, Identifiable, Sendable {
     case direct, encouraging, dataNerd
     var id: String { rawValue }
     var title: String {
@@ -91,7 +91,7 @@ enum CoachTone: String, Codable, CaseIterable, Identifiable, Sendable {
     }
 }
 
-enum MealType: String, Codable, CaseIterable, Identifiable, Sendable {
+nonisolated enum MealType: String, Codable, CaseIterable, Identifiable, Sendable {
     case breakfast, lunch, dinner, snack
     var id: String { rawValue }
     var title: String { rawValue.prefix(1).uppercased() + rawValue.dropFirst() }
@@ -105,11 +105,11 @@ enum MealType: String, Codable, CaseIterable, Identifiable, Sendable {
     }
 }
 
-enum MealSource: String, Codable, CaseIterable, Sendable {
+nonisolated enum MealSource: String, Codable, CaseIterable, Sendable {
     case photo, text, search, quick, coach, sample
 }
 
-enum WorkoutKind: String, Codable, CaseIterable, Identifiable, Sendable {
+nonisolated enum WorkoutKind: String, Codable, CaseIterable, Identifiable, Sendable {
     case strength, cardio, sport, mobility, plyometric
     var id: String { rawValue }
     var title: String { rawValue.prefix(1).uppercased() + rawValue.dropFirst() }
@@ -124,7 +124,7 @@ enum WorkoutKind: String, Codable, CaseIterable, Identifiable, Sendable {
     }
 }
 
-enum CardioType: String, Codable, CaseIterable, Identifiable, Sendable {
+nonisolated enum CardioType: String, Codable, CaseIterable, Identifiable, Sendable {
     case run, ride, swim, row, walk
     var id: String { rawValue }
     var title: String { rawValue.prefix(1).uppercased() + rawValue.dropFirst() }
@@ -149,24 +149,24 @@ enum CardioType: String, Codable, CaseIterable, Identifiable, Sendable {
     }
 }
 
-enum WorkoutSource: String, Codable, CaseIterable, Sendable {
+nonisolated enum WorkoutSource: String, Codable, CaseIterable, Sendable {
     case manual, health, sample
 }
 
-enum SleepStage: String, Codable, CaseIterable, Sendable {
+nonisolated enum SleepStage: String, Codable, CaseIterable, Sendable {
     case awake, rem, core, deep
     var title: String { rawValue.prefix(1).uppercased() + rawValue.dropFirst() }
 }
 
-enum SleepSource: String, Codable, CaseIterable, Sendable {
+nonisolated enum SleepSource: String, Codable, CaseIterable, Sendable {
     case manual, health, sample
 }
 
-enum MessageRole: String, Codable, CaseIterable, Sendable {
+nonisolated enum MessageRole: String, Codable, CaseIterable, Sendable {
     case user, coach
 }
 
-enum MemoryKind: String, Codable, CaseIterable, Sendable {
+nonisolated enum MemoryKind: String, Codable, CaseIterable, Sendable {
     case fact, preference, task
     var title: String {
         switch self {
@@ -177,7 +177,7 @@ enum MemoryKind: String, Codable, CaseIterable, Sendable {
     }
 }
 
-enum Pillar: String, Codable, CaseIterable, Identifiable, Sendable {
+nonisolated enum Pillar: String, Codable, CaseIterable, Identifiable, Sendable {
     case goal, fuel, train, sleep, recovery
     var id: String { rawValue }
     var title: String { rawValue.prefix(1).uppercased() + rawValue.dropFirst() }
@@ -194,11 +194,11 @@ enum Pillar: String, Codable, CaseIterable, Identifiable, Sendable {
 
 // MARK: - Goals
 
-enum MetricDimension: String, Codable, Sendable {
+nonisolated enum MetricDimension: String, Codable, Sendable {
     case length, mass, time, custom
 }
 
-enum GoalMetric: String, Codable, CaseIterable, Identifiable, Sendable {
+nonisolated enum GoalMetric: String, Codable, CaseIterable, Identifiable, Sendable {
     case verticalJump, waist, hipThrust1RM, bodyWeight
     case squat1RM, bench1RM, deadlift1RM
     case fiveK, tenK, custom
@@ -235,7 +235,7 @@ enum GoalMetric: String, Codable, CaseIterable, Identifiable, Sendable {
     }
 }
 
-enum GoalKind: String, Codable, CaseIterable, Identifiable, Sendable {
+nonisolated enum GoalKind: String, Codable, CaseIterable, Identifiable, Sendable {
     case vertical, waist, glutes, fatLoss, muscle, strength, run, custom
 
     var id: String { rawValue }

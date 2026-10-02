@@ -4,7 +4,7 @@ import Foundation
 // Pure Sendable structs produced by the engines/ContextBuilder and consumed by
 // the coach, Game Plan engine, and views.
 
-struct CalendarEventInfo: Codable, Hashable, Identifiable, Sendable {
+nonisolated struct CalendarEventInfo: Codable, Hashable, Identifiable, Sendable {
     var id: String
     var title: String
     var start: Date
@@ -13,7 +13,7 @@ struct CalendarEventInfo: Codable, Hashable, Identifiable, Sendable {
     var isSynthetic: Bool = false
 }
 
-struct GoalSnapshot: Codable, Hashable, Sendable {
+nonisolated struct GoalSnapshot: Codable, Hashable, Sendable {
     var kind: GoalKind
     var title: String
     var metric: GoalMetric
@@ -27,7 +27,7 @@ struct GoalSnapshot: Codable, Hashable, Sendable {
     var projection: Projection
 }
 
-enum ProjectionStatus: String, Codable, Sendable {
+nonisolated enum ProjectionStatus: String, Codable, Sendable {
     case ahead, onTrack, behind, insufficientData, reached
 
     var title: String {
@@ -41,7 +41,7 @@ enum ProjectionStatus: String, Codable, Sendable {
     }
 }
 
-struct Projection: Codable, Hashable, Sendable {
+nonisolated struct Projection: Codable, Hashable, Sendable {
     var current: Double
     var slopePerDay: Double
     var projectedDate: Date?
@@ -50,7 +50,7 @@ struct Projection: Codable, Hashable, Sendable {
     var progress: Double = 0      // 0…1
 }
 
-struct MealSnapshot: Codable, Hashable, Identifiable, Sendable {
+nonisolated struct MealSnapshot: Codable, Hashable, Identifiable, Sendable {
     var id: UUID
     var date: Date
     var title: String
@@ -62,7 +62,7 @@ struct MealSnapshot: Codable, Hashable, Identifiable, Sendable {
     var hasPhoto: Bool
 }
 
-struct WorkoutSnapshot: Codable, Hashable, Identifiable, Sendable {
+nonisolated struct WorkoutSnapshot: Codable, Hashable, Identifiable, Sendable {
     var id: UUID
     var date: Date
     var kind: WorkoutKind
@@ -72,7 +72,7 @@ struct WorkoutSnapshot: Codable, Hashable, Identifiable, Sendable {
     var sport: String?
 }
 
-struct SleepSummary: Codable, Hashable, Sendable {
+nonisolated struct SleepSummary: Codable, Hashable, Sendable {
     var start: Date
     var end: Date
     var asleepMin: Int
@@ -87,14 +87,14 @@ struct SleepSummary: Codable, Hashable, Sendable {
     var score: Int
 }
 
-struct TrainingLoad: Codable, Hashable, Sendable {
+nonisolated struct TrainingLoad: Codable, Hashable, Sendable {
     var acute7: Double
     var chronic28: Double
     var ratio: Double            // acute / chronic (chronic=avg per week)
     var status: String           // "Optimal" / "High" / "Low"
 }
 
-struct EatingWindowState: Codable, Hashable, Sendable {
+nonisolated struct EatingWindowState: Codable, Hashable, Sendable {
     var opens: Date
     var closes: Date
     var isOpen: Bool
@@ -102,14 +102,14 @@ struct EatingWindowState: Codable, Hashable, Sendable {
     var minutesToNextChange: Int
 }
 
-struct MemorySnapshot: Codable, Hashable, Identifiable, Sendable {
+nonisolated struct MemorySnapshot: Codable, Hashable, Identifiable, Sendable {
     var id: UUID
     var kind: MemoryKind
     var text: String
     var dueDate: Date?
 }
 
-struct PlanSnapshotValue: Codable, Hashable, Sendable {
+nonisolated struct PlanSnapshotValue: Codable, Hashable, Sendable {
     var kcalTarget: Int
     var proteinG: Int
     var carbsG: Int
@@ -123,12 +123,12 @@ struct PlanSnapshotValue: Codable, Hashable, Sendable {
                                          weeklySplit: [], rationale: "")
 }
 
-enum ScoreBand: String, Codable, Sendable {
+nonisolated enum ScoreBand: String, Codable, Sendable {
     case low, mid, high
 }
 
 /// Everything the coach, Game Plan engine, and views need for "today".
-struct CoachContext: Sendable {
+nonisolated struct CoachContext: Sendable {
     var now: Date
     var userName: String = ""
     var tone: CoachTone = .direct

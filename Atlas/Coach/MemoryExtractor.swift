@@ -2,7 +2,7 @@ import Foundation
 
 /// Extracts long-term memories from chat text: explicit "remember …" plus
 /// auto-detection of facts/preferences ("my knee …", "I'm vegetarian").
-enum MemoryExtractor {
+nonisolated enum MemoryExtractor {
 
     static func extract(from text: String, now: Date = AppClock.now) -> [MemoryDraft] {
         var out: [MemoryDraft] = []
