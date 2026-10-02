@@ -1,0 +1,5562 @@
+[
+ {
+  "id": "chicken_breast",
+  "name": "Chicken breast",
+  "synonyms": [
+   "grilled chicken",
+   "chicken",
+   "chicken breast cooked"
+  ],
+  "category": "Protein",
+  "serving": "1 piece · 172 g",
+  "grams": 172,
+  "kcal": 284,
+  "protein": 53,
+  "carbs": 0,
+  "fat": 6,
+  "emoji": "🍗"
+ },
+ {
+  "id": "chicken_thigh",
+  "name": "Chicken thigh (skinless)",
+  "synonyms": [
+   "chicken thigh"
+  ],
+  "category": "Protein",
+  "serving": "1 thigh · 116 g",
+  "grams": 116,
+  "kcal": 209,
+  "protein": 26,
+  "carbs": 0,
+  "fat": 10,
+  "emoji": "🍗"
+ },
+ {
+  "id": "rotisserie_chicken",
+  "name": "Rotisserie chicken",
+  "synonyms": [
+   "rotisserie"
+  ],
+  "category": "Protein",
+  "serving": "3 oz · 85 g",
+  "grams": 85,
+  "kcal": 170,
+  "protein": 24,
+  "carbs": 0,
+  "fat": 7,
+  "emoji": "🍗"
+ },
+ {
+  "id": "ground_beef_90",
+  "name": "Ground beef 90% lean",
+  "synonyms": [
+   "ground beef",
+   "beef mince",
+   "minced beef",
+   "lean beef"
+  ],
+  "category": "Protein",
+  "serving": "4 oz · 113 g",
+  "grams": 113,
+  "kcal": 200,
+  "protein": 23,
+  "carbs": 0,
+  "fat": 11,
+  "emoji": "🥩"
+ },
+ {
+  "id": "ground_turkey",
+  "name": "Ground turkey 93%",
+  "synonyms": [
+   "turkey mince"
+  ],
+  "category": "Protein",
+  "serving": "4 oz · 113 g",
+  "grams": 113,
+  "kcal": 160,
+  "protein": 22,
+  "carbs": 0,
+  "fat": 8,
+  "emoji": "🦃"
+ },
+ {
+  "id": "steak",
+  "name": "Sirloin steak",
+  "synonyms": [
+   "steak",
+   "sirloin",
+   "beef steak"
+  ],
+  "category": "Protein",
+  "serving": "6 oz · 170 g",
+  "grams": 170,
+  "kcal": 335,
+  "protein": 49,
+  "carbs": 0,
+  "fat": 14,
+  "emoji": "🥩"
+ },
+ {
+  "id": "ribeye",
+  "name": "Ribeye steak",
+  "synonyms": [
+   "ribeye"
+  ],
+  "category": "Protein",
+  "serving": "6 oz · 170 g",
+  "grams": 170,
+  "kcal": 466,
+  "protein": 42,
+  "carbs": 0,
+  "fat": 32,
+  "emoji": "🥩"
+ },
+ {
+  "id": "salmon",
+  "name": "Salmon fillet",
+  "synonyms": [
+   "salmon",
+   "atlantic salmon",
+   "baked salmon"
+  ],
+  "category": "Protein",
+  "serving": "6 oz · 170 g",
+  "grams": 170,
+  "kcal": 350,
+  "protein": 39,
+  "carbs": 0,
+  "fat": 20,
+  "emoji": "🐟"
+ },
+ {
+  "id": "shrimp",
+  "name": "Shrimp",
+  "synonyms": [
+   "prawns",
+   "shrimp"
+  ],
+  "category": "Protein",
+  "serving": "3 oz · 85 g",
+  "grams": 85,
+  "kcal": 84,
+  "protein": 20,
+  "carbs": 0,
+  "fat": 1,
+  "emoji": "🍤"
+ },
+ {
+  "id": "tuna",
+  "name": "Tuna (canned in water)",
+  "synonyms": [
+   "canned tuna",
+   "tuna fish"
+  ],
+  "category": "Protein",
+  "serving": "1 can · 142 g",
+  "grams": 142,
+  "kcal": 128,
+  "protein": 28,
+  "carbs": 0,
+  "fat": 1,
+  "emoji": "🐟"
+ },
+ {
+  "id": "tuna_steak",
+  "name": "Tuna steak",
+  "synonyms": [
+   "ahi tuna",
+   "seared tuna"
+  ],
+  "category": "Protein",
+  "serving": "5 oz · 142 g",
+  "grams": 142,
+  "kcal": 184,
+  "protein": 40,
+  "carbs": 0,
+  "fat": 2,
+  "emoji": "🐟"
+ },
+ {
+  "id": "cod",
+  "name": "Cod fillet",
+  "synonyms": [
+   "cod",
+   "white fish"
+  ],
+  "category": "Protein",
+  "serving": "6 oz · 170 g",
+  "grams": 170,
+  "kcal": 158,
+  "protein": 36,
+  "carbs": 0,
+  "fat": 1,
+  "emoji": "🐟"
+ },
+ {
+  "id": "tilapia",
+  "name": "Tilapia",
+  "synonyms": [
+   "tilapia"
+  ],
+  "category": "Protein",
+  "serving": "4 oz · 113 g",
+  "grams": 113,
+  "kcal": 109,
+  "protein": 22,
+  "carbs": 0,
+  "fat": 2,
+  "emoji": "🐟"
+ },
+ {
+  "id": "sashimi",
+  "name": "Sashimi (mixed)",
+  "synonyms": [
+   "sashimi",
+   "raw fish"
+  ],
+  "category": "Protein",
+  "serving": "6 pieces · 120 g",
+  "grams": 120,
+  "kcal": 146,
+  "protein": 26,
+  "carbs": 0,
+  "fat": 4,
+  "emoji": "🍣"
+ },
+ {
+  "id": "sushi_roll",
+  "name": "Sushi roll (salmon/tuna)",
+  "synonyms": [
+   "sushi",
+   "maki",
+   "sushi roll",
+   "california roll"
+  ],
+  "category": "Restaurant",
+  "serving": "6 pieces · 180 g",
+  "grams": 180,
+  "kcal": 250,
+  "protein": 11,
+  "carbs": 38,
+  "fat": 6,
+  "emoji": "🍣"
+ },
+ {
+  "id": "spicy_tuna_roll",
+  "name": "Spicy tuna roll",
+  "synonyms": [
+   "spicy tuna"
+  ],
+  "category": "Restaurant",
+  "serving": "6 pieces · 180 g",
+  "grams": 180,
+  "kcal": 290,
+  "protein": 14,
+  "carbs": 40,
+  "fat": 8,
+  "emoji": "🍣"
+ },
+ {
+  "id": "black_cod_miso",
+  "name": "Black cod miso",
+  "synonyms": [
+   "miso cod",
+   "nobu black cod",
+   "miso glazed cod"
+  ],
+  "category": "Restaurant",
+  "serving": "1 fillet · 150 g",
+  "grams": 150,
+  "kcal": 280,
+  "protein": 34,
+  "carbs": 12,
+  "fat": 10,
+  "emoji": "🐟"
+ },
+ {
+  "id": "egg",
+  "name": "Egg (large)",
+  "synonyms": [
+   "eggs",
+   "boiled egg",
+   "fried egg",
+   "scrambled egg"
+  ],
+  "category": "Protein",
+  "serving": "1 large · 50 g",
+  "grams": 50,
+  "kcal": 72,
+  "protein": 6,
+  "carbs": 0.4,
+  "fat": 5,
+  "emoji": "🥚"
+ },
+ {
+  "id": "egg_white",
+  "name": "Egg whites",
+  "synonyms": [
+   "egg white"
+  ],
+  "category": "Protein",
+  "serving": "3 whites · 99 g",
+  "grams": 99,
+  "kcal": 52,
+  "protein": 11,
+  "carbs": 0.4,
+  "fat": 0.2,
+  "emoji": "🥚"
+ },
+ {
+  "id": "bacon",
+  "name": "Bacon",
+  "synonyms": [
+   "bacon strips",
+   "pork bacon"
+  ],
+  "category": "Protein",
+  "serving": "3 strips · 36 g",
+  "grams": 36,
+  "kcal": 161,
+  "protein": 12,
+  "carbs": 0.6,
+  "fat": 12,
+  "emoji": "🥓"
+ },
+ {
+  "id": "turkey_bacon",
+  "name": "Turkey bacon",
+  "synonyms": [
+   "turkey bacon"
+  ],
+  "category": "Protein",
+  "serving": "3 strips · 42 g",
+  "grams": 42,
+  "kcal": 120,
+  "protein": 10,
+  "carbs": 1,
+  "fat": 8,
+  "emoji": "🥓"
+ },
+ {
+  "id": "pork_chop",
+  "name": "Pork chop",
+  "synonyms": [
+   "pork chop"
+  ],
+  "category": "Protein",
+  "serving": "5 oz · 142 g",
+  "grams": 142,
+  "kcal": 250,
+  "protein": 35,
+  "carbs": 0,
+  "fat": 11,
+  "emoji": "🥩"
+ },
+ {
+  "id": "pork_tenderloin",
+  "name": "Pork tenderloin",
+  "synonyms": [
+   "pork loin"
+  ],
+  "category": "Protein",
+  "serving": "4 oz · 113 g",
+  "grams": 113,
+  "kcal": 136,
+  "protein": 26,
+  "carbs": 0,
+  "fat": 4,
+  "emoji": "🥩"
+ },
+ {
+  "id": "ham",
+  "name": "Ham slices",
+  "synonyms": [
+   "ham",
+   "deli ham"
+  ],
+  "category": "Protein",
+  "serving": "3 oz · 85 g",
+  "grams": 85,
+  "kcal": 112,
+  "protein": 15,
+  "carbs": 3,
+  "fat": 4,
+  "emoji": "🍖"
+ },
+ {
+  "id": "turkey_breast",
+  "name": "Turkey breast (deli)",
+  "synonyms": [
+   "turkey slices",
+   "deli turkey"
+  ],
+  "category": "Protein",
+  "serving": "3 oz · 85 g",
+  "grams": 85,
+  "kcal": 90,
+  "protein": 16,
+  "carbs": 1,
+  "fat": 1,
+  "emoji": "🦃"
+ },
+ {
+  "id": "lamb",
+  "name": "Lamb chop",
+  "synonyms": [
+   "lamb"
+  ],
+  "category": "Protein",
+  "serving": "4 oz · 113 g",
+  "grams": 113,
+  "kcal": 282,
+  "protein": 25,
+  "carbs": 0,
+  "fat": 19,
+  "emoji": "🍖"
+ },
+ {
+  "id": "tofu",
+  "name": "Tofu (firm)",
+  "synonyms": [
+   "tofu",
+   "bean curd"
+  ],
+  "category": "Protein",
+  "serving": "150 g",
+  "grams": 150,
+  "kcal": 120,
+  "protein": 14,
+  "carbs": 3,
+  "fat": 7,
+  "emoji": "🧊"
+ },
+ {
+  "id": "tempeh",
+  "name": "Tempeh",
+  "synonyms": [
+   "tempeh"
+  ],
+  "category": "Protein",
+  "serving": "100 g",
+  "grams": 100,
+  "kcal": 193,
+  "protein": 19,
+  "carbs": 9,
+  "fat": 11,
+  "emoji": "🧊"
+ },
+ {
+  "id": "edamame",
+  "name": "Edamame",
+  "synonyms": [
+   "edamame",
+   "soybeans pods"
+  ],
+  "category": "Sides",
+  "serving": "1/2 cup · 75 g",
+  "grams": 75,
+  "kcal": 94,
+  "protein": 9,
+  "carbs": 7,
+  "fat": 4,
+  "emoji": "🫛"
+ },
+ {
+  "id": "protein_shake",
+  "name": "Protein shake (whey)",
+  "synonyms": [
+   "protein shake",
+   "protein powder",
+   "whey",
+   "shake"
+  ],
+  "category": "Drinks",
+  "serving": "1 scoop · 30 g + water",
+  "grams": 30,
+  "kcal": 120,
+  "protein": 24,
+  "carbs": 3,
+  "fat": 1,
+  "emoji": "🥤"
+ },
+ {
+  "id": "casein_shake",
+  "name": "Casein shake",
+  "synonyms": [
+   "casein"
+  ],
+  "category": "Drinks",
+  "serving": "1 scoop · 32 g",
+  "grams": 32,
+  "kcal": 120,
+  "protein": 24,
+  "carbs": 2,
+  "fat": 1,
+  "emoji": "🥤"
+ },
+ {
+  "id": "greek_yogurt",
+  "name": "Greek yogurt (nonfat)",
+  "synonyms": [
+   "greek yogurt",
+   "yogurt"
+  ],
+  "category": "Dairy",
+  "serving": "1 cup · 245 g",
+  "grams": 245,
+  "kcal": 140,
+  "protein": 24,
+  "carbs": 8,
+  "fat": 1,
+  "emoji": "🥣"
+ },
+ {
+  "id": "greek_yogurt_2",
+  "name": "Greek yogurt 2%",
+  "synonyms": [
+   "2% greek yogurt"
+  ],
+  "category": "Dairy",
+  "serving": "1 cup · 245 g",
+  "grams": 245,
+  "kcal": 170,
+  "protein": 24,
+  "carbs": 9,
+  "fat": 5,
+  "emoji": "🥣"
+ },
+ {
+  "id": "cottage_cheese",
+  "name": "Cottage cheese (2%)",
+  "synonyms": [
+   "cottage cheese"
+  ],
+  "category": "Dairy",
+  "serving": "1 cup · 226 g",
+  "grams": 226,
+  "kcal": 183,
+  "protein": 24,
+  "carbs": 9,
+  "fat": 5,
+  "emoji": "🧀"
+ },
+ {
+  "id": "milk",
+  "name": "Milk (2%)",
+  "synonyms": [
+   "milk"
+  ],
+  "category": "Dairy",
+  "serving": "1 cup · 244 g",
+  "grams": 244,
+  "kcal": 122,
+  "protein": 8,
+  "carbs": 12,
+  "fat": 5,
+  "emoji": "🥛"
+ },
+ {
+  "id": "skim_milk",
+  "name": "Skim milk",
+  "synonyms": [
+   "skim milk",
+   "nonfat milk"
+  ],
+  "category": "Dairy",
+  "serving": "1 cup · 245 g",
+  "grams": 245,
+  "kcal": 83,
+  "protein": 8,
+  "carbs": 12,
+  "fat": 0.2,
+  "emoji": "🥛"
+ },
+ {
+  "id": "cheddar",
+  "name": "Cheddar cheese",
+  "synonyms": [
+   "cheddar",
+   "cheese"
+  ],
+  "category": "Dairy",
+  "serving": "1 oz · 28 g",
+  "grams": 28,
+  "kcal": 113,
+  "protein": 7,
+  "carbs": 0.4,
+  "fat": 9,
+  "emoji": "🧀"
+ },
+ {
+  "id": "mozzarella",
+  "name": "Mozzarella (part-skim)",
+  "synonyms": [
+   "mozzarella",
+   "fresh mozzarella"
+  ],
+  "category": "Dairy",
+  "serving": "1 oz · 28 g",
+  "grams": 28,
+  "kcal": 72,
+  "protein": 7,
+  "carbs": 1,
+  "fat": 4.5,
+  "emoji": "🧀"
+ },
+ {
+  "id": "string_cheese",
+  "name": "String cheese",
+  "synonyms": [
+   "cheese stick"
+  ],
+  "category": "Dairy",
+  "serving": "1 stick · 28 g",
+  "grams": 28,
+  "kcal": 80,
+  "protein": 7,
+  "carbs": 0,
+  "fat": 6,
+  "emoji": "🧀"
+ },
+ {
+  "id": "parmesan",
+  "name": "Parmesan",
+  "synonyms": [
+   "parmesan",
+   "parmigiano"
+  ],
+  "category": "Dairy",
+  "serving": "2 tbsp · 10 g",
+  "grams": 10,
+  "kcal": 43,
+  "protein": 4,
+  "carbs": 0.3,
+  "fat": 3,
+  "emoji": "🧀"
+ },
+ {
+  "id": "cream_cheese",
+  "name": "Cream cheese",
+  "synonyms": [
+   "cream cheese",
+   "philadelphia"
+  ],
+  "category": "Dairy",
+  "serving": "2 tbsp · 28 g",
+  "grams": 28,
+  "kcal": 100,
+  "protein": 2,
+  "carbs": 1,
+  "fat": 10,
+  "emoji": "🧀"
+ },
+ {
+  "id": "butter",
+  "name": "Butter",
+  "synonyms": [
+   "butter"
+  ],
+  "category": "Dairy",
+  "serving": "1 tbsp · 14 g",
+  "grams": 14,
+  "kcal": 102,
+  "protein": 0.1,
+  "carbs": 0,
+  "fat": 12,
+  "emoji": "🧈"
+ },
+ {
+  "id": "whey_protein_bar",
+  "name": "Protein bar",
+  "synonyms": [
+   "protein bar",
+   "quest bar"
+  ],
+  "category": "Snacks",
+  "serving": "1 bar · 60 g",
+  "grams": 60,
+  "kcal": 200,
+  "protein": 20,
+  "carbs": 22,
+  "fat": 8,
+  "emoji": "🍫"
+ },
+ {
+  "id": "white_rice",
+  "name": "White rice (cooked)",
+  "synonyms": [
+   "rice",
+   "white rice",
+   "steamed rice"
+  ],
+  "category": "Grains",
+  "serving": "1 cup · 158 g",
+  "grams": 158,
+  "kcal": 205,
+  "protein": 4,
+  "carbs": 45,
+  "fat": 0.4,
+  "emoji": "🍚"
+ },
+ {
+  "id": "brown_rice",
+  "name": "Brown rice (cooked)",
+  "synonyms": [
+   "brown rice"
+  ],
+  "category": "Grains",
+  "serving": "1 cup · 195 g",
+  "grams": 195,
+  "kcal": 216,
+  "protein": 5,
+  "carbs": 45,
+  "fat": 2,
+  "emoji": "🍚"
+ },
+ {
+  "id": "quinoa",
+  "name": "Quinoa (cooked)",
+  "synonyms": [
+   "quinoa"
+  ],
+  "category": "Grains",
+  "serving": "1 cup · 185 g",
+  "grams": 185,
+  "kcal": 222,
+  "protein": 8,
+  "carbs": 39,
+  "fat": 4,
+  "emoji": "🍚"
+ },
+ {
+  "id": "oatmeal",
+  "name": "Oatmeal",
+  "synonyms": [
+   "oats",
+   "oatmeal",
+   "porridge"
+  ],
+  "category": "Grains",
+  "serving": "1 cup cooked · 234 g",
+  "grams": 234,
+  "kcal": 158,
+  "protein": 6,
+  "carbs": 27,
+  "fat": 3,
+  "emoji": "🥣"
+ },
+ {
+  "id": "oatmeal_raw",
+  "name": "Rolled oats (dry)",
+  "synonyms": [
+   "oats dry"
+  ],
+  "category": "Grains",
+  "serving": "1/2 cup · 40 g",
+  "grams": 40,
+  "kcal": 150,
+  "protein": 5,
+  "carbs": 27,
+  "fat": 3,
+  "emoji": "🥣"
+ },
+ {
+  "id": "granola",
+  "name": "Granola",
+  "synonyms": [
+   "granola",
+   "muesli"
+  ],
+  "category": "Grains",
+  "serving": "1/2 cup · 61 g",
+  "grams": 61,
+  "kcal": 270,
+  "protein": 6,
+  "carbs": 36,
+  "fat": 9,
+  "emoji": "🥣"
+ },
+ {
+  "id": "whole_wheat_bread",
+  "name": "Whole wheat bread",
+  "synonyms": [
+   "whole wheat bread",
+   "whole grain bread"
+  ],
+  "category": "Grains",
+  "serving": "1 slice · 32 g",
+  "grams": 32,
+  "kcal": 81,
+  "protein": 4,
+  "carbs": 14,
+  "fat": 1,
+  "emoji": "🍞"
+ },
+ {
+  "id": "white_bread",
+  "name": "White bread",
+  "synonyms": [
+   "white bread"
+  ],
+  "category": "Grains",
+  "serving": "1 slice · 30 g",
+  "grams": 30,
+  "kcal": 79,
+  "protein": 3,
+  "carbs": 15,
+  "fat": 1,
+  "emoji": "🍞"
+ },
+ {
+  "id": "toast",
+  "name": "Toast with butter",
+  "synonyms": [
+   "toast",
+   "buttered toast"
+  ],
+  "category": "Grains",
+  "serving": "1 slice · 33 g",
+  "grams": 33,
+  "kcal": 120,
+  "protein": 3,
+  "carbs": 15,
+  "fat": 5,
+  "emoji": "🍞"
+ },
+ {
+  "id": "avocado_toast",
+  "name": "Avocado toast",
+  "synonyms": [
+   "avocado toast",
+   "avo toast"
+  ],
+  "category": "Meals",
+  "serving": "1 slice · 120 g",
+  "grams": 120,
+  "kcal": 195,
+  "protein": 5,
+  "carbs": 20,
+  "fat": 11,
+  "emoji": "🥑"
+ },
+ {
+  "id": "bagel",
+  "name": "Bagel (plain)",
+  "synonyms": [
+   "bagel"
+  ],
+  "category": "Grains",
+  "serving": "1 bagel · 105 g",
+  "grams": 105,
+  "kcal": 277,
+  "protein": 11,
+  "carbs": 55,
+  "fat": 2,
+  "emoji": "🥯"
+ },
+ {
+  "id": "english_muffin",
+  "name": "English muffin",
+  "synonyms": [
+   "english muffin"
+  ],
+  "category": "Grains",
+  "serving": "1 muffin · 57 g",
+  "grams": 57,
+  "kcal": 134,
+  "protein": 4,
+  "carbs": 26,
+  "fat": 1,
+  "emoji": "🥯"
+ },
+ {
+  "id": "croissant",
+  "name": "Croissant",
+  "synonyms": [
+   "croissant"
+  ],
+  "category": "Grains",
+  "serving": "1 · 57 g",
+  "grams": 57,
+  "kcal": 231,
+  "protein": 5,
+  "carbs": 26,
+  "fat": 12,
+  "emoji": "🥐"
+ },
+ {
+  "id": "tortilla",
+  "name": "Flour tortilla",
+  "synonyms": [
+   "tortilla",
+   "wrap"
+  ],
+  "category": "Grains",
+  "serving": "1 large · 49 g",
+  "grams": 49,
+  "kcal": 146,
+  "protein": 4,
+  "carbs": 25,
+  "fat": 4,
+  "emoji": "🌯"
+ },
+ {
+  "id": "corn_tortilla",
+  "name": "Corn tortilla",
+  "synonyms": [
+   "corn tortilla"
+  ],
+  "category": "Grains",
+  "serving": "1 · 26 g",
+  "grams": 26,
+  "kcal": 57,
+  "protein": 1,
+  "carbs": 12,
+  "fat": 1,
+  "emoji": "🌯"
+ },
+ {
+  "id": "pasta_marinara",
+  "name": "Pasta with marinara",
+  "synonyms": [
+   "pasta",
+   "spaghetti",
+   "marinara pasta",
+   "noodles marinara"
+  ],
+  "category": "Grains",
+  "serving": "1 cup · 250 g",
+  "grams": 250,
+  "kcal": 300,
+  "protein": 10,
+  "carbs": 58,
+  "fat": 4,
+  "emoji": "🍝"
+ },
+ {
+  "id": "penne",
+  "name": "Penne (cooked)",
+  "synonyms": [
+   "penne",
+   "pasta plain"
+  ],
+  "category": "Grains",
+  "serving": "1 cup · 140 g",
+  "grams": 140,
+  "kcal": 220,
+  "protein": 8,
+  "carbs": 43,
+  "fat": 1.3,
+  "emoji": "🍝"
+ },
+ {
+  "id": "ramen",
+  "name": "Ramen bowl",
+  "synonyms": [
+   "ramen",
+   "noodle soup"
+  ],
+  "category": "Restaurant",
+  "serving": "1 bowl · 500 g",
+  "grams": 500,
+  "kcal": 540,
+  "protein": 22,
+  "carbs": 68,
+  "fat": 20,
+  "emoji": "🍜"
+ },
+ {
+  "id": "pad_thai",
+  "name": "Pad thai",
+  "synonyms": [
+   "pad thai",
+   "thai noodles"
+  ],
+  "category": "Restaurant",
+  "serving": "1 serving · 350 g",
+  "grams": 350,
+  "kcal": 640,
+  "protein": 24,
+  "carbs": 78,
+  "fat": 26,
+  "emoji": "🍜"
+ },
+ {
+  "id": "fried_rice",
+  "name": "Fried rice",
+  "synonyms": [
+   "fried rice"
+  ],
+  "category": "Restaurant",
+  "serving": "1 cup · 200 g",
+  "grams": 200,
+  "kcal": 333,
+  "protein": 8,
+  "carbs": 52,
+  "fat": 11,
+  "emoji": "🍚"
+ },
+ {
+  "id": "sweet_potato",
+  "name": "Sweet potato",
+  "synonyms": [
+   "sweet potato",
+   "yam"
+  ],
+  "category": "Vegetables",
+  "serving": "1 medium · 130 g",
+  "grams": 130,
+  "kcal": 112,
+  "protein": 2,
+  "carbs": 26,
+  "fat": 0.1,
+  "emoji": "🍠"
+ },
+ {
+  "id": "potato",
+  "name": "Potato (baked)",
+  "synonyms": [
+   "baked potato",
+   "potato"
+  ],
+  "category": "Vegetables",
+  "serving": "1 medium · 173 g",
+  "grams": 173,
+  "kcal": 161,
+  "protein": 4,
+  "carbs": 37,
+  "fat": 0.2,
+  "emoji": "🥔"
+ },
+ {
+  "id": "mashed_potatoes",
+  "name": "Mashed potatoes",
+  "synonyms": [
+   "mashed potato"
+  ],
+  "category": "Vegetables",
+  "serving": "1 cup · 210 g",
+  "grams": 210,
+  "kcal": 237,
+  "protein": 4,
+  "carbs": 35,
+  "fat": 9,
+  "emoji": "🥔"
+ },
+ {
+  "id": "fries",
+  "name": "French fries",
+  "synonyms": [
+   "fries",
+   "french fries",
+   "chips fries"
+  ],
+  "category": "Sides",
+  "serving": "medium · 117 g",
+  "grams": 117,
+  "kcal": 365,
+  "protein": 4,
+  "carbs": 48,
+  "fat": 17,
+  "emoji": "🍟"
+ },
+ {
+  "id": "sweet_potato_fries",
+  "name": "Sweet potato fries",
+  "synonyms": [
+   "sweet potato fries"
+  ],
+  "category": "Sides",
+  "serving": "100 g",
+  "grams": 100,
+  "kcal": 320,
+  "protein": 2,
+  "carbs": 41,
+  "fat": 16,
+  "emoji": "🍟"
+ },
+ {
+  "id": "hash_browns",
+  "name": "Hash browns",
+  "synonyms": [
+   "hash brown"
+  ],
+  "category": "Breakfast",
+  "serving": "1 patty · 64 g",
+  "grams": 64,
+  "kcal": 143,
+  "protein": 1,
+  "carbs": 19,
+  "fat": 7,
+  "emoji": "🥔"
+ },
+ {
+  "id": "couscous",
+  "name": "Couscous",
+  "synonyms": [
+   "couscous"
+  ],
+  "category": "Grains",
+  "serving": "1 cup · 157 g",
+  "grams": 157,
+  "kcal": 176,
+  "protein": 6,
+  "carbs": 36,
+  "fat": 0.3,
+  "emoji": "🍚"
+ },
+ {
+  "id": "tortilla_chips",
+  "name": "Tortilla chips",
+  "synonyms": [
+   "chips",
+   "nachos"
+  ],
+  "category": "Snacks",
+  "serving": "1 oz · 28 g",
+  "grams": 28,
+  "kcal": 142,
+  "protein": 2,
+  "carbs": 18,
+  "fat": 7,
+  "emoji": "🌮"
+ },
+ {
+  "id": "pretzels",
+  "name": "Pretzels",
+  "synonyms": [
+   "pretzel"
+  ],
+  "category": "Snacks",
+  "serving": "1 oz · 28 g",
+  "grams": 28,
+  "kcal": 108,
+  "protein": 3,
+  "carbs": 23,
+  "fat": 1,
+  "emoji": "🥨"
+ },
+ {
+  "id": "crackers",
+  "name": "Crackers",
+  "synonyms": [
+   "crackers",
+   "saltines"
+  ],
+  "category": "Snacks",
+  "serving": "5 crackers · 15 g",
+  "grams": 15,
+  "kcal": 64,
+  "protein": 1,
+  "carbs": 11,
+  "fat": 2,
+  "emoji": "🍘"
+ },
+ {
+  "id": "popcorn",
+  "name": "Popcorn (air-popped)",
+  "synonyms": [
+   "popcorn"
+  ],
+  "category": "Snacks",
+  "serving": "3 cups · 24 g",
+  "grams": 24,
+  "kcal": 93,
+  "protein": 3,
+  "carbs": 19,
+  "fat": 1,
+  "emoji": "🍿"
+ },
+ {
+  "id": "rice_cakes",
+  "name": "Rice cakes",
+  "synonyms": [
+   "rice cake"
+  ],
+  "category": "Snacks",
+  "serving": "1 cake · 9 g",
+  "grams": 9,
+  "kcal": 35,
+  "protein": 1,
+  "carbs": 7,
+  "fat": 0.3,
+  "emoji": "🍘"
+ },
+ {
+  "id": "hummus",
+  "name": "Hummus",
+  "synonyms": [
+   "hummus"
+  ],
+  "category": "Sides",
+  "serving": "2 tbsp · 30 g",
+  "grams": 30,
+  "kcal": 83,
+  "protein": 2,
+  "carbs": 5,
+  "fat": 5,
+  "emoji": "🥣"
+ },
+ {
+  "id": "pita",
+  "name": "Pita bread",
+  "synonyms": [
+   "pita"
+  ],
+  "category": "Grains",
+  "serving": "1 pita · 60 g",
+  "grams": 60,
+  "kcal": 165,
+  "protein": 5,
+  "carbs": 33,
+  "fat": 1,
+  "emoji": "🫓"
+ },
+ {
+  "id": "noodles_soba",
+  "name": "Soba noodles",
+  "synonyms": [
+   "soba"
+  ],
+  "category": "Grains",
+  "serving": "1 cup · 114 g",
+  "grams": 114,
+  "kcal": 113,
+  "protein": 6,
+  "carbs": 24,
+  "fat": 0.1,
+  "emoji": "🍜"
+ },
+ {
+  "id": "udon",
+  "name": "Udon noodles",
+  "synonyms": [
+   "udon"
+  ],
+  "category": "Grains",
+  "serving": "1 cup · 220 g",
+  "grams": 220,
+  "kcal": 210,
+  "protein": 7,
+  "carbs": 43,
+  "fat": 1,
+  "emoji": "🍜"
+ },
+ {
+  "id": "banana",
+  "name": "Banana",
+  "synonyms": [
+   "banana"
+  ],
+  "category": "Fruit",
+  "serving": "1 medium · 118 g",
+  "grams": 118,
+  "kcal": 105,
+  "protein": 1,
+  "carbs": 27,
+  "fat": 0.4,
+  "emoji": "🍌"
+ },
+ {
+  "id": "apple",
+  "name": "Apple",
+  "synonyms": [
+   "apple",
+   "gala apple",
+   "fuji apple"
+  ],
+  "category": "Fruit",
+  "serving": "1 medium · 182 g",
+  "grams": 182,
+  "kcal": 95,
+  "protein": 0.5,
+  "carbs": 25,
+  "fat": 0.3,
+  "emoji": "🍎"
+ },
+ {
+  "id": "orange",
+  "name": "Orange",
+  "synonyms": [
+   "orange"
+  ],
+  "category": "Fruit",
+  "serving": "1 medium · 131 g",
+  "grams": 131,
+  "kcal": 62,
+  "protein": 1,
+  "carbs": 15,
+  "fat": 0.2,
+  "emoji": "🍊"
+ },
+ {
+  "id": "strawberries",
+  "name": "Strawberries",
+  "synonyms": [
+   "strawberry"
+  ],
+  "category": "Fruit",
+  "serving": "1 cup · 152 g",
+  "grams": 152,
+  "kcal": 49,
+  "protein": 1,
+  "carbs": 12,
+  "fat": 0.5,
+  "emoji": "🍓"
+ },
+ {
+  "id": "blueberries",
+  "name": "Blueberries",
+  "synonyms": [
+   "blueberry"
+  ],
+  "category": "Fruit",
+  "serving": "1 cup · 148 g",
+  "grams": 148,
+  "kcal": 84,
+  "protein": 1,
+  "carbs": 21,
+  "fat": 0.5,
+  "emoji": "🫐"
+ },
+ {
+  "id": "raspberries",
+  "name": "Raspberries",
+  "synonyms": [
+   "raspberry"
+  ],
+  "category": "Fruit",
+  "serving": "1 cup · 123 g",
+  "grams": 123,
+  "kcal": 64,
+  "protein": 1.5,
+  "carbs": 15,
+  "fat": 0.8,
+  "emoji": "🍇"
+ },
+ {
+  "id": "grapes",
+  "name": "Grapes",
+  "synonyms": [
+   "grape"
+  ],
+  "category": "Fruit",
+  "serving": "1 cup · 151 g",
+  "grams": 151,
+  "kcal": 104,
+  "protein": 1,
+  "carbs": 27,
+  "fat": 0.2,
+  "emoji": "🍇"
+ },
+ {
+  "id": "watermelon",
+  "name": "Watermelon",
+  "synonyms": [
+   "watermelon"
+  ],
+  "category": "Fruit",
+  "serving": "1 cup · 152 g",
+  "grams": 152,
+  "kcal": 46,
+  "protein": 1,
+  "carbs": 11.5,
+  "fat": 0.2,
+  "emoji": "🍉"
+ },
+ {
+  "id": "pineapple",
+  "name": "Pineapple",
+  "synonyms": [
+   "pineapple"
+  ],
+  "category": "Fruit",
+  "serving": "1 cup · 165 g",
+  "grams": 165,
+  "kcal": 82,
+  "protein": 1,
+  "carbs": 22,
+  "fat": 0.2,
+  "emoji": "🍍"
+ },
+ {
+  "id": "mango",
+  "name": "Mango",
+  "synonyms": [
+   "mango"
+  ],
+  "category": "Fruit",
+  "serving": "1 cup · 165 g",
+  "grams": 165,
+  "kcal": 99,
+  "protein": 1,
+  "carbs": 25,
+  "fat": 0.6,
+  "emoji": "🥭"
+ },
+ {
+  "id": "peach",
+  "name": "Peach",
+  "synonyms": [
+   "peach"
+  ],
+  "category": "Fruit",
+  "serving": "1 medium · 150 g",
+  "grams": 150,
+  "kcal": 59,
+  "protein": 1,
+  "carbs": 14,
+  "fat": 0.4,
+  "emoji": "🍑"
+ },
+ {
+  "id": "pear",
+  "name": "Pear",
+  "synonyms": [
+   "pear"
+  ],
+  "category": "Fruit",
+  "serving": "1 medium · 178 g",
+  "grams": 178,
+  "kcal": 101,
+  "protein": 1,
+  "carbs": 27,
+  "fat": 0.2,
+  "emoji": "🍐"
+ },
+ {
+  "id": "kiwi",
+  "name": "Kiwi",
+  "synonyms": [
+   "kiwi fruit"
+  ],
+  "category": "Fruit",
+  "serving": "1 · 69 g",
+  "grams": 69,
+  "kcal": 42,
+  "protein": 1,
+  "carbs": 10,
+  "fat": 0.4,
+  "emoji": "🥝"
+ },
+ {
+  "id": "dried_mango",
+  "name": "Dried mango",
+  "synonyms": [
+   "dried mango"
+  ],
+  "category": "Snacks",
+  "serving": "4 pieces · 40 g",
+  "grams": 40,
+  "kcal": 128,
+  "protein": 1,
+  "carbs": 31,
+  "fat": 0.3,
+  "emoji": "🥭"
+ },
+ {
+  "id": "raisins",
+  "name": "Raisins",
+  "synonyms": [
+   "raisins"
+  ],
+  "category": "Snacks",
+  "serving": "1 box · 43 g",
+  "grams": 43,
+  "kcal": 129,
+  "protein": 1,
+  "carbs": 34,
+  "fat": 0.2,
+  "emoji": "🍇"
+ },
+ {
+  "id": "avocado",
+  "name": "Avocado",
+  "synonyms": [
+   "avocado",
+   "avo",
+   "half avocado"
+  ],
+  "category": "Fruit",
+  "serving": "1/2 · 100 g",
+  "grams": 100,
+  "kcal": 160,
+  "protein": 2,
+  "carbs": 9,
+  "fat": 15,
+  "emoji": "🥑"
+ },
+ {
+  "id": "coconut_water",
+  "name": "Coconut water",
+  "synonyms": [
+   "coconut water"
+  ],
+  "category": "Drinks",
+  "serving": "1 cup · 240 g",
+  "grams": 240,
+  "kcal": 46,
+  "protein": 2,
+  "carbs": 9,
+  "fat": 0.5,
+  "emoji": "🥥"
+ },
+ {
+  "id": "broccoli",
+  "name": "Broccoli",
+  "synonyms": [
+   "broccoli"
+  ],
+  "category": "Vegetables",
+  "serving": "1 cup · 156 g",
+  "grams": 156,
+  "kcal": 55,
+  "protein": 4,
+  "carbs": 11,
+  "fat": 0.6,
+  "emoji": "🥦"
+ },
+ {
+  "id": "spinach",
+  "name": "Spinach",
+  "synonyms": [
+   "spinach"
+  ],
+  "category": "Vegetables",
+  "serving": "2 cups · 60 g",
+  "grams": 60,
+  "kcal": 14,
+  "protein": 2,
+  "carbs": 2,
+  "fat": 0.2,
+  "emoji": "🥬"
+ },
+ {
+  "id": "kale",
+  "name": "Kale",
+  "synonyms": [
+   "kale"
+  ],
+  "category": "Vegetables",
+  "serving": "1 cup · 67 g",
+  "grams": 67,
+  "kcal": 33,
+  "protein": 2,
+  "carbs": 6,
+  "fat": 0.5,
+  "emoji": "🥬"
+ },
+ {
+  "id": "asparagus",
+  "name": "Asparagus",
+  "synonyms": [
+   "asparagus"
+  ],
+  "category": "Vegetables",
+  "serving": "6 spears · 90 g",
+  "grams": 90,
+  "kcal": 18,
+  "protein": 2,
+  "carbs": 3.5,
+  "fat": 0.2,
+  "emoji": "🌿"
+ },
+ {
+  "id": "green_beans",
+  "name": "Green beans",
+  "synonyms": [
+   "green beans",
+   "string beans"
+  ],
+  "category": "Vegetables",
+  "serving": "1 cup · 125 g",
+  "grams": 125,
+  "kcal": 44,
+  "protein": 2,
+  "carbs": 10,
+  "fat": 0.3,
+  "emoji": "🫛"
+ },
+ {
+  "id": "brussels_sprouts",
+  "name": "Brussels sprouts",
+  "synonyms": [
+   "brussels"
+  ],
+  "category": "Vegetables",
+  "serving": "1 cup · 156 g",
+  "grams": 156,
+  "kcal": 56,
+  "protein": 4,
+  "carbs": 11,
+  "fat": 0.8,
+  "emoji": "🥬"
+ },
+ {
+  "id": "carrots",
+  "name": "Carrots",
+  "synonyms": [
+   "carrot",
+   "baby carrots"
+  ],
+  "category": "Vegetables",
+  "serving": "1 cup · 128 g",
+  "grams": 128,
+  "kcal": 52,
+  "protein": 1,
+  "carbs": 12,
+  "fat": 0.3,
+  "emoji": "🥕"
+ },
+ {
+  "id": "bell_pepper",
+  "name": "Bell pepper",
+  "synonyms": [
+   "pepper",
+   "red pepper",
+   "bell peppers"
+  ],
+  "category": "Vegetables",
+  "serving": "1 medium · 119 g",
+  "grams": 119,
+  "kcal": 37,
+  "protein": 1,
+  "carbs": 7,
+  "fat": 0.3,
+  "emoji": "🫑"
+ },
+ {
+  "id": "cucumber",
+  "name": "Cucumber",
+  "synonyms": [
+   "cucumber"
+  ],
+  "category": "Vegetables",
+  "serving": "1/2 cup · 52 g",
+  "grams": 52,
+  "kcal": 8,
+  "protein": 0.3,
+  "carbs": 2,
+  "fat": 0.1,
+  "emoji": "🥒"
+ },
+ {
+  "id": "tomato",
+  "name": "Tomato",
+  "synonyms": [
+   "tomato",
+   "cherry tomatoes"
+  ],
+  "category": "Vegetables",
+  "serving": "1 medium · 123 g",
+  "grams": 123,
+  "kcal": 22,
+  "protein": 1,
+  "carbs": 5,
+  "fat": 0.2,
+  "emoji": "🍅"
+ },
+ {
+  "id": "onion",
+  "name": "Onion",
+  "synonyms": [
+   "onion"
+  ],
+  "category": "Vegetables",
+  "serving": "1/2 cup · 80 g",
+  "grams": 80,
+  "kcal": 32,
+  "protein": 1,
+  "carbs": 7,
+  "fat": 0.1,
+  "emoji": "🧅"
+ },
+ {
+  "id": "corn",
+  "name": "Corn",
+  "synonyms": [
+   "corn",
+   "corn on the cob"
+  ],
+  "category": "Vegetables",
+  "serving": "1 ear · 90 g",
+  "grams": 90,
+  "kcal": 90,
+  "protein": 3,
+  "carbs": 19,
+  "fat": 1.4,
+  "emoji": "🌽"
+ },
+ {
+  "id": "cauliflower",
+  "name": "Cauliflower",
+  "synonyms": [
+   "cauliflower"
+  ],
+  "category": "Vegetables",
+  "serving": "1 cup · 107 g",
+  "grams": 107,
+  "kcal": 27,
+  "protein": 2,
+  "carbs": 5,
+  "fat": 0.3,
+  "emoji": "🥦"
+ },
+ {
+  "id": "zucchini",
+  "name": "Zucchini",
+  "synonyms": [
+   "zucchini"
+  ],
+  "category": "Vegetables",
+  "serving": "1 cup · 124 g",
+  "grams": 124,
+  "kcal": 21,
+  "protein": 1.5,
+  "carbs": 4,
+  "fat": 0.4,
+  "emoji": "🥒"
+ },
+ {
+  "id": "mushrooms",
+  "name": "Mushrooms",
+  "synonyms": [
+   "mushroom"
+  ],
+  "category": "Vegetables",
+  "serving": "1 cup · 96 g",
+  "grams": 96,
+  "kcal": 21,
+  "protein": 3,
+  "carbs": 3,
+  "fat": 0.3,
+  "emoji": "🍄"
+ },
+ {
+  "id": "lettuce",
+  "name": "Romaine lettuce",
+  "synonyms": [
+   "lettuce",
+   "romaine"
+  ],
+  "category": "Vegetables",
+  "serving": "2 cups · 94 g",
+  "grams": 94,
+  "kcal": 16,
+  "protein": 1,
+  "carbs": 3,
+  "fat": 0.3,
+  "emoji": "🥗"
+ },
+ {
+  "id": "celery",
+  "name": "Celery",
+  "synonyms": [
+   "celery"
+  ],
+  "category": "Vegetables",
+  "serving": "2 stalks · 80 g",
+  "grams": 80,
+  "kcal": 13,
+  "protein": 0.5,
+  "carbs": 3,
+  "fat": 0.1,
+  "emoji": "🌿"
+ },
+ {
+  "id": "beets",
+  "name": "Beets",
+  "synonyms": [
+   "beet"
+  ],
+  "category": "Vegetables",
+  "serving": "1 cup · 136 g",
+  "grams": 136,
+  "kcal": 59,
+  "protein": 2,
+  "carbs": 13,
+  "fat": 0.2,
+  "emoji": "🟣"
+ },
+ {
+  "id": "kimchi",
+  "name": "Kimchi",
+  "synonyms": [
+   "kimchi"
+  ],
+  "category": "Sides",
+  "serving": "1/2 cup · 75 g",
+  "grams": 75,
+  "kcal": 15,
+  "protein": 1,
+  "carbs": 2,
+  "fat": 0.5,
+  "emoji": "🌶️"
+ },
+ {
+  "id": "chipotle_bowl",
+  "name": "Chipotle-style bowl",
+  "synonyms": [
+   "chipotle bowl",
+   "burrito bowl",
+   "chipotle"
+  ],
+  "category": "Restaurant",
+  "serving": "1 bowl · 500 g",
+  "grams": 500,
+  "kcal": 650,
+  "protein": 48,
+  "carbs": 62,
+  "fat": 22,
+  "emoji": "🥙"
+ },
+ {
+  "id": "chipotle_burrito",
+  "name": "Burrito (chicken)",
+  "synonyms": [
+   "burrito",
+   "chipotle burrito"
+  ],
+  "category": "Restaurant",
+  "serving": "1 burrito · 490 g",
+  "grams": 490,
+  "kcal": 870,
+  "protein": 46,
+  "carbs": 102,
+  "fat": 30,
+  "emoji": "🌯"
+ },
+ {
+  "id": "burrito",
+  "name": "Burrito",
+  "synonyms": [
+   "bean burrito",
+   "beef burrito"
+  ],
+  "category": "Restaurant",
+  "serving": "1 burrito · 300 g",
+  "grams": 300,
+  "kcal": 540,
+  "protein": 20,
+  "carbs": 70,
+  "fat": 20,
+  "emoji": "🌯"
+ },
+ {
+  "id": "taco",
+  "name": "Taco",
+  "synonyms": [
+   "tacos",
+   "chicken taco"
+  ],
+  "category": "Restaurant",
+  "serving": "1 taco · 100 g",
+  "grams": 100,
+  "kcal": 170,
+  "protein": 9,
+  "carbs": 16,
+  "fat": 8,
+  "emoji": "🌮"
+ },
+ {
+  "id": "poke_bowl",
+  "name": "Poke bowl",
+  "synonyms": [
+   "poke",
+   "poke bowl",
+   "salmon poke"
+  ],
+  "category": "Restaurant",
+  "serving": "1 bowl · 420 g",
+  "grams": 420,
+  "kcal": 520,
+  "protein": 34,
+  "carbs": 58,
+  "fat": 16,
+  "emoji": "🍚"
+ },
+ {
+  "id": "sweetgreen_bowl",
+  "name": "Harvest-style salad bowl",
+  "synonyms": [
+   "sweetgreen",
+   "salad bowl",
+   "harvest bowl"
+  ],
+  "category": "Restaurant",
+  "serving": "1 bowl · 400 g",
+  "grams": 400,
+  "kcal": 560,
+  "protein": 28,
+  "carbs": 45,
+  "fat": 30,
+  "emoji": "🥗"
+ },
+ {
+  "id": "burger",
+  "name": "Cheeseburger",
+  "synonyms": [
+   "burger",
+   "cheeseburger",
+   "hamburger"
+  ],
+  "category": "Restaurant",
+  "serving": "1 burger · 220 g",
+  "grams": 220,
+  "kcal": 540,
+  "protein": 30,
+  "carbs": 40,
+  "fat": 28,
+  "emoji": "🍔"
+ },
+ {
+  "id": "double_burger",
+  "name": "Double cheeseburger",
+  "synonyms": [
+   "double burger",
+   "big burger"
+  ],
+  "category": "Restaurant",
+  "serving": "1 · 280 g",
+  "grams": 280,
+  "kcal": 750,
+  "protein": 48,
+  "carbs": 44,
+  "fat": 42,
+  "emoji": "🍔"
+ },
+ {
+  "id": "veggie_burger",
+  "name": "Veggie burger",
+  "synonyms": [
+   "veggie burger",
+   "beyond burger",
+   "impossible"
+  ],
+  "category": "Restaurant",
+  "serving": "1 · 200 g",
+  "grams": 200,
+  "kcal": 390,
+  "protein": 20,
+  "carbs": 42,
+  "fat": 16,
+  "emoji": "🍔"
+ },
+ {
+  "id": "pizza",
+  "name": "Pizza slice (cheese)",
+  "synonyms": [
+   "pizza",
+   "pizza slice",
+   "cheese pizza"
+  ],
+  "category": "Restaurant",
+  "serving": "1 slice · 107 g",
+  "grams": 107,
+  "kcal": 285,
+  "protein": 12,
+  "carbs": 36,
+  "fat": 10,
+  "emoji": "🍕"
+ },
+ {
+  "id": "pepperoni_pizza",
+  "name": "Pepperoni pizza slice",
+  "synonyms": [
+   "pepperoni pizza"
+  ],
+  "category": "Restaurant",
+  "serving": "1 slice · 113 g",
+  "grams": 113,
+  "kcal": 313,
+  "protein": 13,
+  "carbs": 35,
+  "fat": 13,
+  "emoji": "🍕"
+ },
+ {
+  "id": "sandwich",
+  "name": "Turkey club sandwich",
+  "synonyms": [
+   "sandwich",
+   "club sandwich"
+  ],
+  "category": "Restaurant",
+  "serving": "1 · 250 g",
+  "grams": 250,
+  "kcal": 510,
+  "protein": 28,
+  "carbs": 46,
+  "fat": 24,
+  "emoji": "🥪"
+ },
+ {
+  "id": "turkey_sandwich",
+  "name": "Turkey sandwich",
+  "synonyms": [
+   "turkey sandwich",
+   "turkey sub"
+  ],
+  "category": "Restaurant",
+  "serving": "1 · 220 g",
+  "grams": 220,
+  "kcal": 410,
+  "protein": 26,
+  "carbs": 44,
+  "fat": 14,
+  "emoji": "🥪"
+ },
+ {
+  "id": "pb_j",
+  "name": "PB&J sandwich",
+  "synonyms": [
+   "pb&j",
+   "peanut butter jelly"
+  ],
+  "category": "Meals",
+  "serving": "1 · 95 g",
+  "grams": 95,
+  "kcal": 390,
+  "protein": 12,
+  "carbs": 50,
+  "fat": 17,
+  "emoji": "🥪"
+ },
+ {
+  "id": "blt",
+  "name": "BLT sandwich",
+  "synonyms": [
+   "blt"
+  ],
+  "category": "Restaurant",
+  "serving": "1 · 180 g",
+  "grams": 180,
+  "kcal": 430,
+  "protein": 16,
+  "carbs": 36,
+  "fat": 24,
+  "emoji": "🥪"
+ },
+ {
+  "id": "panini",
+  "name": "Chicken panini",
+  "synonyms": [
+   "panini"
+  ],
+  "category": "Restaurant",
+  "serving": "1 · 240 g",
+  "grams": 240,
+  "kcal": 540,
+  "protein": 32,
+  "carbs": 48,
+  "fat": 24,
+  "emoji": "🥪"
+ },
+ {
+  "id": "wrap",
+  "name": "Chicken Caesar wrap",
+  "synonyms": [
+   "wrap",
+   "caesar wrap"
+  ],
+  "category": "Restaurant",
+  "serving": "1 · 280 g",
+  "grams": 280,
+  "kcal": 560,
+  "protein": 34,
+  "carbs": 44,
+  "fat": 26,
+  "emoji": "🌯"
+ },
+ {
+  "id": "quesadilla",
+  "name": "Chicken quesadilla",
+  "synonyms": [
+   "quesadilla"
+  ],
+  "category": "Restaurant",
+  "serving": "1 · 200 g",
+  "grams": 200,
+  "kcal": 530,
+  "protein": 30,
+  "carbs": 36,
+  "fat": 28,
+  "emoji": "🌮"
+ },
+ {
+  "id": "nachos",
+  "name": "Nachos",
+  "synonyms": [
+   "nachos"
+  ],
+  "category": "Restaurant",
+  "serving": "1 serving · 300 g",
+  "grams": 300,
+  "kcal": 750,
+  "protein": 20,
+  "carbs": 72,
+  "fat": 42,
+  "emoji": "🌮"
+ },
+ {
+  "id": "wings",
+  "name": "Chicken wings (6)",
+  "synonyms": [
+   "wings",
+   "chicken wings",
+   "buffalo wings"
+  ],
+  "category": "Restaurant",
+  "serving": "6 wings · 180 g",
+  "grams": 180,
+  "kcal": 430,
+  "protein": 38,
+  "carbs": 2,
+  "fat": 30,
+  "emoji": "🍗"
+ },
+ {
+  "id": "fried_chicken",
+  "name": "Fried chicken breast",
+  "synonyms": [
+   "fried chicken"
+  ],
+  "category": "Restaurant",
+  "serving": "1 breast · 200 g",
+  "grams": 200,
+  "kcal": 470,
+  "protein": 42,
+  "carbs": 12,
+  "fat": 28,
+  "emoji": "🍗"
+ },
+ {
+  "id": "chicken_sandwich",
+  "name": "Fried chicken sandwich",
+  "synonyms": [
+   "chicken sandwich",
+   "chick fil a"
+  ],
+  "category": "Restaurant",
+  "serving": "1 · 230 g",
+  "grams": 230,
+  "kcal": 520,
+  "protein": 29,
+  "carbs": 45,
+  "fat": 24,
+  "emoji": "🍔"
+ },
+ {
+  "id": "grilled_chicken_sandwich",
+  "name": "Grilled chicken sandwich",
+  "synonyms": [
+   "grilled chicken sandwich"
+  ],
+  "category": "Restaurant",
+  "serving": "1 · 220 g",
+  "grams": 220,
+  "kcal": 410,
+  "protein": 35,
+  "carbs": 40,
+  "fat": 12,
+  "emoji": "🍔"
+ },
+ {
+  "id": "falafel_wrap",
+  "name": "Falafel wrap",
+  "synonyms": [
+   "falafel"
+  ],
+  "category": "Restaurant",
+  "serving": "1 · 260 g",
+  "grams": 260,
+  "kcal": 540,
+  "protein": 15,
+  "carbs": 66,
+  "fat": 26,
+  "emoji": "🌯"
+ },
+ {
+  "id": "gyro",
+  "name": "Gyro",
+  "synonyms": [
+   "gyro"
+  ],
+  "category": "Restaurant",
+  "serving": "1 · 300 g",
+  "grams": 300,
+  "kcal": 620,
+  "protein": 30,
+  "carbs": 56,
+  "fat": 28,
+  "emoji": "🥙"
+ },
+ {
+  "id": "pho",
+  "name": "Pho (beef)",
+  "synonyms": [
+   "pho",
+   "vietnamese soup"
+  ],
+  "category": "Restaurant",
+  "serving": "1 bowl · 550 g",
+  "grams": 550,
+  "kcal": 480,
+  "protein": 30,
+  "carbs": 55,
+  "fat": 15,
+  "emoji": "🍜"
+ },
+ {
+  "id": "tikka_masala",
+  "name": "Chicken tikka masala",
+  "synonyms": [
+   "tikka masala",
+   "indian curry"
+  ],
+  "category": "Restaurant",
+  "serving": "1 serving · 300 g",
+  "grams": 300,
+  "kcal": 520,
+  "protein": 32,
+  "carbs": 24,
+  "fat": 32,
+  "emoji": "🍛"
+ },
+ {
+  "id": "teriyaki_chicken",
+  "name": "Chicken teriyaki",
+  "synonyms": [
+   "teriyaki"
+  ],
+  "category": "Restaurant",
+  "serving": "1 serving · 250 g",
+  "grams": 250,
+  "kcal": 440,
+  "protein": 38,
+  "carbs": 34,
+  "fat": 16,
+  "emoji": "🍱"
+ },
+ {
+  "id": "orange_chicken",
+  "name": "Orange chicken",
+  "synonyms": [
+   "orange chicken",
+   "panda express"
+  ],
+  "category": "Restaurant",
+  "serving": "1 serving · 250 g",
+  "grams": 250,
+  "kcal": 490,
+  "protein": 25,
+  "carbs": 51,
+  "fat": 22,
+  "emoji": "🍗"
+ },
+ {
+  "id": "kung_pao",
+  "name": "Kung pao chicken",
+  "synonyms": [
+   "kung pao"
+  ],
+  "category": "Restaurant",
+  "serving": "1 serving · 250 g",
+  "grams": 250,
+  "kcal": 430,
+  "protein": 30,
+  "carbs": 26,
+  "fat": 24,
+  "emoji": "🍗"
+ },
+ {
+  "id": "lo_mein",
+  "name": "Lo mein",
+  "synonyms": [
+   "lo mein"
+  ],
+  "category": "Restaurant",
+  "serving": "1 cup · 200 g",
+  "grams": 200,
+  "kcal": 310,
+  "protein": 12,
+  "carbs": 45,
+  "fat": 9,
+  "emoji": "🍜"
+ },
+ {
+  "id": "caesar_salad",
+  "name": "Caesar salad",
+  "synonyms": [
+   "caesar",
+   "caesar salad"
+  ],
+  "category": "Restaurant",
+  "serving": "1 bowl · 250 g",
+  "grams": 250,
+  "kcal": 360,
+  "protein": 14,
+  "carbs": 18,
+  "fat": 26,
+  "emoji": "🥗"
+ },
+ {
+  "id": "greek_salad",
+  "name": "Greek salad",
+  "synonyms": [
+   "greek salad"
+  ],
+  "category": "Restaurant",
+  "serving": "1 bowl · 280 g",
+  "grams": 280,
+  "kcal": 220,
+  "protein": 8,
+  "carbs": 14,
+  "fat": 15,
+  "emoji": "🥗"
+ },
+ {
+  "id": "garden_salad",
+  "name": "Garden salad",
+  "synonyms": [
+   "salad",
+   "side salad",
+   "garden salad"
+  ],
+  "category": "Restaurant",
+  "serving": "1 bowl · 150 g",
+  "grams": 150,
+  "kcal": 90,
+  "protein": 3,
+  "carbs": 8,
+  "fat": 5,
+  "emoji": "🥗"
+ },
+ {
+  "id": "cobb_salad",
+  "name": "Cobb salad",
+  "synonyms": [
+   "cobb salad"
+  ],
+  "category": "Restaurant",
+  "serving": "1 bowl · 350 g",
+  "grams": 350,
+  "kcal": 540,
+  "protein": 34,
+  "carbs": 16,
+  "fat": 38,
+  "emoji": "🥗"
+ },
+ {
+  "id": "soup",
+  "name": "Chicken noodle soup",
+  "synonyms": [
+   "soup",
+   "chicken soup",
+   "noodle soup"
+  ],
+  "category": "Restaurant",
+  "serving": "1 bowl · 240 g",
+  "grams": 240,
+  "kcal": 120,
+  "protein": 9,
+  "carbs": 13,
+  "fat": 4,
+  "emoji": "🍲"
+ },
+ {
+  "id": "miso_soup",
+  "name": "Miso soup",
+  "synonyms": [
+   "miso",
+   "miso soup"
+  ],
+  "category": "Restaurant",
+  "serving": "1 cup · 240 g",
+  "grams": 240,
+  "kcal": 60,
+  "protein": 4,
+  "carbs": 8,
+  "fat": 2,
+  "emoji": "🍲"
+ },
+ {
+  "id": "tomato_soup",
+  "name": "Tomato soup",
+  "synonyms": [
+   "tomato soup"
+  ],
+  "category": "Restaurant",
+  "serving": "1 cup · 245 g",
+  "grams": 245,
+  "kcal": 160,
+  "protein": 4,
+  "carbs": 28,
+  "fat": 5,
+  "emoji": "🍲"
+ },
+ {
+  "id": "clam_chowder",
+  "name": "Clam chowder",
+  "synonyms": [
+   "chowder"
+  ],
+  "category": "Restaurant",
+  "serving": "1 cup · 245 g",
+  "grams": 245,
+  "kcal": 200,
+  "protein": 8,
+  "carbs": 22,
+  "fat": 9,
+  "emoji": "🍲"
+ },
+ {
+  "id": "chili",
+  "name": "Beef chili",
+  "synonyms": [
+   "chili"
+  ],
+  "category": "Restaurant",
+  "serving": "1 cup · 250 g",
+  "grams": 250,
+  "kcal": 280,
+  "protein": 22,
+  "carbs": 24,
+  "fat": 11,
+  "emoji": "🍲"
+ },
+ {
+  "id": "mac_and_cheese",
+  "name": "Mac and cheese",
+  "synonyms": [
+   "mac n cheese",
+   "macaroni"
+  ],
+  "category": "Restaurant",
+  "serving": "1 cup · 200 g",
+  "grams": 200,
+  "kcal": 400,
+  "protein": 15,
+  "carbs": 40,
+  "fat": 20,
+  "emoji": "🧀"
+ },
+ {
+  "id": "lasagna",
+  "name": "Lasagna",
+  "synonyms": [
+   "lasagna"
+  ],
+  "category": "Restaurant",
+  "serving": "1 piece · 300 g",
+  "grams": 300,
+  "kcal": 530,
+  "protein": 32,
+  "carbs": 44,
+  "fat": 26,
+  "emoji": "🍝"
+ },
+ {
+  "id": "alfredo",
+  "name": "Fettuccine alfredo",
+  "synonyms": [
+   "alfredo",
+   "fettuccine"
+  ],
+  "category": "Restaurant",
+  "serving": "1 cup · 220 g",
+  "grams": 220,
+  "kcal": 500,
+  "protein": 14,
+  "carbs": 48,
+  "fat": 28,
+  "emoji": "🍝"
+ },
+ {
+  "id": "pesto_pasta",
+  "name": "Pesto pasta",
+  "synonyms": [
+   "pesto pasta"
+  ],
+  "category": "Restaurant",
+  "serving": "1 cup · 230 g",
+  "grams": 230,
+  "kcal": 480,
+  "protein": 12,
+  "carbs": 58,
+  "fat": 22,
+  "emoji": "🍝"
+ },
+ {
+  "id": "omelette",
+  "name": "Veggie omelette",
+  "synonyms": [
+   "omelette",
+   "omelet"
+  ],
+  "category": "Breakfast",
+  "serving": "1 · 180 g",
+  "grams": 180,
+  "kcal": 290,
+  "protein": 19,
+  "carbs": 4,
+  "fat": 22,
+  "emoji": "🍳"
+ },
+ {
+  "id": "breakfast_burrito",
+  "name": "Breakfast burrito",
+  "synonyms": [
+   "breakfast burrito"
+  ],
+  "category": "Breakfast",
+  "serving": "1 · 260 g",
+  "grams": 260,
+  "kcal": 560,
+  "protein": 24,
+  "carbs": 52,
+  "fat": 28,
+  "emoji": "🌯"
+ },
+ {
+  "id": "pancakes",
+  "name": "Pancakes (2)",
+  "synonyms": [
+   "pancakes",
+   "pancake"
+  ],
+  "category": "Breakfast",
+  "serving": "2 pancakes · 150 g",
+  "grams": 150,
+  "kcal": 340,
+  "protein": 9,
+  "carbs": 52,
+  "fat": 12,
+  "emoji": "🥞"
+ },
+ {
+  "id": "waffles",
+  "name": "Waffle",
+  "synonyms": [
+   "waffles",
+   "waffle"
+  ],
+  "category": "Breakfast",
+  "serving": "1 waffle · 75 g",
+  "grams": 75,
+  "kcal": 218,
+  "protein": 6,
+  "carbs": 25,
+  "fat": 11,
+  "emoji": "🧇"
+ },
+ {
+  "id": "french_toast",
+  "name": "French toast (2 slices)",
+  "synonyms": [
+   "french toast"
+  ],
+  "category": "Breakfast",
+  "serving": "2 slices · 130 g",
+  "grams": 130,
+  "kcal": 330,
+  "protein": 11,
+  "carbs": 44,
+  "fat": 12,
+  "emoji": "🍞"
+ },
+ {
+  "id": "breakfast_sandwich",
+  "name": "Egg & cheese sandwich",
+  "synonyms": [
+   "breakfast sandwich",
+   "egg sandwich"
+  ],
+  "category": "Breakfast",
+  "serving": "1 · 150 g",
+  "grams": 150,
+  "kcal": 340,
+  "protein": 16,
+  "carbs": 30,
+  "fat": 17,
+  "emoji": "🥪"
+ },
+ {
+  "id": "acai_bowl",
+  "name": "Açaí bowl",
+  "synonyms": [
+   "acai",
+   "acai bowl"
+  ],
+  "category": "Breakfast",
+  "serving": "1 bowl · 350 g",
+  "grams": 350,
+  "kcal": 420,
+  "protein": 6,
+  "carbs": 68,
+  "fat": 12,
+  "emoji": "🍇"
+ },
+ {
+  "id": "smoothie",
+  "name": "Fruit smoothie",
+  "synonyms": [
+   "smoothie",
+   "fruit smoothie"
+  ],
+  "category": "Drinks",
+  "serving": "16 oz · 450 g",
+  "grams": 450,
+  "kcal": 260,
+  "protein": 6,
+  "carbs": 58,
+  "fat": 3,
+  "emoji": "🥤"
+ },
+ {
+  "id": "green_smoothie",
+  "name": "Green smoothie",
+  "synonyms": [
+   "green smoothie"
+  ],
+  "category": "Drinks",
+  "serving": "16 oz · 450 g",
+  "grams": 450,
+  "kcal": 190,
+  "protein": 5,
+  "carbs": 40,
+  "fat": 2,
+  "emoji": "🥤"
+ },
+ {
+  "id": "peanut_butter",
+  "name": "Peanut butter",
+  "synonyms": [
+   "peanut butter",
+   "pb"
+  ],
+  "category": "Snacks",
+  "serving": "2 tbsp · 32 g",
+  "grams": 32,
+  "kcal": 190,
+  "protein": 8,
+  "carbs": 7,
+  "fat": 16,
+  "emoji": "🥜"
+ },
+ {
+  "id": "almond_butter",
+  "name": "Almond butter",
+  "synonyms": [
+   "almond butter"
+  ],
+  "category": "Snacks",
+  "serving": "2 tbsp · 32 g",
+  "grams": 32,
+  "kcal": 196,
+  "protein": 7,
+  "carbs": 6,
+  "fat": 18,
+  "emoji": "🥜"
+ },
+ {
+  "id": "almonds",
+  "name": "Almonds",
+  "synonyms": [
+   "almond"
+  ],
+  "category": "Snacks",
+  "serving": "1 oz · 23 nuts · 28 g",
+  "grams": 28,
+  "kcal": 164,
+  "protein": 6,
+  "carbs": 6,
+  "fat": 14,
+  "emoji": "🥜"
+ },
+ {
+  "id": "walnuts",
+  "name": "Walnuts",
+  "synonyms": [
+   "walnut"
+  ],
+  "category": "Snacks",
+  "serving": "1 oz · 28 g",
+  "grams": 28,
+  "kcal": 185,
+  "protein": 4,
+  "carbs": 4,
+  "fat": 18,
+  "emoji": "🥜"
+ },
+ {
+  "id": "cashews",
+  "name": "Cashews",
+  "synonyms": [
+   "cashew"
+  ],
+  "category": "Snacks",
+  "serving": "1 oz · 28 g",
+  "grams": 28,
+  "kcal": 157,
+  "protein": 5,
+  "carbs": 9,
+  "fat": 12,
+  "emoji": "🥜"
+ },
+ {
+  "id": "mixed_nuts",
+  "name": "Mixed nuts",
+  "synonyms": [
+   "nuts",
+   "trail nuts"
+  ],
+  "category": "Snacks",
+  "serving": "1 oz · 28 g",
+  "grams": 28,
+  "kcal": 172,
+  "protein": 5,
+  "carbs": 6,
+  "fat": 15,
+  "emoji": "🥜"
+ },
+ {
+  "id": "trail_mix",
+  "name": "Trail mix",
+  "synonyms": [
+   "trail mix"
+  ],
+  "category": "Snacks",
+  "serving": "1/4 cup · 38 g",
+  "grams": 38,
+  "kcal": 173,
+  "protein": 5,
+  "carbs": 17,
+  "fat": 11,
+  "emoji": "🥜"
+ },
+ {
+  "id": "dark_chocolate",
+  "name": "Dark chocolate",
+  "synonyms": [
+   "dark chocolate",
+   "chocolate"
+  ],
+  "category": "Snacks",
+  "serving": "1 oz · 28 g",
+  "grams": 28,
+  "kcal": 170,
+  "protein": 2,
+  "carbs": 13,
+  "fat": 12,
+  "emoji": "🍫"
+ },
+ {
+  "id": "cookie",
+  "name": "Chocolate chip cookie",
+  "synonyms": [
+   "cookie",
+   "chocolate chip cookie"
+  ],
+  "category": "Snacks",
+  "serving": "1 · 40 g",
+  "grams": 40,
+  "kcal": 200,
+  "protein": 2,
+  "carbs": 26,
+  "fat": 10,
+  "emoji": "🍪"
+ },
+ {
+  "id": "donut",
+  "name": "Glazed donut",
+  "synonyms": [
+   "donut",
+   "doughnut"
+  ],
+  "category": "Snacks",
+  "serving": "1 · 75 g",
+  "grams": 75,
+  "kcal": 300,
+  "protein": 3,
+  "carbs": 37,
+  "fat": 17,
+  "emoji": "🍩"
+ },
+ {
+  "id": "cake",
+  "name": "Chocolate cake slice",
+  "synonyms": [
+   "cake",
+   "chocolate cake"
+  ],
+  "category": "Snacks",
+  "serving": "1 slice · 95 g",
+  "grams": 95,
+  "kcal": 340,
+  "protein": 4,
+  "carbs": 50,
+  "fat": 15,
+  "emoji": "🍰"
+ },
+ {
+  "id": "ice_cream",
+  "name": "Vanilla ice cream",
+  "synonyms": [
+   "ice cream"
+  ],
+  "category": "Snacks",
+  "serving": "1/2 cup · 66 g",
+  "grams": 66,
+  "kcal": 137,
+  "protein": 2,
+  "carbs": 16,
+  "fat": 7,
+  "emoji": "🍨"
+ },
+ {
+  "id": "frozen_yogurt",
+  "name": "Frozen yogurt",
+  "synonyms": [
+   "froyo"
+  ],
+  "category": "Snacks",
+  "serving": "1/2 cup · 72 g",
+  "grams": 72,
+  "kcal": 110,
+  "protein": 3,
+  "carbs": 19,
+  "fat": 3,
+  "emoji": "🍨"
+ },
+ {
+  "id": "muffin",
+  "name": "Blueberry muffin",
+  "synonyms": [
+   "muffin"
+  ],
+  "category": "Snacks",
+  "serving": "1 · 113 g",
+  "grams": 113,
+  "kcal": 385,
+  "protein": 5,
+  "carbs": 54,
+  "fat": 17,
+  "emoji": "🧁"
+ },
+ {
+  "id": "protein_cookie",
+  "name": "Protein cookie",
+  "synonyms": [
+   "protein cookie"
+  ],
+  "category": "Snacks",
+  "serving": "1 · 60 g",
+  "grams": 60,
+  "kcal": 240,
+  "protein": 16,
+  "carbs": 24,
+  "fat": 9,
+  "emoji": "🍪"
+ },
+ {
+  "id": "rice_pudding",
+  "name": "Rice pudding",
+  "synonyms": [
+   "rice pudding"
+  ],
+  "category": "Snacks",
+  "serving": "1/2 cup · 142 g",
+  "grams": 142,
+  "kcal": 167,
+  "protein": 4,
+  "carbs": 30,
+  "fat": 4,
+  "emoji": "🍮"
+ },
+ {
+  "id": "olive_oil",
+  "name": "Olive oil",
+  "synonyms": [
+   "olive oil",
+   "oil"
+  ],
+  "category": "Extras",
+  "serving": "1 tbsp · 14 g",
+  "grams": 14,
+  "kcal": 119,
+  "protein": 0,
+  "carbs": 0,
+  "fat": 14,
+  "emoji": "🫒"
+ },
+ {
+  "id": "mayo",
+  "name": "Mayonnaise",
+  "synonyms": [
+   "mayo",
+   "mayonnaise"
+  ],
+  "category": "Extras",
+  "serving": "1 tbsp · 13 g",
+  "grams": 13,
+  "kcal": 94,
+  "protein": 0,
+  "carbs": 0,
+  "fat": 10,
+  "emoji": "🥫"
+ },
+ {
+  "id": "ketchup",
+  "name": "Ketchup",
+  "synonyms": [
+   "ketchup"
+  ],
+  "category": "Extras",
+  "serving": "1 tbsp · 17 g",
+  "grams": 17,
+  "kcal": 20,
+  "protein": 0,
+  "carbs": 5,
+  "fat": 0,
+  "emoji": "🥫"
+ },
+ {
+  "id": "soy_sauce",
+  "name": "Soy sauce",
+  "synonyms": [
+   "soy sauce"
+  ],
+  "category": "Extras",
+  "serving": "1 tbsp · 18 g",
+  "grams": 18,
+  "kcal": 9,
+  "protein": 1,
+  "carbs": 1,
+  "fat": 0,
+  "emoji": "🥫"
+ },
+ {
+  "id": "honey",
+  "name": "Honey",
+  "synonyms": [
+   "honey"
+  ],
+  "category": "Extras",
+  "serving": "1 tbsp · 21 g",
+  "grams": 21,
+  "kcal": 64,
+  "protein": 0,
+  "carbs": 17,
+  "fat": 0,
+  "emoji": "🍯"
+ },
+ {
+  "id": "maple_syrup",
+  "name": "Maple syrup",
+  "synonyms": [
+   "syrup",
+   "maple syrup"
+  ],
+  "category": "Extras",
+  "serving": "1 tbsp · 20 g",
+  "grams": 20,
+  "kcal": 52,
+  "protein": 0,
+  "carbs": 13,
+  "fat": 0,
+  "emoji": "🍯"
+ },
+ {
+  "id": "jam",
+  "name": "Jam",
+  "synonyms": [
+   "jam",
+   "jelly"
+  ],
+  "category": "Extras",
+  "serving": "1 tbsp · 20 g",
+  "grams": 20,
+  "kcal": 56,
+  "protein": 0,
+  "carbs": 14,
+  "fat": 0,
+  "emoji": "🍓"
+ },
+ {
+  "id": "salsa",
+  "name": "Salsa",
+  "synonyms": [
+   "salsa"
+  ],
+  "category": "Extras",
+  "serving": "2 tbsp · 36 g",
+  "grams": 36,
+  "kcal": 10,
+  "protein": 0,
+  "carbs": 2,
+  "fat": 0,
+  "emoji": "🍅"
+ },
+ {
+  "id": "guacamole",
+  "name": "Guacamole",
+  "synonyms": [
+   "guac",
+   "guacamole"
+  ],
+  "category": "Extras",
+  "serving": "2 tbsp · 30 g",
+  "grams": 30,
+  "kcal": 50,
+  "protein": 1,
+  "carbs": 3,
+  "fat": 4,
+  "emoji": "🥑"
+ },
+ {
+  "id": "sour_cream",
+  "name": "Sour cream",
+  "synonyms": [
+   "sour cream"
+  ],
+  "category": "Extras",
+  "serving": "2 tbsp · 30 g",
+  "grams": 30,
+  "kcal": 60,
+  "protein": 1,
+  "carbs": 1,
+  "fat": 5,
+  "emoji": "🥛"
+ },
+ {
+  "id": "feta",
+  "name": "Feta cheese",
+  "synonyms": [
+   "feta"
+  ],
+  "category": "Dairy",
+  "serving": "1 oz · 28 g",
+  "grams": 28,
+  "kcal": 75,
+  "protein": 4,
+  "carbs": 1,
+  "fat": 6,
+  "emoji": "🧀"
+ },
+ {
+  "id": "creamer",
+  "name": "Coffee creamer",
+  "synonyms": [
+   "creamer"
+  ],
+  "category": "Extras",
+  "serving": "1 tbsp · 15 g",
+  "grams": 15,
+  "kcal": 35,
+  "protein": 0,
+  "carbs": 5,
+  "fat": 1.5,
+  "emoji": "🥛"
+ },
+ {
+  "id": "coffee",
+  "name": "Black coffee",
+  "synonyms": [
+   "coffee",
+   "black coffee",
+   "americano",
+   "espresso"
+  ],
+  "category": "Drinks",
+  "serving": "1 cup · 240 g",
+  "grams": 240,
+  "kcal": 2,
+  "protein": 0.3,
+  "carbs": 0,
+  "fat": 0,
+  "emoji": "☕"
+ },
+ {
+  "id": "latte",
+  "name": "Latte (2% milk)",
+  "synonyms": [
+   "latte",
+   "cappuccino"
+  ],
+  "category": "Drinks",
+  "serving": "12 oz · 355 g",
+  "grams": 355,
+  "kcal": 150,
+  "protein": 10,
+  "carbs": 15,
+  "fat": 6,
+  "emoji": "☕"
+ },
+ {
+  "id": "oat_milk_latte",
+  "name": "Oat milk latte",
+  "synonyms": [
+   "oat milk latte",
+   "oat latte"
+  ],
+  "category": "Drinks",
+  "serving": "12 oz · 355 g",
+  "grams": 355,
+  "kcal": 170,
+  "protein": 4,
+  "carbs": 22,
+  "fat": 7,
+  "emoji": "☕"
+ },
+ {
+  "id": "iced_coffee",
+  "name": "Iced coffee",
+  "synonyms": [
+   "iced coffee",
+   "cold brew"
+  ],
+  "category": "Drinks",
+  "serving": "16 oz · 480 g",
+  "grams": 480,
+  "kcal": 5,
+  "protein": 0,
+  "carbs": 0,
+  "fat": 0,
+  "emoji": "🧋"
+ },
+ {
+  "id": "orange_juice",
+  "name": "Orange juice",
+  "synonyms": [
+   "oj",
+   "orange juice"
+  ],
+  "category": "Drinks",
+  "serving": "1 cup · 248 g",
+  "grams": 248,
+  "kcal": 112,
+  "protein": 2,
+  "carbs": 26,
+  "fat": 0.5,
+  "emoji": "🧃"
+ },
+ {
+  "id": "apple_juice",
+  "name": "Apple juice",
+  "synonyms": [
+   "apple juice"
+  ],
+  "category": "Drinks",
+  "serving": "1 cup · 248 g",
+  "grams": 248,
+  "kcal": 114,
+  "protein": 0,
+  "carbs": 28,
+  "fat": 0.3,
+  "emoji": "🧃"
+ },
+ {
+  "id": "cola",
+  "name": "Cola",
+  "synonyms": [
+   "coke",
+   "cola",
+   "soda"
+  ],
+  "category": "Drinks",
+  "serving": "12 oz · 355 g",
+  "grams": 355,
+  "kcal": 150,
+  "protein": 0,
+  "carbs": 39,
+  "fat": 0,
+  "emoji": "🥤"
+ },
+ {
+  "id": "diet_soda",
+  "name": "Diet soda",
+  "synonyms": [
+   "diet coke",
+   "diet soda",
+   "zero soda"
+  ],
+  "category": "Drinks",
+  "serving": "12 oz",
+  "grams": 355,
+  "kcal": 0,
+  "protein": 0,
+  "carbs": 0,
+  "fat": 0,
+  "emoji": "🥤"
+ },
+ {
+  "id": "beer",
+  "name": "Beer",
+  "synonyms": [
+   "beer",
+   "lager",
+   "ipa"
+  ],
+  "category": "Drinks",
+  "serving": "12 oz · 355 g",
+  "grams": 355,
+  "kcal": 153,
+  "protein": 2,
+  "carbs": 13,
+  "fat": 0,
+  "emoji": "🍺"
+ },
+ {
+  "id": "wine",
+  "name": "Red wine",
+  "synonyms": [
+   "wine",
+   "red wine"
+  ],
+  "category": "Drinks",
+  "serving": "5 oz · 148 g",
+  "grams": 148,
+  "kcal": 125,
+  "protein": 0,
+  "carbs": 4,
+  "fat": 0,
+  "emoji": "🍷"
+ },
+ {
+  "id": "margarita",
+  "name": "Margarita",
+  "synonyms": [
+   "margarita"
+  ],
+  "category": "Drinks",
+  "serving": "1 · 225 g",
+  "grams": 225,
+  "kcal": 280,
+  "protein": 0,
+  "carbs": 36,
+  "fat": 0,
+  "emoji": "🍸"
+ },
+ {
+  "id": "energy_drink",
+  "name": "Energy drink",
+  "synonyms": [
+   "energy drink",
+   "red bull"
+  ],
+  "category": "Drinks",
+  "serving": "16 oz",
+  "grams": 480,
+  "kcal": 220,
+  "protein": 0,
+  "carbs": 54,
+  "fat": 0,
+  "emoji": "🥤"
+ },
+ {
+  "id": "sports_drink",
+  "name": "Sports drink",
+  "synonyms": [
+   "gatorade",
+   "sports drink"
+  ],
+  "category": "Drinks",
+  "serving": "20 oz",
+  "grams": 591,
+  "kcal": 140,
+  "protein": 0,
+  "carbs": 36,
+  "fat": 0,
+  "emoji": "🥤"
+ },
+ {
+  "id": "kombucha",
+  "name": "Kombucha",
+  "synonyms": [
+   "kombucha"
+  ],
+  "category": "Drinks",
+  "serving": "16 oz",
+  "grams": 480,
+  "kcal": 60,
+  "protein": 0,
+  "carbs": 14,
+  "fat": 0,
+  "emoji": "🍵"
+ },
+ {
+  "id": "green_tea",
+  "name": "Green tea",
+  "synonyms": [
+   "green tea",
+   "tea"
+  ],
+  "category": "Drinks",
+  "serving": "1 cup",
+  "grams": 240,
+  "kcal": 2,
+  "protein": 0,
+  "carbs": 0,
+  "fat": 0,
+  "emoji": "🍵"
+ },
+ {
+  "id": "matcha_latte",
+  "name": "Matcha latte",
+  "synonyms": [
+   "matcha"
+  ],
+  "category": "Drinks",
+  "serving": "12 oz",
+  "grams": 355,
+  "kcal": 190,
+  "protein": 9,
+  "carbs": 25,
+  "fat": 8,
+  "emoji": "🍵"
+ },
+ {
+  "id": "boba",
+  "name": "Bubble tea",
+  "synonyms": [
+   "boba",
+   "bubble tea",
+   "milk tea"
+  ],
+  "category": "Drinks",
+  "serving": "16 oz",
+  "grams": 480,
+  "kcal": 320,
+  "protein": 2,
+  "carbs": 56,
+  "fat": 10,
+  "emoji": "🧋"
+ },
+ {
+  "id": "chocolate_milk",
+  "name": "Chocolate milk",
+  "synonyms": [
+   "chocolate milk",
+   "choc milk"
+  ],
+  "category": "Drinks",
+  "serving": "1 cup · 250 g",
+  "grams": 250,
+  "kcal": 208,
+  "protein": 8,
+  "carbs": 26,
+  "fat": 8,
+  "emoji": "🥛"
+ },
+ {
+  "id": "kefir",
+  "name": "Kefir",
+  "synonyms": [
+   "kefir"
+  ],
+  "category": "Drinks",
+  "serving": "1 cup · 243 g",
+  "grams": 243,
+  "kcal": 104,
+  "protein": 9,
+  "carbs": 12,
+  "fat": 2.5,
+  "emoji": "🥛"
+ },
+ {
+  "id": "protein_oats",
+  "name": "Protein overnight oats",
+  "synonyms": [
+   "overnight oats",
+   "proats"
+  ],
+  "category": "Breakfast",
+  "serving": "1 jar · 300 g",
+  "grams": 300,
+  "kcal": 380,
+  "protein": 28,
+  "carbs": 52,
+  "fat": 8,
+  "emoji": "🥣"
+ },
+ {
+  "id": "egg_bites",
+  "name": "Egg bites",
+  "synonyms": [
+   "egg bites",
+   "starbucks egg bites"
+  ],
+  "category": "Breakfast",
+  "serving": "2 bites · 116 g",
+  "grams": 116,
+  "kcal": 230,
+  "protein": 15,
+  "carbs": 9,
+  "fat": 14,
+  "emoji": "🥚"
+ },
+ {
+  "id": "jerky",
+  "name": "Beef jerky",
+  "synonyms": [
+   "jerky",
+   "beef jerky"
+  ],
+  "category": "Snacks",
+  "serving": "1 oz · 28 g",
+  "grams": 28,
+  "kcal": 82,
+  "protein": 10,
+  "carbs": 2,
+  "fat": 0.7,
+  "emoji": "🥩"
+ },
+ {
+  "id": "hard_boiled_eggs",
+  "name": "Hard-boiled eggs (2)",
+  "synonyms": [
+   "hard boiled eggs"
+  ],
+  "category": "Snacks",
+  "serving": "2 · 100 g",
+  "grams": 100,
+  "kcal": 155,
+  "protein": 13,
+  "carbs": 1,
+  "fat": 11,
+  "emoji": "🥚"
+ },
+ {
+  "id": "rice_bowl",
+  "name": "Teriyaki rice bowl",
+  "synonyms": [
+   "rice bowl"
+  ],
+  "category": "Restaurant",
+  "serving": "1 bowl · 400 g",
+  "grams": 400,
+  "kcal": 520,
+  "protein": 28,
+  "carbs": 68,
+  "fat": 14,
+  "emoji": "🍚"
+ },
+ {
+  "id": "grain_bowl",
+  "name": "Grain bowl",
+  "synonyms": [
+   "grain bowl",
+   "quinoa bowl"
+  ],
+  "category": "Restaurant",
+  "serving": "1 bowl · 380 g",
+  "grams": 380,
+  "kcal": 460,
+  "protein": 18,
+  "carbs": 55,
+  "fat": 18,
+  "emoji": "🥣"
+ },
+ {
+  "id": "salmon_poke",
+  "name": "Salmon poke bowl",
+  "synonyms": [
+   "salmon poke",
+   "poke salmon"
+  ],
+  "category": "Restaurant",
+  "serving": "1 bowl · 420 g",
+  "grams": 420,
+  "kcal": 560,
+  "protein": 38,
+  "carbs": 52,
+  "fat": 20,
+  "emoji": "🍚"
+ },
+ {
+  "id": "shakshuka",
+  "name": "Shakshuka",
+  "synonyms": [
+   "shakshuka"
+  ],
+  "category": "Breakfast",
+  "serving": "1 serving · 300 g",
+  "grams": 300,
+  "kcal": 290,
+  "protein": 14,
+  "carbs": 18,
+  "fat": 18,
+  "emoji": "🍳"
+ },
+ {
+  "id": "frittata",
+  "name": "Frittata slice",
+  "synonyms": [
+   "frittata"
+  ],
+  "category": "Breakfast",
+  "serving": "1 slice · 150 g",
+  "grams": 150,
+  "kcal": 260,
+  "protein": 16,
+  "carbs": 4,
+  "fat": 20,
+  "emoji": "🍳"
+ },
+ {
+  "id": "curry_rice",
+  "name": "Chicken curry + rice",
+  "synonyms": [
+   "curry",
+   "chicken curry"
+  ],
+  "category": "Restaurant",
+  "serving": "1 serving · 400 g",
+  "grams": 400,
+  "kcal": 580,
+  "protein": 34,
+  "carbs": 58,
+  "fat": 22,
+  "emoji": "🍛"
+ },
+ {
+  "id": "fried_chicken_sandwich",
+  "name": "Crispy chicken sandwich",
+  "synonyms": [
+   "crispy chicken"
+  ],
+  "category": "Restaurant",
+  "serving": "1 · 240 g",
+  "grams": 240,
+  "kcal": 560,
+  "protein": 26,
+  "carbs": 52,
+  "fat": 27,
+  "emoji": "🍔"
+ },
+ {
+  "id": "club_sandwich_half",
+  "name": "Half club sandwich",
+  "synonyms": [
+   "half sandwich"
+  ],
+  "category": "Restaurant",
+  "serving": "1/2 · 130 g",
+  "grams": 130,
+  "kcal": 290,
+  "protein": 15,
+  "carbs": 26,
+  "fat": 14,
+  "emoji": "🥪"
+ },
+ {
+  "id": "soup_salad_combo",
+  "name": "Soup + salad combo",
+  "synonyms": [
+   "soup and salad"
+  ],
+  "category": "Restaurant",
+  "serving": "1 combo · 400 g",
+  "grams": 400,
+  "kcal": 320,
+  "protein": 14,
+  "carbs": 34,
+  "fat": 15,
+  "emoji": "🥗"
+ },
+ {
+  "id": "buffalo_chicken_dip",
+  "name": "Buffalo chicken dip",
+  "synonyms": [
+   "buffalo dip"
+  ],
+  "category": "Snacks",
+  "serving": "1/4 cup · 60 g",
+  "grams": 60,
+  "kcal": 140,
+  "protein": 8,
+  "carbs": 2,
+  "fat": 11,
+  "emoji": "🧀"
+ },
+ {
+  "id": "chicken_salad",
+  "name": "Chicken salad",
+  "synonyms": [
+   "chicken salad"
+  ],
+  "category": "Meals",
+  "serving": "1/2 cup · 100 g",
+  "grams": 100,
+  "kcal": 240,
+  "protein": 16,
+  "carbs": 2,
+  "fat": 19,
+  "emoji": "🥗"
+ },
+ {
+  "id": "tuna_salad",
+  "name": "Tuna salad",
+  "synonyms": [
+   "tuna salad"
+  ],
+  "category": "Meals",
+  "serving": "1/2 cup · 100 g",
+  "grams": 100,
+  "kcal": 190,
+  "protein": 16,
+  "carbs": 2,
+  "fat": 13,
+  "emoji": "🥗"
+ },
+ {
+  "id": "egg_salad",
+  "name": "Egg salad",
+  "synonyms": [
+   "egg salad"
+  ],
+  "category": "Meals",
+  "serving": "1/2 cup · 100 g",
+  "grams": 100,
+  "kcal": 230,
+  "protein": 9,
+  "carbs": 2,
+  "fat": 20,
+  "emoji": "🥗"
+ },
+ {
+  "id": "pasta_salad",
+  "name": "Pasta salad",
+  "synonyms": [
+   "pasta salad"
+  ],
+  "category": "Sides",
+  "serving": "1 cup · 190 g",
+  "grams": 190,
+  "kcal": 280,
+  "protein": 6,
+  "carbs": 36,
+  "fat": 12,
+  "emoji": "🥗"
+ },
+ {
+  "id": "potato_salad",
+  "name": "Potato salad",
+  "synonyms": [
+   "potato salad"
+  ],
+  "category": "Sides",
+  "serving": "1/2 cup · 125 g",
+  "grams": 125,
+  "kcal": 180,
+  "protein": 2,
+  "carbs": 21,
+  "fat": 9,
+  "emoji": "🥗"
+ },
+ {
+  "id": "coleslaw",
+  "name": "Coleslaw",
+  "synonyms": [
+   "coleslaw",
+   "slaw"
+  ],
+  "category": "Sides",
+  "serving": "1/2 cup · 60 g",
+  "grams": 60,
+  "kcal": 90,
+  "protein": 1,
+  "carbs": 10,
+  "fat": 5,
+  "emoji": "🥗"
+ },
+ {
+  "id": "fruit_cup",
+  "name": "Fruit cup",
+  "synonyms": [
+   "fruit cup",
+   "mixed fruit"
+  ],
+  "category": "Snacks",
+  "serving": "1 cup · 160 g",
+  "grams": 160,
+  "kcal": 80,
+  "protein": 1,
+  "carbs": 20,
+  "fat": 0,
+  "emoji": "🍓"
+ },
+ {
+  "id": "applesauce",
+  "name": "Applesauce",
+  "synonyms": [
+   "applesauce"
+  ],
+  "category": "Snacks",
+  "serving": "1/2 cup · 122 g",
+  "grams": 122,
+  "kcal": 50,
+  "protein": 0,
+  "carbs": 13,
+  "fat": 0,
+  "emoji": "🍎"
+ },
+ {
+  "id": "dates",
+  "name": "Medjool dates (2)",
+  "synonyms": [
+   "dates"
+  ],
+  "category": "Snacks",
+  "serving": "2 · 48 g",
+  "grams": 48,
+  "kcal": 133,
+  "protein": 1,
+  "carbs": 36,
+  "fat": 0,
+  "emoji": "🌴"
+ },
+ {
+  "id": "beef_stir_fry",
+  "name": "Beef stir fry",
+  "synonyms": [
+   "stir fry",
+   "beef stir fry"
+  ],
+  "category": "Restaurant",
+  "serving": "1 cup · 220 g",
+  "grams": 220,
+  "kcal": 320,
+  "protein": 24,
+  "carbs": 18,
+  "fat": 17,
+  "emoji": "🥘"
+ },
+ {
+  "id": "chicken_stir_fry",
+  "name": "Chicken stir fry",
+  "synonyms": [
+   "chicken stir fry"
+  ],
+  "category": "Restaurant",
+  "serving": "1 cup · 220 g",
+  "grams": 220,
+  "kcal": 260,
+  "protein": 26,
+  "carbs": 14,
+  "fat": 10,
+  "emoji": "🥘"
+ },
+ {
+  "id": "veggie_stir_fry",
+  "name": "Veggie stir fry",
+  "synonyms": [
+   "veggie stir fry",
+   "stir fried vegetables"
+  ],
+  "category": "Restaurant",
+  "serving": "1 cup · 200 g",
+  "grams": 200,
+  "kcal": 140,
+  "protein": 6,
+  "carbs": 18,
+  "fat": 6,
+  "emoji": "🥘"
+ },
+ {
+  "id": "spring_rolls",
+  "name": "Spring rolls (2)",
+  "synonyms": [
+   "spring rolls",
+   "egg rolls"
+  ],
+  "category": "Sides",
+  "serving": "2 rolls · 120 g",
+  "grams": 120,
+  "kcal": 240,
+  "protein": 6,
+  "carbs": 30,
+  "fat": 10,
+  "emoji": "🥟"
+ },
+ {
+  "id": "dumplings",
+  "name": "Dumplings (4)",
+  "synonyms": [
+   "dumplings",
+   "gyoza",
+   "potstickers"
+  ],
+  "category": "Restaurant",
+  "serving": "4 · 120 g",
+  "grams": 120,
+  "kcal": 250,
+  "protein": 10,
+  "carbs": 28,
+  "fat": 10,
+  "emoji": "🥟"
+ },
+ {
+  "id": "naan",
+  "name": "Naan bread",
+  "synonyms": [
+   "naan"
+  ],
+  "category": "Grains",
+  "serving": "1 piece · 90 g",
+  "grams": 90,
+  "kcal": 260,
+  "protein": 9,
+  "carbs": 45,
+  "fat": 5,
+  "emoji": "🫓"
+ },
+ {
+  "id": "garlic_bread",
+  "name": "Garlic bread",
+  "synonyms": [
+   "garlic bread"
+  ],
+  "category": "Sides",
+  "serving": "1 slice · 40 g",
+  "grams": 40,
+  "kcal": 150,
+  "protein": 4,
+  "carbs": 19,
+  "fat": 6,
+  "emoji": "🍞"
+ },
+ {
+  "id": "rice_noodles",
+  "name": "Rice noodles",
+  "synonyms": [
+   "rice noodles"
+  ],
+  "category": "Grains",
+  "serving": "1 cup · 176 g",
+  "grams": 176,
+  "kcal": 190,
+  "protein": 3,
+  "carbs": 42,
+  "fat": 0.7,
+  "emoji": "🍜"
+ },
+ {
+  "id": "couscous_salad",
+  "name": "Couscous salad",
+  "synonyms": [
+   "couscous salad"
+  ],
+  "category": "Meals",
+  "serving": "1 cup · 180 g",
+  "grams": 180,
+  "kcal": 240,
+  "protein": 7,
+  "carbs": 38,
+  "fat": 7,
+  "emoji": "🥗"
+ },
+ {
+  "id": "lentil_soup",
+  "name": "Lentil soup",
+  "synonyms": [
+   "lentil soup",
+   "lentils soup"
+  ],
+  "category": "Meals",
+  "serving": "1 cup · 240 g",
+  "grams": 240,
+  "kcal": 180,
+  "protein": 12,
+  "carbs": 30,
+  "fat": 3,
+  "emoji": "🍲"
+ },
+ {
+  "id": "lentils",
+  "name": "Lentils (cooked)",
+  "synonyms": [
+   "lentils"
+  ],
+  "category": "Grains",
+  "serving": "1 cup · 198 g",
+  "grams": 198,
+  "kcal": 230,
+  "protein": 18,
+  "carbs": 40,
+  "fat": 1,
+  "emoji": "🍲"
+ },
+ {
+  "id": "black_beans",
+  "name": "Black beans",
+  "synonyms": [
+   "black beans",
+   "beans"
+  ],
+  "category": "Grains",
+  "serving": "1 cup · 172 g",
+  "grams": 172,
+  "kcal": 227,
+  "protein": 15,
+  "carbs": 41,
+  "fat": 1,
+  "emoji": "🫘"
+ },
+ {
+  "id": "chickpeas",
+  "name": "Chickpeas",
+  "synonyms": [
+   "chickpeas",
+   "garbanzo"
+  ],
+  "category": "Grains",
+  "serving": "1 cup · 164 g",
+  "grams": 164,
+  "kcal": 269,
+  "protein": 15,
+  "carbs": 45,
+  "fat": 4,
+  "emoji": "🫘"
+ },
+ {
+  "id": "kidney_beans",
+  "name": "Kidney beans",
+  "synonyms": [
+   "kidney beans"
+  ],
+  "category": "Grains",
+  "serving": "1 cup · 177 g",
+  "grams": 177,
+  "kcal": 225,
+  "protein": 15,
+  "carbs": 40,
+  "fat": 1,
+  "emoji": "🫘"
+ },
+ {
+  "id": "black_bean_soup",
+  "name": "Black bean soup",
+  "synonyms": [
+   "black bean soup"
+  ],
+  "category": "Meals",
+  "serving": "1 cup · 245 g",
+  "grams": 245,
+  "kcal": 220,
+  "protein": 12,
+  "carbs": 38,
+  "fat": 4,
+  "emoji": "🍲"
+ },
+ {
+  "id": "tofu_scramble",
+  "name": "Tofu scramble",
+  "synonyms": [
+   "tofu scramble"
+  ],
+  "category": "Breakfast",
+  "serving": "1 cup · 200 g",
+  "grams": 200,
+  "kcal": 190,
+  "protein": 17,
+  "carbs": 6,
+  "fat": 11,
+  "emoji": "🥘"
+ },
+ {
+  "id": "veggie_omelette",
+  "name": "Egg white omelette",
+  "synonyms": [
+   "egg white omelette"
+  ],
+  "category": "Breakfast",
+  "serving": "1 · 160 g",
+  "grams": 160,
+  "kcal": 130,
+  "protein": 18,
+  "carbs": 4,
+  "fat": 4,
+  "emoji": "🍳"
+ },
+ {
+  "id": "cheeseburger_small",
+  "name": "Slider burger",
+  "synonyms": [
+   "slider",
+   "mini burger"
+  ],
+  "category": "Restaurant",
+  "serving": "1 · 110 g",
+  "grams": 110,
+  "kcal": 290,
+  "protein": 15,
+  "carbs": 20,
+  "fat": 16,
+  "emoji": "🍔"
+ },
+ {
+  "id": "bbq_chicken",
+  "name": "BBQ chicken breast",
+  "synonyms": [
+   "bbq chicken"
+  ],
+  "category": "Protein",
+  "serving": "6 oz · 170 g",
+  "grams": 170,
+  "kcal": 290,
+  "protein": 40,
+  "carbs": 12,
+  "fat": 8,
+  "emoji": "🍗"
+ },
+ {
+  "id": "pulled_pork",
+  "name": "Pulled pork",
+  "synonyms": [
+   "pulled pork"
+  ],
+  "category": "Restaurant",
+  "serving": "4 oz · 113 g",
+  "grams": 113,
+  "kcal": 250,
+  "protein": 22,
+  "carbs": 6,
+  "fat": 16,
+  "emoji": "🍖"
+ },
+ {
+  "id": "ribs",
+  "name": "BBQ ribs (3)",
+  "synonyms": [
+   "ribs",
+   "bbq ribs"
+  ],
+  "category": "Restaurant",
+  "serving": "3 ribs · 200 g",
+  "grams": 200,
+  "kcal": 540,
+  "protein": 38,
+  "carbs": 12,
+  "fat": 38,
+  "emoji": "🍖"
+ },
+ {
+  "id": "baked_salmon_rice",
+  "name": "Salmon + rice plate",
+  "synonyms": [
+   "salmon rice"
+  ],
+  "category": "Meals",
+  "serving": "1 plate · 380 g",
+  "grams": 380,
+  "kcal": 520,
+  "protein": 36,
+  "carbs": 48,
+  "fat": 18,
+  "emoji": "🐟"
+ },
+ {
+  "id": "seared_tuna",
+  "name": "Seared tuna salad",
+  "synonyms": [
+   "seared tuna"
+  ],
+  "category": "Restaurant",
+  "serving": "1 · 300 g",
+  "grams": 300,
+  "kcal": 320,
+  "protein": 34,
+  "carbs": 12,
+  "fat": 14,
+  "emoji": "🐟"
+ },
+ {
+  "id": "crab_cakes",
+  "name": "Crab cakes (2)",
+  "synonyms": [
+   "crab cakes"
+  ],
+  "category": "Restaurant",
+  "serving": "2 · 140 g",
+  "grams": 140,
+  "kcal": 320,
+  "protein": 20,
+  "carbs": 14,
+  "fat": 18,
+  "emoji": "🦀"
+ },
+ {
+  "id": "calamari",
+  "name": "Fried calamari",
+  "synonyms": [
+   "calamari"
+  ],
+  "category": "Restaurant",
+  "serving": "1 cup · 110 g",
+  "grams": 110,
+  "kcal": 350,
+  "protein": 18,
+  "carbs": 24,
+  "fat": 20,
+  "emoji": "🦑"
+ },
+ {
+  "id": "lobster_roll",
+  "name": "Lobster roll",
+  "synonyms": [
+   "lobster roll"
+  ],
+  "category": "Restaurant",
+  "serving": "1 · 180 g",
+  "grams": 180,
+  "kcal": 430,
+  "protein": 22,
+  "carbs": 32,
+  "fat": 24,
+  "emoji": "🦞"
+ },
+ {
+  "id": "clam_strips",
+  "name": "Fried clams",
+  "synonyms": [
+   "fried clams"
+  ],
+  "category": "Restaurant",
+  "serving": "100 g",
+  "grams": 100,
+  "kcal": 340,
+  "protein": 12,
+  "carbs": 28,
+  "fat": 20,
+  "emoji": "🦪"
+ },
+ {
+  "id": "tortellini",
+  "name": "Tortellini",
+  "synonyms": [
+   "tortellini"
+  ],
+  "category": "Grains",
+  "serving": "1 cup · 140 g",
+  "grams": 140,
+  "kcal": 320,
+  "protein": 13,
+  "carbs": 48,
+  "fat": 8,
+  "emoji": "🍝"
+ },
+ {
+  "id": "gnocchi",
+  "name": "Gnocchi",
+  "synonyms": [
+   "gnocchi"
+  ],
+  "category": "Grains",
+  "serving": "1 cup · 140 g",
+  "grams": 140,
+  "kcal": 250,
+  "protein": 5,
+  "carbs": 50,
+  "fat": 3,
+  "emoji": "🍝"
+ },
+ {
+  "id": "ravioli",
+  "name": "Cheese ravioli",
+  "synonyms": [
+   "ravioli"
+  ],
+  "category": "Grains",
+  "serving": "1 cup · 160 g",
+  "grams": 160,
+  "kcal": 330,
+  "protein": 13,
+  "carbs": 46,
+  "fat": 10,
+  "emoji": "🍝"
+ },
+ {
+  "id": "bolognese",
+  "name": "Spaghetti bolognese",
+  "synonyms": [
+   "bolognese",
+   "meat sauce"
+  ],
+  "category": "Restaurant",
+  "serving": "1 serving · 350 g",
+  "grams": 350,
+  "kcal": 520,
+  "protein": 28,
+  "carbs": 60,
+  "fat": 18,
+  "emoji": "🍝"
+ },
+ {
+  "id": "carbonara",
+  "name": "Carbonara",
+  "synonyms": [
+   "carbonara"
+  ],
+  "category": "Restaurant",
+  "serving": "1 cup · 230 g",
+  "grams": 230,
+  "kcal": 560,
+  "protein": 20,
+  "carbs": 52,
+  "fat": 30,
+  "emoji": "🍝"
+ },
+ {
+  "id": "arancini",
+  "name": "Arancini (2)",
+  "synonyms": [
+   "arancini"
+  ],
+  "category": "Restaurant",
+  "serving": "2 · 120 g",
+  "grams": 120,
+  "kcal": 310,
+  "protein": 8,
+  "carbs": 38,
+  "fat": 14,
+  "emoji": "🍙"
+ },
+ {
+  "id": "onigiri",
+  "name": "Onigiri",
+  "synonyms": [
+   "onigiri",
+   "rice ball"
+  ],
+  "category": "Snacks",
+  "serving": "1 · 110 g",
+  "grams": 110,
+  "kcal": 180,
+  "protein": 4,
+  "carbs": 38,
+  "fat": 1,
+  "emoji": "🍙"
+ },
+ {
+  "id": "bento",
+  "name": "Chicken bento box",
+  "synonyms": [
+   "bento"
+  ],
+  "category": "Restaurant",
+  "serving": "1 box · 450 g",
+  "grams": 450,
+  "kcal": 650,
+  "protein": 34,
+  "carbs": 72,
+  "fat": 24,
+  "emoji": "🍱"
+ },
+ {
+  "id": "katsu",
+  "name": "Chicken katsu",
+  "synonyms": [
+   "katsu",
+   "chicken katsu"
+  ],
+  "category": "Restaurant",
+  "serving": "1 · 200 g",
+  "grams": 200,
+  "kcal": 480,
+  "protein": 32,
+  "carbs": 32,
+  "fat": 24,
+  "emoji": "🍗"
+ },
+ {
+  "id": "tandoori",
+  "name": "Tandoori chicken",
+  "synonyms": [
+   "tandoori"
+  ],
+  "category": "Restaurant",
+  "serving": "2 pieces · 160 g",
+  "grams": 160,
+  "kcal": 280,
+  "protein": 38,
+  "carbs": 4,
+  "fat": 12,
+  "emoji": "🍗"
+ },
+ {
+  "id": "butter_chicken",
+  "name": "Butter chicken",
+  "synonyms": [
+   "butter chicken"
+  ],
+  "category": "Restaurant",
+  "serving": "1 cup · 250 g",
+  "grams": 250,
+  "kcal": 430,
+  "protein": 30,
+  "carbs": 14,
+  "fat": 28,
+  "emoji": "🍛"
+ },
+ {
+  "id": "saag_paneer",
+  "name": "Saag paneer",
+  "synonyms": [
+   "saag paneer",
+   "palak paneer"
+  ],
+  "category": "Restaurant",
+  "serving": "1 cup · 240 g",
+  "grams": 240,
+  "kcal": 340,
+  "protein": 18,
+  "carbs": 12,
+  "fat": 24,
+  "emoji": "🥘"
+ },
+ {
+  "id": "dal",
+  "name": "Dal (lentil curry)",
+  "synonyms": [
+   "dal",
+   "daal"
+  ],
+  "category": "Meals",
+  "serving": "1 cup · 240 g",
+  "grams": 240,
+  "kcal": 240,
+  "protein": 14,
+  "carbs": 34,
+  "fat": 7,
+  "emoji": "🍲"
+ },
+ {
+  "id": "biryani",
+  "name": "Chicken biryani",
+  "synonyms": [
+   "biryani"
+  ],
+  "category": "Restaurant",
+  "serving": "1 cup · 250 g",
+  "grams": 250,
+  "kcal": 430,
+  "protein": 22,
+  "carbs": 54,
+  "fat": 14,
+  "emoji": "🍚"
+ },
+ {
+  "id": "shawarma",
+  "name": "Chicken shawarma wrap",
+  "synonyms": [
+   "shawarma"
+  ],
+  "category": "Restaurant",
+  "serving": "1 · 280 g",
+  "grams": 280,
+  "kcal": 560,
+  "protein": 32,
+  "carbs": 48,
+  "fat": 26,
+  "emoji": "🌯"
+ },
+ {
+  "id": "kebab",
+  "name": "Chicken kebab skewer",
+  "synonyms": [
+   "kebab",
+   "skewer"
+  ],
+  "category": "Restaurant",
+  "serving": "2 skewers · 150 g",
+  "grams": 150,
+  "kcal": 240,
+  "protein": 34,
+  "carbs": 4,
+  "fat": 10,
+  "emoji": "🍢"
+ },
+ {
+  "id": "meatballs",
+  "name": "Meatballs (4)",
+  "synonyms": [
+   "meatballs"
+  ],
+  "category": "Protein",
+  "serving": "4 · 120 g",
+  "grams": 120,
+  "kcal": 290,
+  "protein": 22,
+  "carbs": 6,
+  "fat": 20,
+  "emoji": "🧆"
+ },
+ {
+  "id": "meatball_sub",
+  "name": "Meatball sub",
+  "synonyms": [
+   "meatball sub"
+  ],
+  "category": "Restaurant",
+  "serving": "1 · 300 g",
+  "grams": 300,
+  "kcal": 620,
+  "protein": 30,
+  "carbs": 58,
+  "fat": 28,
+  "emoji": "🥖"
+ },
+ {
+  "id": "italian_sub",
+  "name": "Italian sub",
+  "synonyms": [
+   "italian sub",
+   "hoagie"
+  ],
+  "category": "Restaurant",
+  "serving": "1 · 280 g",
+  "grams": 280,
+  "kcal": 560,
+  "protein": 24,
+  "carbs": 52,
+  "fat": 26,
+  "emoji": "🥖"
+ },
+ {
+  "id": "philly_cheesesteak",
+  "name": "Philly cheesesteak",
+  "synonyms": [
+   "cheesesteak",
+   "philly"
+  ],
+  "category": "Restaurant",
+  "serving": "1 · 300 g",
+  "grams": 300,
+  "kcal": 700,
+  "protein": 40,
+  "carbs": 52,
+  "fat": 34,
+  "emoji": "🥖"
+ },
+ {
+  "id": "fish_tacos",
+  "name": "Fish tacos (2)",
+  "synonyms": [
+   "fish tacos"
+  ],
+  "category": "Restaurant",
+  "serving": "2 tacos · 220 g",
+  "grams": 220,
+  "kcal": 420,
+  "protein": 22,
+  "carbs": 38,
+  "fat": 20,
+  "emoji": "🌮"
+ },
+ {
+  "id": "carnitas",
+  "name": "Carnitas plate",
+  "synonyms": [
+   "carnitas"
+  ],
+  "category": "Restaurant",
+  "serving": "1 plate · 350 g",
+  "grams": 350,
+  "kcal": 620,
+  "protein": 44,
+  "carbs": 40,
+  "fat": 30,
+  "emoji": "🌮"
+ },
+ {
+  "id": "elote",
+  "name": "Street corn (elote)",
+  "synonyms": [
+   "elote",
+   "street corn"
+  ],
+  "category": "Sides",
+  "serving": "1 ear · 120 g",
+  "grams": 120,
+  "kcal": 180,
+  "protein": 4,
+  "carbs": 22,
+  "fat": 9,
+  "emoji": "🌽"
+ },
+ {
+  "id": "bruschetta",
+  "name": "Bruschetta",
+  "synonyms": [
+   "bruschetta"
+  ],
+  "category": "Sides",
+  "serving": "2 pieces · 80 g",
+  "grams": 80,
+  "kcal": 160,
+  "protein": 4,
+  "carbs": 22,
+  "fat": 6,
+  "emoji": "🍅"
+ },
+ {
+  "id": "caprese",
+  "name": "Caprese salad",
+  "synonyms": [
+   "caprese"
+  ],
+  "category": "Meals",
+  "serving": "1 serving · 150 g",
+  "grams": 150,
+  "kcal": 240,
+  "protein": 12,
+  "carbs": 6,
+  "fat": 18,
+  "emoji": "🍅"
+ },
+ {
+  "id": "antipasto",
+  "name": "Antipasto plate",
+  "synonyms": [
+   "antipasto"
+  ],
+  "category": "Restaurant",
+  "serving": "1 plate · 200 g",
+  "grams": 200,
+  "kcal": 380,
+  "protein": 18,
+  "carbs": 12,
+  "fat": 28,
+  "emoji": "🧀"
+ },
+ {
+  "id": "charcuterie",
+  "name": "Charcuterie board",
+  "synonyms": [
+   "charcuterie"
+  ],
+  "category": "Snacks",
+  "serving": "1 serving · 100 g",
+  "grams": 100,
+  "kcal": 380,
+  "protein": 20,
+  "carbs": 8,
+  "fat": 30,
+  "emoji": "🧀"
+ },
+ {
+  "id": "stuffed_peppers",
+  "name": "Stuffed peppers",
+  "synonyms": [
+   "stuffed peppers"
+  ],
+  "category": "Meals",
+  "serving": "1 pepper · 200 g",
+  "grams": 200,
+  "kcal": 280,
+  "protein": 16,
+  "carbs": 28,
+  "fat": 12,
+  "emoji": "🫑"
+ },
+ {
+  "id": "shepherds_pie",
+  "name": "Shepherd's pie",
+  "synonyms": [
+   "shepherds pie"
+  ],
+  "category": "Meals",
+  "serving": "1 cup · 240 g",
+  "grams": 240,
+  "kcal": 330,
+  "protein": 18,
+  "carbs": 26,
+  "fat": 17,
+  "emoji": "🥧"
+ },
+ {
+  "id": "pot_roast",
+  "name": "Pot roast",
+  "synonyms": [
+   "pot roast"
+  ],
+  "category": "Meals",
+  "serving": "4 oz · 113 g",
+  "grams": 113,
+  "kcal": 240,
+  "protein": 28,
+  "carbs": 0,
+  "fat": 13,
+  "emoji": "🥩"
+ },
+ {
+  "id": "meatloaf",
+  "name": "Meatloaf slice",
+  "synonyms": [
+   "meatloaf"
+  ],
+  "category": "Meals",
+  "serving": "1 slice · 140 g",
+  "grams": 140,
+  "kcal": 290,
+  "protein": 20,
+  "carbs": 10,
+  "fat": 18,
+  "emoji": "🍖"
+ },
+ {
+  "id": "chicken_parm",
+  "name": "Chicken parmesan",
+  "synonyms": [
+   "chicken parm",
+   "chicken parmesan"
+  ],
+  "category": "Restaurant",
+  "serving": "1 · 280 g",
+  "grams": 280,
+  "kcal": 570,
+  "protein": 42,
+  "carbs": 30,
+  "fat": 30,
+  "emoji": "🍗"
+ },
+ {
+  "id": "eggplant_parm",
+  "name": "Eggplant parmesan",
+  "synonyms": [
+   "eggplant parm"
+  ],
+  "category": "Restaurant",
+  "serving": "1 serving · 280 g",
+  "grams": 280,
+  "kcal": 420,
+  "protein": 14,
+  "carbs": 36,
+  "fat": 24,
+  "emoji": "🍆"
+ },
+ {
+  "id": "risotto",
+  "name": "Mushroom risotto",
+  "synonyms": [
+   "risotto"
+  ],
+  "category": "Restaurant",
+  "serving": "1 cup · 240 g",
+  "grams": 240,
+  "kcal": 420,
+  "protein": 9,
+  "carbs": 54,
+  "fat": 18,
+  "emoji": "🍚"
+ },
+ {
+  "id": "paella",
+  "name": "Paella",
+  "synonyms": [
+   "paella"
+  ],
+  "category": "Restaurant",
+  "serving": "1 cup · 250 g",
+  "grams": 250,
+  "kcal": 430,
+  "protein": 24,
+  "carbs": 48,
+  "fat": 16,
+  "emoji": "🥘"
+ },
+ {
+  "id": "jambalaya",
+  "name": "Jambalaya",
+  "synonyms": [
+   "jambalaya"
+  ],
+  "category": "Restaurant",
+  "serving": "1 cup · 240 g",
+  "grams": 240,
+  "kcal": 390,
+  "protein": 20,
+  "carbs": 44,
+  "fat": 14,
+  "emoji": "🥘"
+ },
+ {
+  "id": "gumbo",
+  "name": "Gumbo",
+  "synonyms": [
+   "gumbo"
+  ],
+  "category": "Restaurant",
+  "serving": "1 cup · 240 g",
+  "grams": 240,
+  "kcal": 240,
+  "protein": 12,
+  "carbs": 22,
+  "fat": 10,
+  "emoji": "🍲"
+ },
+ {
+  "id": "crab_salad",
+  "name": "Crab salad roll",
+  "synonyms": [
+   "crab salad"
+  ],
+  "category": "Restaurant",
+  "serving": "1 roll · 180 g",
+  "grams": 180,
+  "kcal": 340,
+  "protein": 18,
+  "carbs": 30,
+  "fat": 16,
+  "emoji": "🦀"
+ },
+ {
+  "id": "lobster_bisque",
+  "name": "Lobster bisque",
+  "synonyms": [
+   "lobster bisque"
+  ],
+  "category": "Restaurant",
+  "serving": "1 cup · 240 g",
+  "grams": 240,
+  "kcal": 280,
+  "protein": 10,
+  "carbs": 20,
+  "fat": 18,
+  "emoji": "🍲"
+ },
+ {
+  "id": "clam_bake",
+  "name": "Seafood boil serving",
+  "synonyms": [
+   "seafood boil"
+  ],
+  "category": "Restaurant",
+  "serving": "1 serving · 400 g",
+  "grams": 400,
+  "kcal": 480,
+  "protein": 42,
+  "carbs": 20,
+  "fat": 26,
+  "emoji": "🦐"
+ },
+ {
+  "id": "fish_and_chips",
+  "name": "Fish and chips",
+  "synonyms": [
+   "fish and chips",
+   "fish n chips"
+  ],
+  "category": "Restaurant",
+  "serving": "1 serving · 400 g",
+  "grams": 400,
+  "kcal": 840,
+  "protein": 34,
+  "carbs": 84,
+  "fat": 40,
+  "emoji": "🐟"
+ },
+ {
+  "id": "chicken_wings_bbq",
+  "name": "BBQ wings (6)",
+  "synonyms": [
+   "bbq wings"
+  ],
+  "category": "Restaurant",
+  "serving": "6 · 180 g",
+  "grams": 180,
+  "kcal": 460,
+  "protein": 36,
+  "carbs": 12,
+  "fat": 28,
+  "emoji": "🍗"
+ },
+ {
+  "id": "poke_nachos",
+  "name": "Poke nachos",
+  "synonyms": [
+   "poke nachos"
+  ],
+  "category": "Restaurant",
+  "serving": "1 plate · 250 g",
+  "grams": 250,
+  "kcal": 540,
+  "protein": 22,
+  "carbs": 44,
+  "fat": 30,
+  "emoji": "🍣"
+ },
+ {
+  "id": "seaweed_salad",
+  "name": "Seaweed salad",
+  "synonyms": [
+   "seaweed salad"
+  ],
+  "category": "Sides",
+  "serving": "1/2 cup · 50 g",
+  "grams": 50,
+  "kcal": 45,
+  "protein": 1,
+  "carbs": 7,
+  "fat": 1.5,
+  "emoji": "🥗"
+ },
+ {
+  "id": "cucumber_salad",
+  "name": "Cucumber salad",
+  "synonyms": [
+   "cucumber salad"
+  ],
+  "category": "Sides",
+  "serving": "1 cup · 150 g",
+  "grams": 150,
+  "kcal": 60,
+  "protein": 1,
+  "carbs": 8,
+  "fat": 3,
+  "emoji": "🥗"
+ },
+ {
+  "id": "edamame_salad",
+  "name": "Edamame salad",
+  "synonyms": [
+   "edamame salad"
+  ],
+  "category": "Sides",
+  "serving": "1 cup · 160 g",
+  "grams": 160,
+  "kcal": 220,
+  "protein": 14,
+  "carbs": 16,
+  "fat": 12,
+  "emoji": "🥗"
+ },
+ {
+  "id": "quiche",
+  "name": "Quiche slice",
+  "synonyms": [
+   "quiche"
+  ],
+  "category": "Breakfast",
+  "serving": "1 slice · 150 g",
+  "grams": 150,
+  "kcal": 380,
+  "protein": 13,
+  "carbs": 26,
+  "fat": 25,
+  "emoji": "🥧"
+ },
+ {
+  "id": "crepe",
+  "name": "Nutella crepe",
+  "synonyms": [
+   "crepe",
+   "nutella crepe"
+  ],
+  "category": "Breakfast",
+  "serving": "1 · 140 g",
+  "grams": 140,
+  "kcal": 420,
+  "protein": 8,
+  "carbs": 48,
+  "fat": 22,
+  "emoji": "🥞"
+ },
+ {
+  "id": "blintz",
+  "name": "Cheese blintz (2)",
+  "synonyms": [
+   "blintz"
+  ],
+  "category": "Breakfast",
+  "serving": "2 · 160 g",
+  "grams": 160,
+  "kcal": 340,
+  "protein": 12,
+  "carbs": 36,
+  "fat": 16,
+  "emoji": "🥞"
+ },
+ {
+  "id": "bagel_lox",
+  "name": "Bagel with lox + cream cheese",
+  "synonyms": [
+   "lox bagel",
+   "bagel and lox"
+  ],
+  "category": "Breakfast",
+  "serving": "1 · 180 g",
+  "grams": 180,
+  "kcal": 460,
+  "protein": 22,
+  "carbs": 56,
+  "fat": 15,
+  "emoji": "🥯"
+ },
+ {
+  "id": "biscuits_gravy",
+  "name": "Biscuits and gravy",
+  "synonyms": [
+   "biscuits and gravy"
+  ],
+  "category": "Breakfast",
+  "serving": "1 serving · 250 g",
+  "grams": 250,
+  "kcal": 520,
+  "protein": 10,
+  "carbs": 52,
+  "fat": 30,
+  "emoji": "🍞"
+ },
+ {
+  "id": "chicken_waffle",
+  "name": "Chicken and waffles",
+  "synonyms": [
+   "chicken and waffles"
+  ],
+  "category": "Restaurant",
+  "serving": "1 serving · 350 g",
+  "grams": 350,
+  "kcal": 780,
+  "protein": 36,
+  "carbs": 64,
+  "fat": 42,
+  "emoji": "🧇"
+ },
+ {
+  "id": "cornbread",
+  "name": "Cornbread",
+  "synonyms": [
+   "cornbread"
+  ],
+  "category": "Sides",
+  "serving": "1 piece · 60 g",
+  "grams": 60,
+  "kcal": 180,
+  "protein": 4,
+  "carbs": 29,
+  "fat": 6,
+  "emoji": "🍞"
+ },
+ {
+  "id": "baked_potato_loaded",
+  "name": "Loaded baked potato",
+  "synonyms": [
+   "loaded potato"
+  ],
+  "category": "Sides",
+  "serving": "1 · 300 g",
+  "grams": 300,
+  "kcal": 420,
+  "protein": 12,
+  "carbs": 50,
+  "fat": 18,
+  "emoji": "🥔"
+ },
+ {
+  "id": "tater_tots",
+  "name": "Tater tots",
+  "synonyms": [
+   "tater tots",
+   "tots"
+  ],
+  "category": "Sides",
+  "serving": "10 tots · 86 g",
+  "grams": 86,
+  "kcal": 220,
+  "protein": 2,
+  "carbs": 26,
+  "fat": 11,
+  "emoji": "🥔"
+ },
+ {
+  "id": "onion_rings",
+  "name": "Onion rings",
+  "synonyms": [
+   "onion rings"
+  ],
+  "category": "Sides",
+  "serving": "8 rings · 117 g",
+  "grams": 117,
+  "kcal": 410,
+  "protein": 5,
+  "carbs": 48,
+  "fat": 22,
+  "emoji": "🧅"
+ },
+ {
+  "id": "mozzarella_sticks",
+  "name": "Mozzarella sticks (4)",
+  "synonyms": [
+   "mozzarella sticks",
+   "mozz sticks"
+  ],
+  "category": "Sides",
+  "serving": "4 · 120 g",
+  "grams": 120,
+  "kcal": 360,
+  "protein": 16,
+  "carbs": 26,
+  "fat": 20,
+  "emoji": "🧀"
+ },
+ {
+  "id": "jalapeno_poppers",
+  "name": "Jalapeño poppers (4)",
+  "synonyms": [
+   "jalapeno poppers",
+   "poppers"
+  ],
+  "category": "Sides",
+  "serving": "4 · 120 g",
+  "grams": 120,
+  "kcal": 340,
+  "protein": 8,
+  "carbs": 28,
+  "fat": 22,
+  "emoji": "🌶️"
+ },
+ {
+  "id": "spinach_dip",
+  "name": "Spinach artichoke dip",
+  "synonyms": [
+   "spinach dip",
+   "artichoke dip"
+  ],
+  "category": "Sides",
+  "serving": "1/4 cup · 60 g",
+  "grams": 60,
+  "kcal": 140,
+  "protein": 4,
+  "carbs": 6,
+  "fat": 11,
+  "emoji": "🥣"
+ },
+ {
+  "id": "deviled_eggs",
+  "name": "Deviled eggs (3 halves)",
+  "synonyms": [
+   "deviled eggs"
+  ],
+  "category": "Snacks",
+  "serving": "3 halves · 66 g",
+  "grams": 66,
+  "kcal": 130,
+  "protein": 6,
+  "carbs": 1,
+  "fat": 10,
+  "emoji": "🥚"
+ },
+ {
+  "id": "cheese_plate",
+  "name": "Cheese plate",
+  "synonyms": [
+   "cheese plate",
+   "cheese board"
+  ],
+  "category": "Snacks",
+  "serving": "2 oz · 56 g",
+  "grams": 56,
+  "kcal": 220,
+  "protein": 13,
+  "carbs": 2,
+  "fat": 18,
+  "emoji": "🧀"
+ },
+ {
+  "id": "pudding",
+  "name": "Chocolate pudding",
+  "synonyms": [
+   "pudding"
+  ],
+  "category": "Snacks",
+  "serving": "1/2 cup · 130 g",
+  "grams": 130,
+  "kcal": 160,
+  "protein": 3,
+  "carbs": 26,
+  "fat": 4,
+  "emoji": "🍮"
+ },
+ {
+  "id": "brownie",
+  "name": "Brownie",
+  "synonyms": [
+   "brownie"
+  ],
+  "category": "Snacks",
+  "serving": "1 · 60 g",
+  "grams": 60,
+  "kcal": 280,
+  "protein": 3,
+  "carbs": 36,
+  "fat": 14,
+  "emoji": "🍫"
+ },
+ {
+  "id": "cheesecake",
+  "name": "Cheesecake slice",
+  "synonyms": [
+   "cheesecake"
+  ],
+  "category": "Snacks",
+  "serving": "1 slice · 125 g",
+  "grams": 125,
+  "kcal": 400,
+  "protein": 7,
+  "carbs": 32,
+  "fat": 28,
+  "emoji": "🍰"
+ },
+ {
+  "id": "tiramisu",
+  "name": "Tiramisu",
+  "synonyms": [
+   "tiramisu"
+  ],
+  "category": "Snacks",
+  "serving": "1 piece · 120 g",
+  "grams": 120,
+  "kcal": 360,
+  "protein": 6,
+  "carbs": 30,
+  "fat": 24,
+  "emoji": "🍰"
+ },
+ {
+  "id": "gelato",
+  "name": "Gelato",
+  "synonyms": [
+   "gelato"
+  ],
+  "category": "Snacks",
+  "serving": "1/2 cup · 100 g",
+  "grams": 100,
+  "kcal": 200,
+  "protein": 4,
+  "carbs": 24,
+  "fat": 9,
+  "emoji": "🍨"
+ },
+ {
+  "id": "sorbet",
+  "name": "Sorbet",
+  "synonyms": [
+   "sorbet"
+  ],
+  "category": "Snacks",
+  "serving": "1/2 cup · 100 g",
+  "grams": 100,
+  "kcal": 120,
+  "protein": 0,
+  "carbs": 30,
+  "fat": 0,
+  "emoji": "🍧"
+ },
+ {
+  "id": "milkshake",
+  "name": "Milkshake",
+  "synonyms": [
+   "milkshake",
+   "shake drink"
+  ],
+  "category": "Drinks",
+  "serving": "12 oz · 340 g",
+  "grams": 340,
+  "kcal": 530,
+  "protein": 12,
+  "carbs": 66,
+  "fat": 24,
+  "emoji": "🥤"
+ },
+ {
+  "id": "hot_chocolate",
+  "name": "Hot chocolate",
+  "synonyms": [
+   "hot chocolate",
+   "hot cocoa"
+  ],
+  "category": "Drinks",
+  "serving": "1 cup · 250 g",
+  "grams": 250,
+  "kcal": 190,
+  "protein": 4,
+  "carbs": 32,
+  "fat": 7,
+  "emoji": "☕"
+ },
+ {
+  "id": "churro",
+  "name": "Churro",
+  "synonyms": [
+   "churro",
+   "churros"
+  ],
+  "category": "Snacks",
+  "serving": "1 · 50 g",
+  "grams": 50,
+  "kcal": 200,
+  "protein": 2,
+  "carbs": 24,
+  "fat": 11,
+  "emoji": "🥨"
+ },
+ {
+  "id": "funnel_cake",
+  "name": "Funnel cake",
+  "synonyms": [
+   "funnel cake"
+  ],
+  "category": "Snacks",
+  "serving": "1 piece · 100 g",
+  "grams": 100,
+  "kcal": 380,
+  "protein": 5,
+  "carbs": 44,
+  "fat": 20,
+  "emoji": "🍰"
+ },
+ {
+  "id": "cotton_candy",
+  "name": "Cotton candy",
+  "synonyms": [
+   "cotton candy"
+  ],
+  "category": "Snacks",
+  "serving": "1 bag · 28 g",
+  "grams": 28,
+  "kcal": 110,
+  "protein": 0,
+  "carbs": 28,
+  "fat": 0,
+  "emoji": "🍬"
+ },
+ {
+  "id": "gummy_bears",
+  "name": "Gummy bears",
+  "synonyms": [
+   "gummy bears",
+   "candy"
+  ],
+  "category": "Snacks",
+  "serving": "17 pieces · 40 g",
+  "grams": 40,
+  "kcal": 140,
+  "protein": 3,
+  "carbs": 32,
+  "fat": 0,
+  "emoji": "🍬"
+ },
+ {
+  "id": "skittles",
+  "name": "Skittles",
+  "synonyms": [
+   "skittles"
+  ],
+  "category": "Snacks",
+  "serving": "1 pack · 57 g",
+  "grams": 57,
+  "kcal": 230,
+  "protein": 0,
+  "carbs": 52,
+  "fat": 2.5,
+  "emoji": "🍬"
+ },
+ {
+  "id": "mms",
+  "name": "M&Ms",
+  "synonyms": [
+   "m&m",
+   "m&ms"
+  ],
+  "category": "Snacks",
+  "serving": "1 pack · 48 g",
+  "grams": 48,
+  "kcal": 240,
+  "protein": 2,
+  "carbs": 34,
+  "fat": 10,
+  "emoji": "🍫"
+ },
+ {
+  "id": "snickers",
+  "name": "Snickers bar",
+  "synonyms": [
+   "snickers",
+   "candy bar"
+  ],
+  "category": "Snacks",
+  "serving": "1 bar · 53 g",
+  "grams": 53,
+  "kcal": 250,
+  "protein": 4,
+  "carbs": 33,
+  "fat": 12,
+  "emoji": "🍫"
+ },
+ {
+  "id": "granola_bar",
+  "name": "Granola bar",
+  "synonyms": [
+   "granola bar",
+   "nature valley"
+  ],
+  "category": "Snacks",
+  "serving": "1 bar · 42 g",
+  "grams": 42,
+  "kcal": 180,
+  "protein": 4,
+  "carbs": 27,
+  "fat": 7,
+  "emoji": "🍫"
+ },
+ {
+  "id": "rice_krispie",
+  "name": "Rice krispie treat",
+  "synonyms": [
+   "rice krispie"
+  ],
+  "category": "Snacks",
+  "serving": "1 · 22 g",
+  "grams": 22,
+  "kcal": 90,
+  "protein": 1,
+  "carbs": 17,
+  "fat": 2,
+  "emoji": "🍬"
+ },
+ {
+  "id": "fruit_snacks",
+  "name": "Fruit snacks",
+  "synonyms": [
+   "fruit snacks",
+   "gummies"
+  ],
+  "category": "Snacks",
+  "serving": "1 pack · 23 g",
+  "grams": 23,
+  "kcal": 80,
+  "protein": 1,
+  "carbs": 18,
+  "fat": 0,
+  "emoji": "🍬"
+ },
+ {
+  "id": "seaweed_snacks",
+  "name": "Seaweed snacks",
+  "synonyms": [
+   "seaweed snacks",
+   "nori"
+  ],
+  "category": "Snacks",
+  "serving": "1 pack · 5 g",
+  "grams": 5,
+  "kcal": 30,
+  "protein": 1,
+  "carbs": 1,
+  "fat": 2.5,
+  "emoji": "🌿"
+ },
+ {
+  "id": "pork_rinds",
+  "name": "Pork rinds",
+  "synonyms": [
+   "pork rinds",
+   "chicharrones"
+  ],
+  "category": "Snacks",
+  "serving": "1 oz · 28 g",
+  "grams": 28,
+  "kcal": 160,
+  "protein": 17,
+  "carbs": 0,
+  "fat": 9,
+  "emoji": "🥓"
+ },
+ {
+  "id": "cheese_crackers",
+  "name": "Cheese crackers",
+  "synonyms": [
+   "cheez it",
+   "cheese crackers"
+  ],
+  "category": "Snacks",
+  "serving": "27 crackers · 30 g",
+  "grams": 30,
+  "kcal": 150,
+  "protein": 3,
+  "carbs": 17,
+  "fat": 8,
+  "emoji": "🧀"
+ },
+ {
+  "id": "veggie_chips",
+  "name": "Veggie chips",
+  "synonyms": [
+   "veggie chips"
+  ],
+  "category": "Snacks",
+  "serving": "1 oz · 28 g",
+  "grams": 28,
+  "kcal": 140,
+  "protein": 1,
+  "carbs": 17,
+  "fat": 7,
+  "emoji": "🥕"
+ },
+ {
+  "id": "pita_chips",
+  "name": "Pita chips",
+  "synonyms": [
+   "pita chips"
+  ],
+  "category": "Snacks",
+  "serving": "1 oz · 28 g",
+  "grams": 28,
+  "kcal": 130,
+  "protein": 3,
+  "carbs": 19,
+  "fat": 4,
+  "emoji": "🫓"
+ },
+ {
+  "id": "hummus_pretzel",
+  "name": "Hummus + pretzel pack",
+  "synonyms": [
+   "hummus snack"
+  ],
+  "category": "Snacks",
+  "serving": "1 pack · 90 g",
+  "grams": 90,
+  "kcal": 220,
+  "protein": 6,
+  "carbs": 30,
+  "fat": 9,
+  "emoji": "🥣"
+ },
+ {
+  "id": "yogurt_parfait",
+  "name": "Yogurt parfait",
+  "synonyms": [
+   "parfait",
+   "yogurt parfait"
+  ],
+  "category": "Breakfast",
+  "serving": "1 cup · 200 g",
+  "grams": 200,
+  "kcal": 240,
+  "protein": 10,
+  "carbs": 36,
+  "fat": 6,
+  "emoji": "🥣"
+ },
+ {
+  "id": "chia_pudding",
+  "name": "Chia pudding",
+  "synonyms": [
+   "chia pudding",
+   "chia seed pudding"
+  ],
+  "category": "Breakfast",
+  "serving": "1/2 cup · 120 g",
+  "grams": 120,
+  "kcal": 190,
+  "protein": 6,
+  "carbs": 16,
+  "fat": 10,
+  "emoji": "🥣"
+ },
+ {
+  "id": "overnight_oats",
+  "name": "Overnight oats (plain)",
+  "synonyms": [
+   "overnight oats"
+  ],
+  "category": "Breakfast",
+  "serving": "1 cup · 250 g",
+  "grams": 250,
+  "kcal": 300,
+  "protein": 10,
+  "carbs": 44,
+  "fat": 9,
+  "emoji": "🥣"
+ },
+ {
+  "id": "acai_smoothie",
+  "name": "Açaí smoothie",
+  "synonyms": [
+   "acai smoothie"
+  ],
+  "category": "Drinks",
+  "serving": "16 oz",
+  "grams": 450,
+  "kcal": 300,
+  "protein": 4,
+  "carbs": 58,
+  "fat": 6,
+  "emoji": "🥤"
+ },
+ {
+  "id": "matcha_smoothie",
+  "name": "Matcha protein smoothie",
+  "synonyms": [
+   "matcha smoothie"
+  ],
+  "category": "Drinks",
+  "serving": "16 oz",
+  "grams": 450,
+  "kcal": 340,
+  "protein": 24,
+  "carbs": 36,
+  "fat": 10,
+  "emoji": "🍵"
+ },
+ {
+  "id": "pb_smoothie",
+  "name": "Peanut butter smoothie",
+  "synonyms": [
+   "pb smoothie",
+   "peanut butter smoothie"
+  ],
+  "category": "Drinks",
+  "serving": "16 oz",
+  "grams": 450,
+  "kcal": 430,
+  "protein": 20,
+  "carbs": 42,
+  "fat": 20,
+  "emoji": "🥤"
+ },
+ {
+  "id": "berry_smoothie",
+  "name": "Berry protein smoothie",
+  "synonyms": [
+   "berry smoothie"
+  ],
+  "category": "Drinks",
+  "serving": "16 oz",
+  "grams": 450,
+  "kcal": 320,
+  "protein": 26,
+  "carbs": 44,
+  "fat": 5,
+  "emoji": "🥤"
+ },
+ {
+  "id": "mango_smoothie",
+  "name": "Mango smoothie",
+  "synonyms": [
+   "mango smoothie"
+  ],
+  "category": "Drinks",
+  "serving": "16 oz",
+  "grams": 450,
+  "kcal": 280,
+  "protein": 5,
+  "carbs": 58,
+  "fat": 3,
+  "emoji": "🥤"
+ }
+]

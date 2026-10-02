@@ -1,0 +1,874 @@
+[
+ {
+  "id": "back_squat",
+  "name": "Back squat",
+  "muscle": "Quads",
+  "equipment": "barbell",
+  "cue": "Brace, knees out, depth below parallel",
+  "isBodyweight": false
+ },
+ {
+  "id": "front_squat",
+  "name": "Front squat",
+  "muscle": "Quads",
+  "equipment": "barbell",
+  "cue": "Elbows high, torso tall",
+  "isBodyweight": false
+ },
+ {
+  "id": "goblet_squat",
+  "name": "Goblet squat",
+  "muscle": "Quads",
+  "equipment": "dumbbell",
+  "cue": "Elbows inside knees",
+  "isBodyweight": false
+ },
+ {
+  "id": "leg_press",
+  "name": "Leg press",
+  "muscle": "Quads",
+  "equipment": "machine",
+  "cue": "Full range, no knee lock",
+  "isBodyweight": false
+ },
+ {
+  "id": "hack_squat",
+  "name": "Hack squat",
+  "muscle": "Quads",
+  "equipment": "machine",
+  "cue": "Controlled, knees track toes",
+  "isBodyweight": false
+ },
+ {
+  "id": "walking_lunges",
+  "name": "Walking lunges",
+  "muscle": "Quads",
+  "equipment": "dumbbell",
+  "cue": "Long steps, torso upright",
+  "isBodyweight": false
+ },
+ {
+  "id": "reverse_lunge",
+  "name": "Reverse lunge",
+  "muscle": "Quads",
+  "equipment": "dumbbell",
+  "cue": "Step back, drive through heel",
+  "isBodyweight": false
+ },
+ {
+  "id": "bulgarian_split_squat",
+  "name": "Bulgarian split squat",
+  "muscle": "Quads",
+  "equipment": "dumbbell",
+  "cue": "Long stride, slight forward lean",
+  "isBodyweight": false
+ },
+ {
+  "id": "step_up",
+  "name": "Step-up",
+  "muscle": "Quads",
+  "equipment": "dumbbell",
+  "cue": "Drive through the top foot",
+  "isBodyweight": false
+ },
+ {
+  "id": "leg_extension",
+  "name": "Leg extension",
+  "muscle": "Quads",
+  "equipment": "machine",
+  "cue": "Pause at full extension",
+  "isBodyweight": false
+ },
+ {
+  "id": "spanish_squat",
+  "name": "Spanish squat",
+  "muscle": "Quads",
+  "equipment": "band",
+  "cue": "Sit back into the band",
+  "isBodyweight": false
+ },
+ {
+  "id": "wall_sit",
+  "name": "Wall sit",
+  "muscle": "Quads",
+  "equipment": "bodyweight",
+  "cue": "Thighs parallel, back flat",
+  "isBodyweight": true
+ },
+ {
+  "id": "romanian_deadlift",
+  "name": "Romanian deadlift",
+  "muscle": "Hamstrings",
+  "equipment": "barbell",
+  "cue": "Hips back, soft knees",
+  "isBodyweight": false
+ },
+ {
+  "id": "single_leg_rdl",
+  "name": "Single-leg RDL",
+  "muscle": "Hamstrings",
+  "equipment": "dumbbell",
+  "cue": "Balance first, hips square",
+  "isBodyweight": false
+ },
+ {
+  "id": "nordic_curl",
+  "name": "Nordic curl",
+  "muscle": "Hamstrings",
+  "equipment": "bodyweight",
+  "cue": "Slow eccentric, fight the way down",
+  "isBodyweight": true
+ },
+ {
+  "id": "lying_leg_curl",
+  "name": "Lying leg curl",
+  "muscle": "Hamstrings",
+  "equipment": "machine",
+  "cue": "Full range, hips down",
+  "isBodyweight": false
+ },
+ {
+  "id": "seated_leg_curl",
+  "name": "Seated leg curl",
+  "muscle": "Hamstrings",
+  "equipment": "machine",
+  "cue": "Squeeze at the curl",
+  "isBodyweight": false
+ },
+ {
+  "id": "good_morning",
+  "name": "Good morning",
+  "muscle": "Hamstrings",
+  "equipment": "barbell",
+  "cue": "Hinge, chest proud",
+  "isBodyweight": false
+ },
+ {
+  "id": "glute_ham_raise",
+  "name": "Glute-ham raise",
+  "muscle": "Hamstrings",
+  "equipment": "machine",
+  "cue": "Control the descent",
+  "isBodyweight": false
+ },
+ {
+  "id": "hip_thrust",
+  "name": "Hip thrust",
+  "muscle": "Glutes",
+  "equipment": "barbell",
+  "cue": "Chin tucked, 1s lockout squeeze",
+  "isBodyweight": false
+ },
+ {
+  "id": "glute_bridge",
+  "name": "Glute bridge",
+  "muscle": "Glutes",
+  "equipment": "bodyweight",
+  "cue": "2s hold at top",
+  "isBodyweight": true
+ },
+ {
+  "id": "sumo_deadlift",
+  "name": "Sumo deadlift",
+  "muscle": "Glutes",
+  "equipment": "barbell",
+  "cue": "Knees out, chest tall",
+  "isBodyweight": false
+ },
+ {
+  "id": "trap_bar_deadlift",
+  "name": "Trap-bar deadlift",
+  "muscle": "Glutes",
+  "equipment": "barbell",
+  "cue": "Push the floor away",
+  "isBodyweight": false
+ },
+ {
+  "id": "conventional_deadlift",
+  "name": "Conventional deadlift",
+  "muscle": "Back",
+  "equipment": "barbell",
+  "cue": "Brace, bar close to shins",
+  "isBodyweight": false
+ },
+ {
+  "id": "cable_kickback",
+  "name": "Cable kickback",
+  "muscle": "Glutes",
+  "equipment": "cable",
+  "cue": "Squeeze at full extension",
+  "isBodyweight": false
+ },
+ {
+  "id": "abductor_machine",
+  "name": "Hip abductor",
+  "muscle": "Glutes",
+  "equipment": "machine",
+  "cue": "Control the return",
+  "isBodyweight": false
+ },
+ {
+  "id": "band_sidesteps",
+  "name": "Band lateral walk",
+  "muscle": "Glutes",
+  "equipment": "band",
+  "cue": "Knees out the whole way",
+  "isBodyweight": false
+ },
+ {
+  "id": "frog_pumps",
+  "name": "Frog pumps",
+  "muscle": "Glutes",
+  "equipment": "bodyweight",
+  "cue": "Soles together, pump hips",
+  "isBodyweight": true
+ },
+ {
+  "id": "bench_press",
+  "name": "Bench press",
+  "muscle": "Chest",
+  "equipment": "barbell",
+  "cue": "Leg drive, touch lower chest",
+  "isBodyweight": false
+ },
+ {
+  "id": "incline_db_press",
+  "name": "Incline dumbbell press",
+  "muscle": "Chest",
+  "equipment": "dumbbell",
+  "cue": "Full stretch at bottom",
+  "isBodyweight": false
+ },
+ {
+  "id": "push_up",
+  "name": "Push-up",
+  "muscle": "Chest",
+  "equipment": "bodyweight",
+  "cue": "Body line rigid",
+  "isBodyweight": true
+ },
+ {
+  "id": "dips",
+  "name": "Dips",
+  "muscle": "Chest",
+  "equipment": "bodyweight",
+  "cue": "Lean forward, elbows 45°",
+  "isBodyweight": true
+ },
+ {
+  "id": "cable_fly",
+  "name": "Cable fly",
+  "muscle": "Chest",
+  "equipment": "cable",
+  "cue": "Stretch, don't slam",
+  "isBodyweight": false
+ },
+ {
+  "id": "pec_deck",
+  "name": "Pec deck",
+  "muscle": "Chest",
+  "equipment": "machine",
+  "cue": "Slow controlled squeeze",
+  "isBodyweight": false
+ },
+ {
+  "id": "overhead_press",
+  "name": "Overhead press",
+  "muscle": "Shoulders",
+  "equipment": "barbell",
+  "cue": "Glutes tight, no lean back",
+  "isBodyweight": false
+ },
+ {
+  "id": "seated_db_press",
+  "name": "Seated dumbbell press",
+  "muscle": "Shoulders",
+  "equipment": "dumbbell",
+  "cue": "Full range, stacked wrists",
+  "isBodyweight": false
+ },
+ {
+  "id": "lateral_raise",
+  "name": "Lateral raise",
+  "muscle": "Shoulders",
+  "equipment": "dumbbell",
+  "cue": "Lead with elbows, light",
+  "isBodyweight": false
+ },
+ {
+  "id": "rear_delt_fly",
+  "name": "Rear delt fly",
+  "muscle": "Shoulders",
+  "equipment": "dumbbell",
+  "cue": "Hinge, pull wide",
+  "isBodyweight": false
+ },
+ {
+  "id": "face_pull",
+  "name": "Face pull",
+  "muscle": "Shoulders",
+  "equipment": "cable",
+  "cue": "Externally rotate at the end",
+  "isBodyweight": false
+ },
+ {
+  "id": "arnold_press",
+  "name": "Arnold press",
+  "muscle": "Shoulders",
+  "equipment": "dumbbell",
+  "cue": "Rotate through the press",
+  "isBodyweight": false
+ },
+ {
+  "id": "pull_ups",
+  "name": "Pull-up",
+  "muscle": "Back",
+  "equipment": "bodyweight",
+  "cue": "Full hang to chin over bar",
+  "isBodyweight": true
+ },
+ {
+  "id": "chin_ups",
+  "name": "Chin-up",
+  "muscle": "Back",
+  "equipment": "bodyweight",
+  "cue": "Supinated, chest to bar",
+  "isBodyweight": true
+ },
+ {
+  "id": "lat_pulldown",
+  "name": "Lat pulldown",
+  "muscle": "Back",
+  "equipment": "cable",
+  "cue": "Elbows drive to hips",
+  "isBodyweight": false
+ },
+ {
+  "id": "barbell_row",
+  "name": "Barbell row",
+  "muscle": "Back",
+  "equipment": "barbell",
+  "cue": "Pull to lower ribs, no bounce",
+  "isBodyweight": false
+ },
+ {
+  "id": "seated_row",
+  "name": "Seated cable row",
+  "muscle": "Back",
+  "equipment": "cable",
+  "cue": "Squeeze shoulder blades",
+  "isBodyweight": false
+ },
+ {
+  "id": "db_row",
+  "name": "One-arm dumbbell row",
+  "muscle": "Back",
+  "equipment": "dumbbell",
+  "cue": "Pull to hip, torso flat",
+  "isBodyweight": false
+ },
+ {
+  "id": "inverted_row",
+  "name": "Inverted row",
+  "muscle": "Back",
+  "equipment": "bodyweight",
+  "cue": "Body rigid, chest to bar",
+  "isBodyweight": true
+ },
+ {
+  "id": "straight_arm_pulldown",
+  "name": "Straight-arm pulldown",
+  "muscle": "Back",
+  "equipment": "cable",
+  "cue": "Lats stretch, arms straight",
+  "isBodyweight": false
+ },
+ {
+  "id": "incline_db_curl",
+  "name": "Incline dumbbell curl",
+  "muscle": "Arms",
+  "equipment": "dumbbell",
+  "cue": "Full stretch at bottom",
+  "isBodyweight": false
+ },
+ {
+  "id": "barbell_curl",
+  "name": "Barbell curl",
+  "muscle": "Arms",
+  "equipment": "barbell",
+  "cue": "Elbows pinned",
+  "isBodyweight": false
+ },
+ {
+  "id": "hammer_curl",
+  "name": "Hammer curl",
+  "muscle": "Arms",
+  "equipment": "dumbbell",
+  "cue": "Neutral grip, strict",
+  "isBodyweight": false
+ },
+ {
+  "id": "rope_pushdown",
+  "name": "Rope pushdown",
+  "muscle": "Arms",
+  "equipment": "cable",
+  "cue": "Full extension, flare the rope",
+  "isBodyweight": false
+ },
+ {
+  "id": "overhead_extension",
+  "name": "Overhead triceps extension",
+  "muscle": "Arms",
+  "equipment": "cable",
+  "cue": "Elbows by ears",
+  "isBodyweight": false
+ },
+ {
+  "id": "skullcrusher",
+  "name": "Skullcrusher",
+  "muscle": "Arms",
+  "equipment": "barbell",
+  "cue": "Lower to forehead, elbows still",
+  "isBodyweight": false
+ },
+ {
+  "id": "plank",
+  "name": "Plank",
+  "muscle": "Core",
+  "equipment": "bodyweight",
+  "cue": "Ribs down, glutes on",
+  "isBodyweight": true
+ },
+ {
+  "id": "side_plank",
+  "name": "Side plank",
+  "muscle": "Core",
+  "equipment": "bodyweight",
+  "cue": "Stack hips",
+  "isBodyweight": true
+ },
+ {
+  "id": "dead_bug",
+  "name": "Dead bug",
+  "muscle": "Core",
+  "equipment": "bodyweight",
+  "cue": "Low back stays down",
+  "isBodyweight": true
+ },
+ {
+  "id": "pallof_press",
+  "name": "Pallof press",
+  "muscle": "Core",
+  "equipment": "cable",
+  "cue": "Resist rotation",
+  "isBodyweight": false
+ },
+ {
+  "id": "hanging_leg_raise",
+  "name": "Hanging leg raise",
+  "muscle": "Core",
+  "equipment": "bodyweight",
+  "cue": "No swing, toes to bar",
+  "isBodyweight": true
+ },
+ {
+  "id": "cable_crunch",
+  "name": "Cable crunch",
+  "muscle": "Core",
+  "equipment": "cable",
+  "cue": "Curl the spine",
+  "isBodyweight": false
+ },
+ {
+  "id": "ab_wheel",
+  "name": "Ab wheel rollout",
+  "muscle": "Core",
+  "equipment": "bodyweight",
+  "cue": "Hollow the whole way",
+  "isBodyweight": true
+ },
+ {
+  "id": "russian_twist",
+  "name": "Russian twist",
+  "muscle": "Core",
+  "equipment": "bodyweight",
+  "cue": "Rotate the torso, not just arms",
+  "isBodyweight": true
+ },
+ {
+  "id": "standing_calf_raise",
+  "name": "Standing calf raise",
+  "muscle": "Calves",
+  "equipment": "machine",
+  "cue": "Pause top and bottom",
+  "isBodyweight": false
+ },
+ {
+  "id": "seated_calf_raise",
+  "name": "Seated calf raise",
+  "muscle": "Calves",
+  "equipment": "machine",
+  "cue": "Full stretch",
+  "isBodyweight": false
+ },
+ {
+  "id": "tibialis_raise",
+  "name": "Tibialis raise",
+  "muscle": "Calves",
+  "equipment": "bodyweight",
+  "cue": "Toes up hard",
+  "isBodyweight": true
+ },
+ {
+  "id": "pogo_hops",
+  "name": "Pogo hops",
+  "muscle": "Plyometric",
+  "equipment": "bodyweight",
+  "cue": "Stiff ankles, minimal ground time",
+  "isBodyweight": true
+ },
+ {
+  "id": "depth_jumps",
+  "name": "Depth jumps",
+  "muscle": "Plyometric",
+  "equipment": "bodyweight",
+  "cue": "Land soft, react up fast",
+  "isBodyweight": true
+ },
+ {
+  "id": "box_jumps",
+  "name": "Box jumps",
+  "muscle": "Plyometric",
+  "equipment": "bodyweight",
+  "cue": "Full hip extension, step down",
+  "isBodyweight": true
+ },
+ {
+  "id": "ankle_hops",
+  "name": "Ankle hops",
+  "muscle": "Plyometric",
+  "equipment": "bodyweight",
+  "cue": "Quick, quiet contacts",
+  "isBodyweight": true
+ },
+ {
+  "id": "hurdle_hops",
+  "name": "Hurdle hops",
+  "muscle": "Plyometric",
+  "equipment": "bodyweight",
+  "cue": "Strike and react",
+  "isBodyweight": true
+ },
+ {
+  "id": "single_leg_bounds",
+  "name": "Single-leg bounds",
+  "muscle": "Plyometric",
+  "equipment": "bodyweight",
+  "cue": "Stick each landing",
+  "isBodyweight": true
+ },
+ {
+  "id": "squat_jumps",
+  "name": "Squat jumps",
+  "muscle": "Plyometric",
+  "equipment": "bodyweight",
+  "cue": "Load, explode, land soft",
+  "isBodyweight": true
+ },
+ {
+  "id": "tuck_jumps",
+  "name": "Tuck jumps",
+  "muscle": "Plyometric",
+  "equipment": "bodyweight",
+  "cue": "Knees to chest",
+  "isBodyweight": true
+ },
+ {
+  "id": "broad_jumps",
+  "name": "Broad jumps",
+  "muscle": "Plyometric",
+  "equipment": "bodyweight",
+  "cue": "Swing arms, land quiet",
+  "isBodyweight": true
+ },
+ {
+  "id": "skater_jumps",
+  "name": "Skater jumps",
+  "muscle": "Plyometric",
+  "equipment": "bodyweight",
+  "cue": "Bound side to side, stick",
+  "isBodyweight": true
+ },
+ {
+  "id": "hill_sprints",
+  "name": "Hill sprints",
+  "muscle": "Cardio",
+  "equipment": "bodyweight",
+  "cue": "Full recovery between reps",
+  "isBodyweight": true
+ },
+ {
+  "id": "zone2_run",
+  "name": "Zone 2 run",
+  "muscle": "Cardio",
+  "equipment": "bodyweight",
+  "cue": "Conversational pace",
+  "isBodyweight": true
+ },
+ {
+  "id": "interval_400",
+  "name": "400 m interval",
+  "muscle": "Cardio",
+  "equipment": "bodyweight",
+  "cue": "5K pace, 90s jog rest",
+  "isBodyweight": true
+ },
+ {
+  "id": "tempo_run",
+  "name": "Tempo run",
+  "muscle": "Cardio",
+  "equipment": "bodyweight",
+  "cue": "Comfortably hard",
+  "isBodyweight": true
+ },
+ {
+  "id": "sprint",
+  "name": "Sprint",
+  "muscle": "Cardio",
+  "equipment": "bodyweight",
+  "cue": "Fast relaxation, tall posture",
+  "isBodyweight": true
+ },
+ {
+  "id": "jump_rope",
+  "name": "Jump rope",
+  "muscle": "Cardio",
+  "equipment": "bodyweight",
+  "cue": "Light on the feet",
+  "isBodyweight": true
+ },
+ {
+  "id": "row_erg",
+  "name": "Rowing",
+  "muscle": "Cardio",
+  "equipment": "machine",
+  "cue": "Legs–hips–arms sequence",
+  "isBodyweight": false
+ },
+ {
+  "id": "air_bike",
+  "name": "Air bike",
+  "muscle": "Cardio",
+  "equipment": "machine",
+  "cue": "Push and pull together",
+  "isBodyweight": false
+ },
+ {
+  "id": "incline_walk",
+  "name": "Incline walk",
+  "muscle": "Cardio",
+  "equipment": "machine",
+  "cue": "Zone 2 — nasal breathing",
+  "isBodyweight": false
+ },
+ {
+  "id": "stair_climber",
+  "name": "Stair climber",
+  "muscle": "Cardio",
+  "equipment": "machine",
+  "cue": "No handrail lean",
+  "isBodyweight": false
+ },
+ {
+  "id": "swim",
+  "name": "Swim",
+  "muscle": "Cardio",
+  "equipment": "bodyweight",
+  "cue": "Long strokes, steady breathing",
+  "isBodyweight": true
+ },
+ {
+  "id": "kettlebell_swings",
+  "name": "Kettlebell swing",
+  "muscle": "Full body",
+  "equipment": "kettlebell",
+  "cue": "Snap the hips",
+  "isBodyweight": false
+ },
+ {
+  "id": "farmer_carry",
+  "name": "Farmer's carry",
+  "muscle": "Full body",
+  "equipment": "dumbbell",
+  "cue": "Tall posture, short steps",
+  "isBodyweight": false
+ },
+ {
+  "id": "sled_push",
+  "name": "Sled push",
+  "muscle": "Full body",
+  "equipment": "machine",
+  "cue": "Drive through the legs",
+  "isBodyweight": false
+ },
+ {
+  "id": "battle_ropes",
+  "name": "Battle ropes",
+  "muscle": "Full body",
+  "equipment": "other",
+  "cue": "Fast hands, hinged",
+  "isBodyweight": false
+ },
+ {
+  "id": "turkish_getup",
+  "name": "Turkish get-up",
+  "muscle": "Full body",
+  "equipment": "kettlebell",
+  "cue": "Slow, eyes on the bell",
+  "isBodyweight": false
+ },
+ {
+  "id": "worlds_greatest_stretch",
+  "name": "World's greatest stretch",
+  "muscle": "Mobility",
+  "equipment": "bodyweight",
+  "cue": "Breathe into the hip",
+  "isBodyweight": true
+ },
+ {
+  "id": "couch_stretch",
+  "name": "Couch stretch",
+  "muscle": "Mobility",
+  "equipment": "bodyweight",
+  "cue": "Posterior tilt, glute squeeze",
+  "isBodyweight": true
+ },
+ {
+  "id": "hip_flexor_stretch",
+  "name": "Half-kneeling hip flexor stretch",
+  "muscle": "Mobility",
+  "equipment": "bodyweight",
+  "cue": "Glute squeezed, ribs down",
+  "isBodyweight": true
+ },
+ {
+  "id": "9090_breathing",
+  "name": "90/90 hip switch",
+  "muscle": "Mobility",
+  "equipment": "bodyweight",
+  "cue": "Rotate through both hips",
+  "isBodyweight": true
+ },
+ {
+  "id": "cat_cow",
+  "name": "Cat-cow",
+  "muscle": "Mobility",
+  "equipment": "bodyweight",
+  "cue": "Move segment by segment",
+  "isBodyweight": true
+ },
+ {
+  "id": "thoracic_rotation",
+  "name": "Thoracic rotation",
+  "muscle": "Mobility",
+  "equipment": "bodyweight",
+  "cue": "Open the ribcage",
+  "isBodyweight": true
+ },
+ {
+  "id": "ankle_rocks",
+  "name": "Ankle rocks",
+  "muscle": "Mobility",
+  "equipment": "bodyweight",
+  "cue": "Knee over toe",
+  "isBodyweight": true
+ },
+ {
+  "id": "deep_squat_hold",
+  "name": "Deep squat hold",
+  "muscle": "Mobility",
+  "equipment": "bodyweight",
+  "cue": "Relax into the bottom",
+  "isBodyweight": true
+ },
+ {
+  "id": "foam_roll",
+  "name": "Foam roll quads",
+  "muscle": "Mobility",
+  "equipment": "bodyweight",
+  "cue": "Slow passes, breathe",
+  "isBodyweight": true
+ },
+ {
+  "id": "shoulder_dislocates",
+  "name": "Shoulder dislocates",
+  "muscle": "Mobility",
+  "equipment": "band",
+  "cue": "Straight arms, full circle",
+  "isBodyweight": false
+ },
+ {
+  "id": "bird_dog",
+  "name": "Bird dog",
+  "muscle": "Mobility",
+  "equipment": "bodyweight",
+  "cue": "Long line, hips square",
+  "isBodyweight": true
+ },
+ {
+  "id": "wall_angels",
+  "name": "Wall angels",
+  "muscle": "Mobility",
+  "equipment": "bodyweight",
+  "cue": "Back flat to wall",
+  "isBodyweight": true
+ },
+ {
+  "id": "band_pull_apart",
+  "name": "Band pull-apart",
+  "muscle": "Mobility",
+  "equipment": "band",
+  "cue": "Squeeze shoulder blades",
+  "isBodyweight": false
+ },
+ {
+  "id": "cossack_squat",
+  "name": "Cossack squat",
+  "muscle": "Mobility",
+  "equipment": "bodyweight",
+  "cue": "Deep lateral lunge",
+  "isBodyweight": true
+ },
+ {
+  "id": "pigeon_stretch",
+  "name": "Pigeon stretch",
+  "muscle": "Mobility",
+  "equipment": "bodyweight",
+  "cue": "Fold over front leg",
+  "isBodyweight": true
+ },
+ {
+  "id": "downward_dog",
+  "name": "Downward dog",
+  "muscle": "Mobility",
+  "equipment": "bodyweight",
+  "cue": "Push floor away",
+  "isBodyweight": true
+ },
+ {
+  "id": "hamstring_stretch",
+  "name": "Standing hamstring stretch",
+  "muscle": "Mobility",
+  "equipment": "bodyweight",
+  "cue": "Hinge with flat back",
+  "isBodyweight": true
+ },
+ {
+  "id": "wrist_rocks",
+  "name": "Wrist rocks",
+  "muscle": "Mobility",
+  "equipment": "bodyweight",
+  "cue": "Fingers toward knees",
+  "isBodyweight": true
+ }
+]

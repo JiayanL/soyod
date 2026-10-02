@@ -1,0 +1,11 @@
+{
+  "chicken_rice_bowl": ["chicken_breast", "white_rice", "broccoli"],
+  "salmon_poke": ["poke_bowl", "edamame"],
+  "avocado_toast_eggs": ["avocado_toast", "egg"],
+  "greek_yogurt_berries": ["greek_yogurt", "blueberries", "granola"],
+  "burger_fries": ["burger", "fries"],
+  "pasta": ["pasta_marinara"],
+  "salad": ["garden_salad"],
+  "protein_oats": ["oatmeal", "banana", "protein_shake"],
+  "sushi": ["sushi_roll", "edamame", "miso_soup"]
+}
