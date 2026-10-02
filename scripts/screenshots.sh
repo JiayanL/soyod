@@ -51,13 +51,15 @@ for devs in json.load(sys.stdin)['devices'].values():
 }
 
 device_slug() {
-    local name
-    name=$(xcrun simctl list devices -j | python3 -c "
+    # Slug from the device *type* (e.g. iPhone-17-Pro), not the instance name.
+    local dtype
+    dtype=$(xcrun simctl list devices -j | python3 -c "
 import json,sys
 for devs in json.load(sys.stdin)['devices'].values():
     for d in devs:
-        if d['udid'] == '$1': print(d['name']); sys.exit(0)")
-    echo "${name:-$1}" | tr 'A-Z ' 'a-z-' | tr -cd 'a-z0-9-'
+        if d['udid'] == '$1': print(d['deviceTypeIdentifier']); sys.exit(0)")
+    dtype="${dtype##*SimDeviceType.}"
+    echo "${dtype:-$1}" | tr 'A-Z_' 'a-z-' | tr -cd 'a-z0-9-'
 }
 
 if [ ! -d "$APP" ]; then
@@ -75,9 +77,12 @@ for dev in "${DEVICES[@]}"; do
     xcrun simctl boot "$UDID" 2>/dev/null || true
     xcrun simctl bootstatus "$UDID" -b >/dev/null
     xcrun simctl install "$UDID" "$APP"
-    xcrun simctl status_bar "$UDID" override \
-        --time 9:41 --batteryState charged --batteryLevel 100 \
-        --cellularBars 4 --wifiBars 3 --dataNetwork wifi 2>/dev/null || true
+    status_bar() {
+        xcrun simctl status_bar "$UDID" override \
+            --time 9:41 --batteryState charged --batteryLevel 100 \
+            --cellularBars 4 --wifiBars 3 --dataNetwork wifi 2>/dev/null || true
+    }
+    status_bar
     scripts/add-sample-photos.sh "$UDID" >/dev/null 2>&1 || \
         xcrun simctl addmedia "$UDID" Atlas/Resources/SampleMeals/*.jpg >/dev/null 2>&1 || true
 
@@ -94,8 +99,10 @@ for dev in "${DEVICES[@]}"; do
             esac
             xcrun simctl terminate "$UDID" com.jiayanl.atlas 2>/dev/null || true
             xcrun simctl launch "$UDID" com.jiayanl.atlas "${args[@]}" >/dev/null
+            status_bar   # launch can reset the override
             sleep "$(wait_for "$route")"
-            xcrun simctl io "$UDID" screenshot "$out" >/dev/null
+            status_bar
+            xcrun simctl io "$UDID" screenshot --mask=black "$out" >/dev/null
             sips -Z 1320 "$out" >/dev/null 2>&1 || true
         done
     done
